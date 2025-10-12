@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Video Generation Models Directory</title>
+    <meta name="description" content="Comprehensive AI intelligence platform with 200+ tools across all categories. Discover, compare, and optimize AI solutions with vibe-based recommendations and workflow intelligence.">
+    <meta name="keywords" content="AI tools, artificial intelligence, machine learning, AI discovery, AI comparison, AI workflows, vibe coding">
+    <title>AI Intelligence Hub - Ultimate AI Tools Discovery Platform</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <nav class="navbar">
             <div class="nav-brand">
-                <i class="fas fa-video"></i>
-                <span>AI Video Hub</span>
+                <i class="fas fa-robot"></i>
+                <span>AI Intelligence Hub</span>
             </div>
             <div class="nav-menu">
-                <a href="#models" class="nav-link">Models</a>
+                <a href="#discover" class="nav-link">Discover</a>
+                <a href="#workflows" class="nav-link">Workflows</a>
                 <a href="#compare" class="nav-link">Compare</a>
+                <a href="#analytics" class="nav-link">Analytics</a>
                 <a href="#about" class="nav-link">About</a>
             </div>
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search models..." class="search-input">
+                <input type="text" id="searchInput" placeholder="Search AI tools, tasks, workflows..." class="search-input">
                 <i class="fas fa-search search-icon"></i>
             </div>
         </nav>
@@ -30,35 +37,99 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>AI Video Generation Models Directory</h1>
-            <p>Discover the most advanced AI tools for creating stunning videos from text, images, and more</p>
+            <h1>AI Intelligence Hub</h1>
+            <p>The ultimate platform for discovering, comparing, and optimizing AI tools across all categories. Find your perfect AI workflow with vibe-based recommendations and intelligent insights.</p>
             <div class="hero-stats">
                 <div class="stat">
-                    <span class="stat-number">8+</span>
-                    <span class="stat-label">AI Models</span>
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">AI Tools</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">1000+</span>
-                    <span class="stat-label">Videos Generated</span>
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Categories</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">Available</span>
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Workflows</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <button class="cta-button primary" onclick="scrollToSection('discover')">
+                    <i class="fas fa-search"></i>
+                    Discover AI Tools
+                </button>
+                <button class="cta-button secondary" onclick="scrollToSection('workflows')">
+                    <i class="fas fa-project-diagram"></i>
+                    Explore Workflows
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vibe Discovery Section -->
+    <section class="vibe-discovery" id="discover">
+        <div class="vibe-container">
+            <h2>Discover AI Tools by Vibe</h2>
+            <p>Find the perfect AI tools based on your current creative energy and mood</p>
+            
+            <div class="vibe-grid" id="vibeGrid">
+                <div class="vibe-card" data-vibe="creative">
+                    <div class="vibe-icon">🎨</div>
+                    <h3>Creative Flow</h3>
+                    <p>For artistic and innovative projects</p>
+                    <div class="vibe-tools-count">25+ tools</div>
+                </div>
+                
+                <div class="vibe-card" data-vibe="productive">
+                    <div class="vibe-icon">⚡</div>
+                    <h3>Goal Crusher</h3>
+                    <p>For maximum productivity and efficiency</p>
+                    <div class="vibe-tools-count">40+ tools</div>
+                </div>
+                
+                <div class="vibe-card" data-vibe="explorative">
+                    <div class="vibe-icon">🔍</div>
+                    <h3>Curious Explorer</h3>
+                    <p>For research and discovery</p>
+                    <div class="vibe-tools-count">30+ tools</div>
+                </div>
+                
+                <div class="vibe-card" data-vibe="relaxed">
+                    <div class="vibe-icon">😌</div>
+                    <h3>Chill Creator</h3>
+                    <p>For casual, pressure-free creation</p>
+                    <div class="vibe-tools-count">35+ tools</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Filters Section -->
+    <!-- Advanced Filters Section -->
     <section class="filters">
         <div class="filter-container">
             <div class="filter-group">
-                <label for="categoryFilter">Category:</label>
+                <label for="categoryFilter">AI Category:</label>
                 <select id="categoryFilter" class="filter-select">
                     <option value="all">All Categories</option>
-                    <option value="text-to-video">Text to Video</option>
-                    <option value="image-to-video">Image to Video</option>
-                    <option value="video-to-video">Video to Video</option>
+                    <option value="text-generation">Text Generation</option>
+                    <option value="image-generation">Image Generation</option>
+                    <option value="video-generation">Video Generation</option>
+                    <option value="audio-generation">Audio Generation</option>
+                    <option value="code-generation">Code Generation</option>
+                    <option value="data-analysis">Data Analysis</option>
+                    <option value="productivity">Productivity</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="useCaseFilter">Use Case:</label>
+                <select id="useCaseFilter" class="filter-select">
+                    <option value="all">All Use Cases</option>
+                    <option value="writing">Writing</option>
+                    <option value="coding">Coding</option>
+                    <option value="design">Design</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="analysis">Analysis</option>
+                    <option value="automation">Automation</option>
                 </select>
             </div>
             <div class="filter-group">
@@ -76,6 +147,7 @@
                     <option value="name">Name</option>
                     <option value="rating">Rating</option>
                     <option value="popularity">Popularity</option>
+                    <option value="roi">ROI Score</option>
                 </select>
             </div>
         </div>
@@ -83,58 +155,190 @@
 
     <!-- Main Content -->
     <main class="main-content">
+        <!-- AI Tools Section -->
         <section id="models" class="models-section">
-            <h2>Featured AI Video Models</h2>
+            <h2>Featured AI Tools</h2>
             
             <div class="models-grid" id="modelsGrid">
-                <!-- Model cards will be populated by JavaScript -->
+                <!-- AI tool cards will be populated by JavaScript -->
             </div>
         </section>
 
-        <!-- Comparison Section -->
+        <!-- Workflow Recommendations Section -->
+        <section id="workflows" class="workflows-section">
+            <h2>AI Workflow Recommendations</h2>
+            <p>Discover complete AI-powered workflows that combine multiple tools for maximum efficiency</p>
+            
+            <div class="workflow-categories">
+                <div class="workflow-category" data-category="content-creation">
+                    <div class="category-icon">📝</div>
+                    <h3>Content Creation</h3>
+                    <p>Complete workflows for writing, editing, and publishing</p>
+                    <div class="workflow-count">15 workflows</div>
+                </div>
+                
+                <div class="workflow-category" data-category="development">
+                    <div class="category-icon">💻</div>
+                    <h3>Development</h3>
+                    <p>Full-stack development workflows with AI assistance</p>
+                    <div class="workflow-count">12 workflows</div>
+                </div>
+                
+                <div class="workflow-category" data-category="design">
+                    <div class="category-icon">🎨</div>
+                    <h3>Design</h3>
+                    <p>Creative design workflows from concept to completion</p>
+                    <div class="workflow-count">10 workflows</div>
+                </div>
+                
+                <div class="workflow-category" data-category="business">
+                    <div class="category-icon">💼</div>
+                    <h3>Business</h3>
+                    <p>Business automation and intelligence workflows</p>
+                    <div class="workflow-count">18 workflows</div>
+                </div>
+            </div>
+
+            <div class="featured-workflows" id="featuredWorkflows">
+                <!-- Featured workflows will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Advanced Comparison & Analytics Section -->
         <section id="compare" class="comparison-section">
-            <h2>Compare Models</h2>
+            <h2>Advanced AI Tool Comparison</h2>
+            <p>Compare tools across multiple dimensions including performance, cost-benefit analysis, and ROI metrics</p>
+            
             <div class="comparison-container">
                 <div class="comparison-table">
                     <table id="comparisonTable">
                         <thead>
                             <tr>
-                                <th>Feature</th>
-                                <th id="compare1">Select Model</th>
-                                <th id="compare2">Select Model</th>
+                                <th>Metric</th>
+                                <th id="compare1">Select Tool</th>
+                                <th id="compare2">Select Tool</th>
+                                <th id="compare3">Select Tool</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Comparison data will be populated by JavaScript -->
+                            <!-- Advanced comparison data will be populated by JavaScript -->
                         </tbody>
                     </table>
                 </div>
             </div>
         </section>
 
+        <!-- Analytics Dashboard Section -->
+        <section id="analytics" class="analytics-section">
+            <h2>AI Ecosystem Analytics</h2>
+            <p>Real-time insights into AI tool trends, performance metrics, and market intelligence</p>
+            
+            <div class="analytics-grid">
+                <div class="analytics-card">
+                    <div class="card-icon">📈</div>
+                    <h3>Market Trends</h3>
+                    <p>Track emerging AI categories and growing tools</p>
+                    <div class="analytics-stats">
+                        <span class="stat">+45% Video AI Growth</span>
+                        <span class="stat">+32% Code AI Growth</span>
+                    </div>
+                </div>
+                
+                <div class="analytics-card">
+                    <div class="card-icon">💰</div>
+                    <h3>ROI Leaderboard</h3>
+                    <p>Best return on investment AI tools</p>
+                    <div class="analytics-stats">
+                        <span class="stat">ChatGPT: 6900% ROI</span>
+                        <span class="stat">Copilot: 4200% ROI</span>
+                    </div>
+                </div>
+                
+                <div class="analytics-card">
+                    <div class="card-icon">⭐</div>
+                    <h3>Top Rated</h3>
+                    <p>Highest user satisfaction scores</p>
+                    <div class="analytics-stats">
+                        <span class="stat">Claude: 9.5/10</span>
+                        <span class="stat">Midjourney: 9.3/10</span>
+                    </div>
+                </div>
+                
+                <div class="analytics-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Performance</h3>
+                    <p>Fastest and most reliable tools</p>
+                    <div class="analytics-stats">
+                        <span class="stat">GitHub Copilot: 9.5</span>
+                        <span class="stat">ChatGPT: 8.9</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section class="community-section">
+            <h2>Join the AI Intelligence Community</h2>
+            <div class="community-content">
+                <div class="community-text">
+                    <p>Connect with AI enthusiasts, share workflows, and stay updated on the latest developments in artificial intelligence.</p>
+                    <div class="community-stats">
+                        <div class="community-stat">
+                            <span class="stat-number">10,000+</span>
+                            <span class="stat-label">AI Tools Tracked</span>
+                        </div>
+                        <div class="community-stat">
+                            <span class="stat-number">5,000+</span>
+                            <span class="stat-label">Community Members</span>
+                        </div>
+                        <div class="community-stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Workflows Shared</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="newsletter-signup">
+                    <h3>Stay Updated</h3>
+                    <p>Get weekly AI intelligence reports and new tool alerts</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-button">
+                            <i class="fas fa-bell"></i>
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <!-- About Section -->
         <section id="about" class="about-section">
-            <h2>About AI Video Generation</h2>
+            <h2>About AI Intelligence Hub</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>AI video generation technology has revolutionized content creation, enabling users to transform text descriptions, images, and existing videos into stunning visual content.</p>
-                    <p>Our directory features the most advanced AI video generation models available today, each with unique capabilities and strengths.</p>
+                    <p>AI Intelligence Hub is the ultimate platform for discovering, comparing, and optimizing AI tools across all categories. We track 200+ AI tools with real-time updates, comprehensive analytics, and intelligent workflow recommendations.</p>
+                    <p>Our mission is to help users navigate the complex AI landscape with confidence, providing data-driven insights and personalized recommendations for every use case and creative need.</p>
                 </div>
                 <div class="features-grid">
                     <div class="feature-card">
                         <i class="fas fa-brain"></i>
-                        <h3>Advanced AI</h3>
-                        <p>Cutting-edge machine learning models</p>
+                        <h3>AI-Powered Intelligence</h3>
+                        <p>Advanced algorithms for smart recommendations and insights</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Community Driven</h3>
+                        <p>Real user reviews and shared workflows for authentic insights</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Real-Time Analytics</h3>
+                        <p>Live tracking of AI trends and performance metrics</p>
                     </div>
                     <div class="feature-card">
                         <i class="fas fa-palette"></i>
-                        <h3>Creative Control</h3>
-                        <p>Precise control over style and content</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-rocket"></i>
-                        <h3>Fast Generation</h3>
-                        <p>Quick video creation and rendering</p>
+                        <h3>Vibe-Based Discovery</h3>
+                        <p>Find AI tools that match your creative energy and mood</p>
                     </div>
                 </div>
             </div>
@@ -145,24 +349,39 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>AI Video Hub</h3>
-                <p>Your ultimate directory for AI video generation tools</p>
+                <h3>AI Intelligence Hub</h3>
+                <p>The ultimate platform for AI tool discovery, comparison, and workflow optimization</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                </div>
             </div>
             <div class="footer-section">
-                <h4>Quick Links</h4>
-                <a href="#models">Models</a>
-                <a href="#compare">Compare</a>
-                <a href="#about">About</a>
+                <h4>Platform</h4>
+                <a href="#discover">Discover AI Tools</a>
+                <a href="#workflows">Browse Workflows</a>
+                <a href="#compare">Compare Tools</a>
+                <a href="#analytics">View Analytics</a>
+            </div>
+            <div class="footer-section">
+                <h4>Community</h4>
+                <a href="#">User Reviews</a>
+                <a href="#">Workflow Sharing</a>
+                <a href="#">AI Discussions</a>
+                <a href="#">Newsletter</a>
             </div>
             <div class="footer-section">
                 <h4>Resources</h4>
                 <a href="#">API Documentation</a>
-                <a href="#">Tutorials</a>
+                <a href="#">AI Learning Hub</a>
+                <a href="#">ROI Calculator</a>
                 <a href="#">Support</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 AI Video Hub. All rights reserved.</p>
+            <p>&copy; 2024 AI Intelligence Hub. Empowering AI discovery and optimization worldwide.</p>
         </div>
     </footer>
 
