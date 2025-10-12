@@ -559,7 +559,7 @@ function createToolCard(tool) {
 
             <div class="model-categories">
                 <span class="category-tag primary">${tool.primaryCategory.replace('-', ' ')}</span>
-                ${tool.subcategories?.slice(0, 2).map(cat => `<span class="category-tag">${cat}</span>`).join('') || ''}
+                ${tool.subcategories?.slice(0, 2).map(cat => `<span class="category-tag">${cat.replace('-', ' ')}</span>`).join('') || ''}
             </div>
 
             <div class="model-features">
@@ -572,12 +572,12 @@ function createToolCard(tool) {
                     <div class="metric-label">Overall</div>
                 </div>
                 <div class="metric">
-                    <div class="metric-value">${tool.analytics.popularity}</div>
-                    <div class="metric-label">Popularity</div>
+                    <div class="metric-value">${tool.analytics.popularity}%</div>
+                    <div class="metric-label">Popular</div>
                 </div>
                 <div class="metric">
-                    <div class="metric-value">${tool.roiScore > 1000 ? Math.round(tool.roiScore / 1000) + 'K' : tool.roiScore}%</div>
-                    <div class="metric-label">ROI</div>
+                    <div class="metric-value">${tool.roiScore > 1000 ? Math.round(tool.roiScore / 1000) + 'K+' : tool.roiScore + '%'}</div>
+                    <div class="metric-label">ROI Score</div>
                 </div>
             </div>
 
@@ -617,7 +617,7 @@ function createWorkflowCard(workflow) {
             <div class="workflow-tools">
                 ${workflow.tools.map(toolId => {
                     const tool = aiToolsDatabase.find(t => t.id === toolId);
-                    return tool ? `<span class="workflow-tool">${tool.logo} ${tool.name}</span>` : '';
+                    return tool ? `<span class="workflow-tool">${tool.logo} ${tool.name}</span>` : `<span class="workflow-tool">🔧 ${toolId}</span>`;
                 }).join('')}
             </div>
             <div class="workflow-benefits">
@@ -838,22 +838,25 @@ function showNotification(message) {
         </div>
     `;
     
-    // Add notification styles
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: var(--primary-color);
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
-        box-shadow: var(--shadow-lg);
-        z-index: 1001;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        animation: slideIn 0.3s ease;
-    `;
+    // Add notification with proper styling
+    Object.assign(notification.style, {
+        position: 'fixed',
+        top: '20px',
+        right: '20px',
+        background: 'var(--success-color)',
+        color: 'white',
+        padding: '1rem 1.5rem',
+        borderRadius: '12px',
+        boxShadow: 'var(--shadow-lg)',
+        zIndex: '1001',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '0.5rem',
+        animation: 'slideIn 0.3s ease',
+        maxWidth: '300px',
+        fontSize: '0.9rem',
+        fontWeight: '500'
+    });
     
     document.body.appendChild(notification);
     
