@@ -573,10 +573,52 @@ p {
 }
 
 .model-actions {
-    display: flex;
-    gap: 1rem;
     margin-top: auto;
     padding-top: 1rem;
+}
+
+.tool-interactions {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.interaction-btn {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-secondary);
+}
+
+.interaction-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.interaction-btn.active {
+    background: var(--error-color);
+    color: white;
+    border-color: var(--error-color);
+}
+
+.interaction-btn.bookmark-btn.active {
+    background: var(--warning-color);
+    border-color: var(--warning-color);
+}
+
+.model-actions-buttons {
+    display: flex;
+    gap: 1rem;
 }
 
 .btn {

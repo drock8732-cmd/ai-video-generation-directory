@@ -341,6 +341,188 @@ const aiToolsDatabase = [
             'Write project briefs': { effectiveness: 8.6, timeToComplete: '4 minutes', outputQuality: 'structured' },
             'Summarize meeting notes': { effectiveness: 8.9, timeToComplete: '2 minutes', outputQuality: 'concise' }
         }
+    },
+
+    // MORE TEXT GENERATION TOOLS
+    {
+        id: 'perplexity',
+        name: 'Perplexity AI',
+        company: 'Perplexity',
+        logo: '🔍',
+        primaryCategory: 'text-generation',
+        subcategories: ['research', 'search', 'analysis'],
+        useCases: ['research', 'analysis', 'learning'],
+        pricing: { model: 'freemium', monthlyCost: 20, freeTier: true },
+        performance: { quality: 8.9, speed: 9.2, consistency: 8.7, reliability: 9.0 },
+        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
+        analytics: { popularity: 76, growth: '+35%', lastUpdated: '2024-01-15', launchDate: '2022-12-01' },
+        community: { rating: 4.5, reviewCount: 5670, sentiment: 'positive' },
+        description: 'AI-powered search engine that provides comprehensive answers with source citations and real-time information.',
+        features: ['Source citations', 'Real-time search', 'Follow-up questions', 'Export answers'],
+        capabilities: { inputTypes: ['text'], outputTypes: ['text'], integrations: ['api'], platforms: ['web', 'mobile'] },
+        vibeAlignment: { creative: 6, productive: 8, explorative: 10, relaxed: 7 },
+        roiScore: 2850,
+        website: 'https://perplexity.ai',
+        tasks: {
+            'Research any topic': { effectiveness: 8.9, timeToComplete: '3 minutes', outputQuality: 'comprehensive' },
+            'Find latest information': { effectiveness: 9.2, timeToComplete: '2 minutes', outputQuality: 'current' }
+        }
+    },
+
+    // DESIGN TOOLS
+    {
+        id: 'canva-magic',
+        name: 'Canva Magic Studio',
+        company: 'Canva',
+        logo: '🎨',
+        primaryCategory: 'image-generation',
+        subcategories: ['design', 'social-media', 'marketing'],
+        useCases: ['design', 'social-media', 'marketing'],
+        pricing: { model: 'freemium', monthlyCost: 13, freeTier: true },
+        performance: { quality: 8.4, speed: 9.5, consistency: 8.8, reliability: 9.2 },
+        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
+        analytics: { popularity: 92, growth: '+18%', lastUpdated: '2024-01-15', launchDate: '2023-03-01' },
+        community: { rating: 4.6, reviewCount: 34500, sentiment: 'positive' },
+        description: 'AI-powered design platform that makes professional graphics accessible to everyone.',
+        features: ['Magic Studio', 'Template library', 'Brand kit', 'Team collaboration', 'AI image generation'],
+        capabilities: { inputTypes: ['text'], outputTypes: ['image'], integrations: ['api'], platforms: ['web', 'mobile'] },
+        vibeAlignment: { creative: 9, productive: 9, explorative: 6, relaxed: 10 },
+        roiScore: 4100,
+        website: 'https://canva.com/magic',
+        tasks: {
+            'Create social media posts': { effectiveness: 8.4, timeToComplete: '5 minutes', outputQuality: 'professional' },
+            'Design presentations': { effectiveness: 8.2, timeToComplete: '10 minutes', outputQuality: 'polished' }
+        }
+    },
+
+    // PRODUCTIVITY TOOLS
+    {
+        id: 'grammarly',
+        name: 'Grammarly',
+        company: 'Grammarly',
+        logo: '✏️',
+        primaryCategory: 'productivity',
+        subcategories: ['writing', 'editing', 'grammar'],
+        useCases: ['writing', 'editing', 'proofreading'],
+        pricing: { model: 'freemium', monthlyCost: 12, freeTier: true },
+        performance: { quality: 9.1, speed: 9.3, consistency: 9.4, reliability: 9.5 },
+        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
+        analytics: { popularity: 88, growth: '+8%', lastUpdated: '2024-01-15', launchDate: '2009-01-01' },
+        community: { rating: 4.7, reviewCount: 45600, sentiment: 'positive' },
+        description: 'AI-powered writing assistant that helps with grammar, clarity, and tone.',
+        features: ['Grammar checking', 'Style suggestions', 'Tone detection', 'Plagiarism detection'],
+        capabilities: { inputTypes: ['text'], outputTypes: ['text'], integrations: ['browser', 'api'], platforms: ['web', 'desktop', 'mobile'] },
+        vibeAlignment: { creative: 7, productive: 10, explorative: 5, relaxed: 8 },
+        roiScore: 3200,
+        website: 'https://grammarly.com',
+        tasks: {
+            'Edit writing': { effectiveness: 9.1, timeToComplete: '2 minutes', outputQuality: 'polished' },
+            'Check grammar': { effectiveness: 9.4, timeToComplete: '1 minute', outputQuality: 'accurate' }
+        }
+    },
+
+    // MORE CODE TOOLS
+    {
+        id: 'cursor',
+        name: 'Cursor',
+        company: 'Cursor',
+        logo: '⚡',
+        primaryCategory: 'code-generation',
+        subcategories: ['coding', 'ai-assistance', 'productivity'],
+        useCases: ['coding', 'debugging', 'documentation'],
+        pricing: { model: 'freemium', monthlyCost: 20, freeTier: true },
+        performance: { quality: 9.1, speed: 9.3, consistency: 8.9, reliability: 9.0 },
+        userExperience: { learningCurve: 'intermediate', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
+        analytics: { popularity: 71, growth: '+45%', lastUpdated: '2024-01-15', launchDate: '2023-01-01' },
+        community: { rating: 4.6, reviewCount: 7890, sentiment: 'positive' },
+        description: 'AI-first code editor with advanced autocomplete and intelligent suggestions.',
+        features: ['AI autocomplete', 'Code generation', 'Debugging help', 'Multi-language support'],
+        capabilities: { inputTypes: ['code'], outputTypes: ['code'], integrations: ['api'], platforms: ['web', 'desktop'] },
+        vibeAlignment: { creative: 7, productive: 10, explorative: 8, relaxed: 6 },
+        roiScore: 3800,
+        website: 'https://cursor.sh',
+        tasks: {
+            'Write code faster': { effectiveness: 9.1, timeToComplete: 'varies', outputQuality: 'professional' },
+            'Debug code': { effectiveness: 8.7, timeToComplete: '5 minutes', outputQuality: 'accurate' }
+        }
+    },
+
+    // MORE VIDEO TOOLS
+    {
+        id: 'kapwing',
+        name: 'Kapwing',
+        company: 'Kapwing',
+        logo: '🎬',
+        primaryCategory: 'video-generation',
+        subcategories: ['editing', 'social-media', 'marketing'],
+        useCases: ['video-editing', 'social-media', 'marketing'],
+        pricing: { model: 'freemium', monthlyCost: 16, freeTier: true },
+        performance: { quality: 8.3, speed: 8.8, consistency: 8.5, reliability: 8.7 },
+        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
+        analytics: { popularity: 74, growth: '+22%', lastUpdated: '2024-01-15', launchDate: '2018-01-01' },
+        community: { rating: 4.4, reviewCount: 12340, sentiment: 'positive' },
+        description: 'Collaborative video editing platform with AI-powered features for social media content.',
+        features: ['AI video editing', 'Subtitle generation', 'Template library', 'Team collaboration'],
+        capabilities: { inputTypes: ['video', 'text'], outputTypes: ['video'], integrations: ['api'], platforms: ['web'] },
+        vibeAlignment: { creative: 8, productive: 9, explorative: 6, relaxed: 8 },
+        roiScore: 2650,
+        website: 'https://kapwing.com',
+        tasks: {
+            'Edit social videos': { effectiveness: 8.3, timeToComplete: '15 minutes', outputQuality: 'professional' },
+            'Add subtitles': { effectiveness: 8.6, timeToComplete: '5 minutes', outputQuality: 'accurate' }
+        }
+    },
+
+    // MORE AUDIO TOOLS
+    {
+        id: 'murf',
+        name: 'Murf.ai',
+        company: 'Murf',
+        logo: '🎙️',
+        primaryCategory: 'audio-generation',
+        subcategories: ['voice', 'speech', 'marketing'],
+        useCases: ['voiceover', 'marketing', 'accessibility'],
+        pricing: { model: 'freemium', monthlyCost: 19, freeTier: true },
+        performance: { quality: 8.7, speed: 8.5, consistency: 8.9, reliability: 8.6 },
+        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
+        analytics: { popularity: 68, growth: '+28%', lastUpdated: '2024-01-15', launchDate: '2020-01-01' },
+        community: { rating: 4.3, reviewCount: 4560, sentiment: 'positive' },
+        description: 'AI voice generator that creates realistic voiceovers in multiple languages and accents.',
+        features: ['Voice synthesis', 'Multi-language', 'Custom voices', 'Commercial usage'],
+        capabilities: { inputTypes: ['text'], outputTypes: ['audio'], integrations: ['api'], platforms: ['web'] },
+        vibeAlignment: { creative: 7, productive: 8, explorative: 6, relaxed: 9 },
+        roiScore: 2350,
+        website: 'https://murf.ai',
+        tasks: {
+            'Create voiceovers': { effectiveness: 8.7, timeToComplete: '5 minutes', outputQuality: 'natural' },
+            'Generate podcasts': { effectiveness: 8.2, timeToComplete: '10 minutes', outputQuality: 'engaging' }
+        }
+    },
+
+    // MORE DATA ANALYSIS TOOLS
+    {
+        id: 'tableau-ai',
+        name: 'Tableau AI',
+        company: 'Salesforce',
+        logo: '📊',
+        primaryCategory: 'data-analysis',
+        subcategories: ['analytics', 'visualization', 'business-intelligence'],
+        useCases: ['analysis', 'reporting', 'business-intelligence'],
+        pricing: { model: 'paid', monthlyCost: 70, freeTier: false },
+        performance: { quality: 9.0, speed: 8.2, consistency: 9.1, reliability: 9.3 },
+        userExperience: { learningCurve: 'intermediate', interface: 'moderate', documentation: 'excellent', support: 'responsive' },
+        analytics: { popularity: 82, growth: '+12%', lastUpdated: '2024-01-15', launchDate: '2023-05-01' },
+        community: { rating: 4.5, reviewCount: 23400, sentiment: 'positive' },
+        description: 'Enterprise-grade data visualization and business intelligence platform with AI-powered insights.',
+        features: ['AI data analysis', 'Interactive dashboards', 'Natural language queries', 'Predictive analytics'],
+        capabilities: { inputTypes: ['data'], outputTypes: ['data', 'insights'], integrations: ['api'], platforms: ['web', 'desktop'] },
+        vibeAlignment: { creative: 5, productive: 9, explorative: 8, relaxed: 6 },
+        roiScore: 3150,
+        website: 'https://tableau.com/ai',
+        tasks: {
+            'Analyze business data': { effectiveness: 9.0, timeToComplete: '10 minutes', outputQuality: 'comprehensive' },
+            'Create dashboards': { effectiveness: 8.8, timeToComplete: '20 minutes', outputQuality: 'visual' }
+        }
     }
 ];
 
@@ -402,28 +584,28 @@ const vibeCategories = {
         emoji: '🎨',
         description: 'For artistic and innovative projects',
         gradient: 'from-pink-400 to-orange-500',
-        tools: ['midjourney', 'dalle-3', 'sora', 'elevenlabs']
+        tools: ['midjourney', 'dalle-3', 'sora', 'elevenlabs', 'canva-magic', 'kapwing']
     },
     productive: {
         name: 'Goal Crusher',
         emoji: '⚡',
         description: 'For maximum productivity and efficiency',
         gradient: 'from-green-400 to-blue-500',
-        tools: ['chatgpt', 'github-copilot', 'notion-ai']
+        tools: ['chatgpt', 'github-copilot', 'notion-ai', 'grammarly', 'cursor', 'tableau-ai']
     },
     explorative: {
         name: 'Curious Explorer',
         emoji: '🔍',
         description: 'For research and discovery',
         gradient: 'from-blue-400 to-purple-500',
-        tools: ['claude', 'perplexity', 'chatgpt']
+        tools: ['claude', 'perplexity', 'chatgpt', 'julius']
     },
     relaxed: {
         name: 'Chill Creator',
         emoji: '😌',
         description: 'For casual, pressure-free creation',
         gradient: 'from-indigo-400 to-purple-400',
-        tools: ['chatgpt', 'canva-magic', 'remove-bg']
+        tools: ['chatgpt', 'canva-magic', 'grammarly', 'murf']
     }
 };
 
@@ -521,7 +703,12 @@ function populateWorkflows() {
 // Vibe selection handler
 function selectVibe(vibeKey) {
     const vibe = vibeCategories[vibeKey];
-    if (!vibe) return;
+    if (!vibe) {
+        console.error('Vibe not found:', vibeKey);
+        return;
+    }
+
+    console.log('Selecting vibe:', vibeKey, vibe);
 
     appState.selectedVibe = vibeKey;
 
@@ -529,18 +716,33 @@ function selectVibe(vibeKey) {
     document.querySelectorAll('.vibe-card').forEach(card => {
         card.classList.remove('selected');
     });
-    document.querySelector(`[data-vibe="${vibeKey}"]`)?.classList.add('selected');
+
+    const selectedCard = document.querySelector(`[data-vibe="${vibeKey}"]`);
+    if (selectedCard) {
+        selectedCard.classList.add('selected');
+        console.log('Vibe card selected:', vibeKey);
+    }
 
     // Filter tools by vibe
     const vibeTools = aiToolsDatabase.filter(tool =>
         vibe.tools.includes(tool.id)
     );
 
+    console.log(`Found ${vibeTools.length} tools for vibe ${vibeKey}:`, vibeTools.map(t => t.name));
+
     populateModels(vibeTools);
-    showNotification(`Showing ${vibeTools.length} tools for ${vibe.name}`);
+
+    if (vibeTools.length > 0) {
+        showNotification(`✨ ${vibe.name}: ${vibeTools.length} AI tools ready!`);
+    } else {
+        showNotification(`No tools found for ${vibe.name} vibe`);
+    }
 
     // Scroll to models section
-    document.getElementById('models')?.scrollIntoView({ behavior: 'smooth' });
+    const modelsSection = document.getElementById('models');
+    if (modelsSection) {
+        modelsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
 
 // Create enhanced AI tool card
@@ -582,14 +784,28 @@ function createToolCard(tool) {
             </div>
 
             <div class="model-actions">
-                <a href="${tool.website}" target="_blank" class="btn btn-primary">
-                    <i class="fas fa-external-link-alt"></i>
-                    Visit Site
-                </a>
-                <button class="btn btn-secondary" onclick="addToComparison('${tool.id}')">
-                    <i class="fas fa-balance-scale"></i>
-                    Compare
-                </button>
+                <div class="tool-interactions">
+                    <button class="interaction-btn favorite-btn ${communityData.favorites.has(tool.id) ? 'active' : ''}"
+                            onclick="toggleFavorite('${tool.id}')"
+                            title="Add to favorites">
+                        <i class="${communityData.favorites.has(tool.id) ? 'fas' : 'far'} fa-heart"></i>
+                    </button>
+                    <button class="interaction-btn bookmark-btn ${communityData.bookmarks.has(tool.id) ? 'active' : ''}"
+                            onclick="toggleBookmark('${tool.id}')"
+                            title="Bookmark tool">
+                        <i class="${communityData.bookmarks.has(tool.id) ? 'fas' : 'far'} fa-bookmark"></i>
+                    </button>
+                </div>
+                <div class="model-actions-buttons">
+                    <a href="${tool.website}" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Visit Site
+                    </a>
+                    <button class="btn btn-secondary" onclick="addToComparison('${tool.id}')">
+                        <i class="fas fa-balance-scale"></i>
+                        Compare
+                    </button>
+                </div>
             </div>
         </div>
     `;
@@ -685,20 +901,44 @@ function handleFilters() {
     applyFiltersAndSearch();
 }
 
-// Apply all filters and search
+// Enhanced search with better algorithm
 function applyFiltersAndSearch() {
     let filteredTools = [...aiToolsDatabase];
+    console.log(`🔍 Starting search with ${aiToolsDatabase.length} tools`);
 
-    // Apply search filter
+    // Apply search filter with enhanced matching
     if (appState.searchTerm) {
-        const searchTerm = appState.searchTerm.toLowerCase();
-        filteredTools = filteredTools.filter(tool =>
-            tool.name.toLowerCase().includes(searchTerm) ||
-            tool.description.toLowerCase().includes(searchTerm) ||
-            tool.company.toLowerCase().includes(searchTerm) ||
-            tool.features?.some(f => f.toLowerCase().includes(searchTerm)) ||
-            tool.useCases?.some(u => u.toLowerCase().includes(searchTerm))
-        );
+        const searchTerm = appState.searchTerm.toLowerCase().trim();
+        filteredTools = filteredTools.filter(tool => {
+            // Direct name/company matches (highest priority)
+            if (tool.name.toLowerCase().includes(searchTerm) ||
+                tool.company.toLowerCase().includes(searchTerm)) {
+                return true;
+            }
+
+            // Description and feature matches
+            if (tool.description.toLowerCase().includes(searchTerm) ||
+                tool.features?.some(f => f.toLowerCase().includes(searchTerm))) {
+                return true;
+            }
+
+            // Use case and category matches
+            if (tool.useCases?.some(u => u.toLowerCase().includes(searchTerm)) ||
+                tool.subcategories?.some(c => c.toLowerCase().includes(searchTerm))) {
+                return true;
+            }
+
+            // Task-specific matches
+            if (tool.tasks) {
+                return Object.keys(tool.tasks).some(task =>
+                    task.toLowerCase().includes(searchTerm)
+                );
+            }
+
+            return false;
+        });
+
+        console.log(`🔍 Search "${appState.searchTerm}" found ${filteredTools.length} matches`);
     }
 
     // Apply category filter
@@ -1027,10 +1267,320 @@ function viewWorkflow(workflowId) {
     // Find workflow in templates
     const workflow = Object.values(workflowTemplates).flat().find(w => w.id === workflowId);
     if (workflow) {
-        showNotification(`Opening ${workflow.name} workflow...`);
-        // In a real app, this would open a detailed workflow view
         console.log('Viewing workflow:', workflow);
+
+        // Create detailed workflow modal
+        showWorkflowModal(workflow);
+    } else {
+        console.error('Workflow not found:', workflowId);
+        showNotification('Workflow not found');
     }
+}
+
+function showWorkflowModal(workflow) {
+    // Create modal overlay
+    const modalOverlay = document.createElement('div');
+    modalOverlay.className = 'modal-overlay';
+    modalOverlay.innerHTML = `
+        <div class="modal-content workflow-modal">
+            <div class="modal-header">
+                <h2>${workflow.name}</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="workflow-description">${workflow.description}</p>
+
+                <div class="workflow-meta-detailed">
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span><strong>Duration:</strong> ${workflow.estimatedTime} minutes</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span><strong>Cost:</strong> $${workflow.totalCost}/month</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-signal"></i>
+                        <span><strong>Difficulty:</strong> ${workflow.difficulty}</span>
+                    </div>
+                </div>
+
+                <div class="workflow-benefits-detailed">
+                    <h3>Expected Results</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-detailed">
+                            <i class="fas fa-rocket"></i>
+                            <div>
+                                <strong>Time Saved:</strong> ${workflow.benefits.timeSaved}
+                            </div>
+                        </div>
+                        <div class="benefit-detailed">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <strong>Quality:</strong> ${workflow.benefits.outputQuality}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-tools-detailed">
+                    <h3>Tools Used</h3>
+                    <div class="tools-grid">
+                        ${workflow.tools.map(toolId => {
+                            const tool = aiToolsDatabase.find(t => t.id === toolId);
+                            return tool ? `
+                                <div class="workflow-tool-card">
+                                    <div class="tool-logo">${tool.logo}</div>
+                                    <div class="tool-info">
+                                        <h4>${tool.name}</h4>
+                                        <p>${tool.company}</p>
+                                    </div>
+                                </div>
+                            ` : '';
+                        }).join('')}
+                    </div>
+                </div>
+
+                <div class="workflow-steps">
+                    <h3>Step by Step Guide</h3>
+                    <ol class="steps-list">
+                        ${workflow.steps.map((step, index) => `
+                            <li class="step-item">
+                                <span class="step-number">${index + 1}</span>
+                                <span class="step-text">${step}</span>
+                            </li>
+                        `).join('')}
+                    </ol>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+                <button class="btn btn-primary" onclick="startWorkflow('${workflow.id}')">
+                    <i class="fas fa-play"></i>
+                    Start This Workflow
+                </button>
+            </div>
+        </div>
+    `;
+
+    // Add modal styles
+    if (!document.querySelector('#modal-styles')) {
+        const modalStyles = document.createElement('style');
+        modalStyles.id = 'modal-styles';
+        modalStyles.textContent = `
+            .modal-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.8);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 2000;
+                padding: 2rem;
+            }
+
+            .modal-content {
+                background: var(--bg-primary);
+                border-radius: 16px;
+                max-width: 800px;
+                max-height: 90vh;
+                overflow-y: auto;
+                box-shadow: var(--shadow-xl);
+                border: 1px solid var(--border-color);
+            }
+
+            .modal-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2rem;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .modal-close {
+                background: none;
+                border: none;
+                font-size: 2rem;
+                cursor: pointer;
+                color: var(--text-secondary);
+                padding: 0;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                transition: all 0.3s ease;
+            }
+
+            .modal-close:hover {
+                background: var(--bg-secondary);
+                color: var(--text-primary);
+            }
+
+            .modal-body {
+                padding: 2rem;
+            }
+
+            .modal-footer {
+                padding: 2rem;
+                border-top: 1px solid var(--border-color);
+                display: flex;
+                gap: 1rem;
+                justify-content: flex-end;
+            }
+
+            .workflow-description {
+                font-size: 1.1rem;
+                color: var(--text-secondary);
+                margin-bottom: 2rem;
+            }
+
+            .workflow-meta-detailed {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+                margin-bottom: 2rem;
+                padding: 1.5rem;
+                background: var(--bg-secondary);
+                border-radius: 12px;
+            }
+
+            .meta-item {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            .meta-item i {
+                color: var(--primary-color);
+                width: 16px;
+            }
+
+            .workflow-benefits-detailed h3,
+            .workflow-tools-detailed h3,
+            .workflow-steps h3 {
+                margin-bottom: 1rem;
+                color: var(--text-primary);
+                font-size: 1.25rem;
+            }
+
+            .benefits-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+
+            .benefit-detailed {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem;
+                background: var(--bg-secondary);
+                border-radius: 8px;
+            }
+
+            .benefit-detailed i {
+                color: var(--success-color);
+                font-size: 1.5rem;
+            }
+
+            .tools-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+
+            .workflow-tool-card {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem;
+                background: var(--bg-secondary);
+                border-radius: 8px;
+                border: 1px solid var(--border-color);
+            }
+
+            .tool-logo {
+                font-size: 1.5rem;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: var(--primary-color);
+                color: white;
+                border-radius: 8px;
+            }
+
+            .tool-info h4 {
+                margin: 0 0 0.25rem 0;
+                font-size: 1rem;
+            }
+
+            .tool-info p {
+                margin: 0;
+                font-size: 0.8rem;
+                color: var(--text-secondary);
+            }
+
+            .steps-list {
+                list-style: none;
+                padding: 0;
+            }
+
+            .step-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 1rem;
+                margin-bottom: 1rem;
+                padding: 1rem;
+                background: var(--bg-secondary);
+                border-radius: 8px;
+            }
+
+            .step-number {
+                background: var(--primary-color);
+                color: white;
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 0.9rem;
+                flex-shrink: 0;
+                margin-top: 0.125rem;
+            }
+
+            .step-text {
+                flex: 1;
+                line-height: 1.6;
+            }
+        `;
+        document.head.appendChild(modalStyles);
+    }
+
+    document.body.appendChild(modalOverlay);
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeModal() {
+    const modal = document.querySelector('.modal-overlay');
+    if (modal) {
+        modal.remove();
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+}
+
+function startWorkflow(workflowId) {
+    closeModal();
+    showNotification('🚀 Workflow started! Check each tool for detailed instructions.');
 }
 
 // Enhanced comparison functionality
@@ -1101,7 +1651,9 @@ function updateComparisonTable() {
 const communityData = {
     reviews: {},
     userInteractions: [],
-    newsletterSubscribers: []
+    newsletterSubscribers: [],
+    favorites: new Set(),
+    bookmarks: new Set()
 };
 
 function submitReview(toolId, rating, comment) {
@@ -1134,6 +1686,57 @@ function updateToolCommunityRating(toolId) {
         tool.community.rating = Math.round(avgRating * 10) / 10;
         tool.community.reviewCount = reviews.length;
     }
+}
+
+// Tool interaction features
+function toggleFavorite(toolId) {
+    const tool = aiToolsDatabase.find(t => t.id === toolId);
+    if (!tool) return;
+
+    if (communityData.favorites.has(toolId)) {
+        communityData.favorites.delete(toolId);
+        showNotification(`💔 Removed ${tool.name} from favorites`);
+    } else {
+        communityData.favorites.add(toolId);
+        showNotification(`❤️ Added ${tool.name} to favorites`);
+    }
+
+    // Update UI
+    updateToolCardFavorites(toolId);
+}
+
+function toggleBookmark(toolId) {
+    const tool = aiToolsDatabase.find(t => t.id === toolId);
+    if (!tool) return;
+
+    if (communityData.bookmarks.has(toolId)) {
+        communityData.bookmarks.delete(toolId);
+        showNotification(`🔖 Removed ${tool.name} from bookmarks`);
+    } else {
+        communityData.bookmarks.add(toolId);
+        showNotification(`📖 Bookmarked ${tool.name}`);
+    }
+
+    // Update UI
+    updateToolCardBookmarks(toolId);
+}
+
+function updateToolCardFavorites(toolId) {
+    const favoriteButtons = document.querySelectorAll(`[data-tool-id="${toolId}"] .favorite-btn`);
+    favoriteButtons.forEach(btn => {
+        const isFavorite = communityData.favorites.has(toolId);
+        btn.innerHTML = isFavorite ? '<i class="fas fa-heart"></i>' : '<i class="far fa-heart"></i>';
+        btn.classList.toggle('active', isFavorite);
+    });
+}
+
+function updateToolCardBookmarks(toolId) {
+    const bookmarkButtons = document.querySelectorAll(`[data-tool-id="${toolId}"] .bookmark-btn`);
+    bookmarkButtons.forEach(btn => {
+        const isBookmarked = communityData.bookmarks.has(toolId);
+        btn.innerHTML = isBookmarked ? '<i class="fas fa-bookmark"></i>' : '<i class="far fa-bookmark"></i>';
+        btn.classList.toggle('active', isBookmarked);
+    });
 }
 
 // Export functions for external use
