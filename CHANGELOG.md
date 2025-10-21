@@ -10,12 +10,67 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Planned
-- Database schema standardization (Priority 2)
-- Input validation for forms (Priority 2)
-- Error handling improvements (Priority 2)
+- Complete database schema standardization (remaining ~3 tools)
 - Pagination for tools grid (Priority 3)
+- Accessibility improvements (Priority 3)
 - TypeScript conversion (Priority 4)
 - Unit testing framework (Priority 4)
+
+---
+
+## [1.0.2] - 2025-10-21
+
+### Added
+- **Input Validation System**
+  - `isValidEmail()` function with regex pattern validation
+  - `sanitizeSearchTerm()` function to clean and limit search input
+  - Email validation in newsletter form (prevents invalid/duplicate emails)
+  - Search input sanitization (100 char limit, removes special chars)
+
+- **Error Handling Utilities**
+  - `findToolById()` safe lookup function with try/catch
+  - Enhanced `addToComparison()` with comprehensive error handling
+  - Enhanced `updateComparisonTable()` with safe property access
+  - Console warnings for debugging (non-intrusive logging)
+
+### Changed
+- **Database Schema Improvements**
+  - Converted 3 popular tools to standardized complex schema
+  - Runway Gen-2: Full nested structure with all metadata
+  - Pika Labs: Standardized with complete objects
+  - Stable Video Diffusion: Updated to match schema pattern
+  - Comparison table now handles both schema types gracefully
+
+- **Newsletter Form Enhancement**
+  - Validates email format before submission
+  - Checks for duplicate subscriptions
+  - Clear user feedback for all validation scenarios
+  - Prevents empty submissions
+
+- **Search Handler Improvement**
+  - Sanitizes search terms before processing
+  - Prevents injection of problematic characters
+  - Limits search term length to prevent abuse
+
+### Fixed
+- Comparison feature now handles tools with inconsistent schemas
+- No crashes from missing tool properties (optional chaining)
+- Graceful fallback to 'N/A' for missing data
+- Better error messages for debugging
+
+### Technical Details
+- Commit: `ee180f2` - Refactored 3 tools and added validation/error handling
+- Files Changed: `script.js` (+188 insertions, -77 deletions)
+- Net: +111 lines (added features outweigh refactoring)
+- New utility functions: 3 (isValidEmail, sanitizeSearchTerm, findToolById)
+- Try/catch blocks added: 3 (comprehensive error handling)
+
+### Benefits
+- ✅ No crashes from invalid input
+- ✅ Better UX with clear validation messages
+- ✅ Comparison works with mixed schema types
+- ✅ Foundation for full schema standardization
+- ✅ More robust and production-ready code
 
 ---
 
