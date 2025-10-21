@@ -518,6 +518,11 @@ p {
     color: white;
 }
 
+.model-badge.freemium {
+    background: linear-gradient(135deg, #10b981 0%, #f59e0b 100%);
+    color: white;
+}
+
 .model-body {
     padding: 2rem;
     flex: 1;
@@ -1644,4 +1649,93 @@ html {
         background: white !important;
         color: black !important;
     }
+}
+/* ================================
+   PAGINATION STYLES
+   ================================ */
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 3rem 0 2rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.pagination-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.pagination-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.pagination-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: linear-gradient(135deg, #999 0%, #777 100%);
+}
+
+.pagination-arrow {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.pagination-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.pagination-divider {
+    color: var(--border-color);
+}
+
+/* Responsive Pagination */
+@media (max-width: 768px) {
+    .pagination-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .pagination-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .pagination-info {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .pagination-divider {
+        display: none;
+    }
+}
+
+/* Hide pagination when no results */
+.pagination-container.hidden {
+    display: none;
 }

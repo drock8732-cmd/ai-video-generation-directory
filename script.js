@@ -60,54 +60,75 @@ const aiToolsDatabase = [
         name: 'Gen-2',
         company: 'Runway ML',
         logo: '🚀',
-        category: 'text-to-video',
-        pricing: 'freemium',
-        rating: 9.2,
-        popularity: 88,
+        primaryCategory: 'text-to-video',
+        subcategories: ['video-generation', 'image-to-video', 'video-editing'],
+        useCases: ['Professional video editing', 'Content creation', 'Art projects'],
+        pricing: { model: 'freemium', monthlyCost: 15, freeTier: true },
+        performance: { quality: 9.0, speed: 8.0, consistency: 8.5, reliability: 8.8 },
+        userExperience: { learningCurve: 'intermediate', interface: 'professional', documentation: 'good', support: 'responsive' },
+        analytics: { popularity: 88, growth: '+15%', lastUpdated: '2024-01-15', launchDate: '2023-03-01' },
+        community: { rating: 9.2, reviewCount: 3200, sentiment: 'positive' },
         description: 'Professional AI video generation tool with advanced controls for text, image, and video-to-video conversion.',
         features: ['Text-to-video', 'Image-to-video', 'Video-to-video', 'Style presets'],
-        quality: 90,
-        speed: 80,
-        easeOfUse: 85,
-        price: 'Free trial, $15/month Pro',
+        capabilities: { inputTypes: ['text', 'image', 'video'], outputTypes: ['video'], integrations: ['api'], platforms: ['web', 'api'] },
+        vibeAlignment: { creative: 9, productive: 8, explorative: 8, relaxed: 6 },
+        roiScore: 7920,
         website: 'https://runwayml.com',
-        useCases: ['Professional video editing', 'Content creation', 'Art projects']
+        tasks: {
+            'Generate video from text': { effectiveness: 9.0, timeToComplete: '2 minutes', outputQuality: 'professional' },
+            'Convert image to video': { effectiveness: 8.8, timeToComplete: '90 seconds', outputQuality: 'high-quality' },
+            'Edit existing videos': { effectiveness: 8.5, timeToComplete: '3 minutes', outputQuality: 'polished' }
+        }
     },
     {
         id: 'pika-labs',
         name: 'Pika Labs',
         company: 'Pika Labs',
         logo: '🎨',
-        category: 'text-to-video',
-        pricing: 'freemium',
-        rating: 8.8,
-        popularity: 82,
+        primaryCategory: 'text-to-video',
+        subcategories: ['video-generation', 'art-generation', 'creative-tools'],
+        useCases: ['Creative projects', 'Social media content', 'Art generation'],
+        pricing: { model: 'freemium', monthlyCost: 8, freeTier: true },
+        performance: { quality: 8.5, speed: 9.0, consistency: 8.2, reliability: 8.5 },
+        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'good', support: 'community' },
+        analytics: { popularity: 82, growth: '+20%', lastUpdated: '2024-01-10', launchDate: '2023-04-15' },
+        community: { rating: 8.8, reviewCount: 2850, sentiment: 'positive' },
         description: 'Creative AI video generation platform known for artistic and stylized video creation.',
         features: ['Text-to-video', 'Artistic styles', 'Character consistency', 'Custom models'],
-        quality: 85,
-        speed: 90,
-        easeOfUse: 88,
-        price: 'Free tier, $8/month Creator',
+        capabilities: { inputTypes: ['text', 'image'], outputTypes: ['video'], integrations: [], platforms: ['web'] },
+        vibeAlignment: { creative: 10, productive: 7, explorative: 9, relaxed: 8 },
+        roiScore: 6560,
         website: 'https://pika.art',
-        useCases: ['Creative projects', 'Social media content', 'Art generation']
+        tasks: {
+            'Create artistic video': { effectiveness: 8.8, timeToComplete: '1.5 minutes', outputQuality: 'stylized' },
+            'Generate social media clips': { effectiveness: 9.0, timeToComplete: '1 minute', outputQuality: 'engaging' },
+            'Experimental art projects': { effectiveness: 8.5, timeToComplete: '2 minutes', outputQuality: 'unique' }
+        }
     },
     {
         id: 'stable-video-diffusion',
         name: 'Stable Video Diffusion',
         company: 'Stability AI',
         logo: '🔬',
-        category: 'image-to-video',
-        pricing: 'free',
-        rating: 8.5,
-        popularity: 75,
+        primaryCategory: 'image-to-video',
+        subcategories: ['video-generation', 'animation', 'open-source'],
+        useCases: ['Character animation', 'Educational content', 'Research'],
+        pricing: { model: 'free', monthlyCost: 0, freeTier: true },
+        performance: { quality: 8.0, speed: 7.5, consistency: 8.2, reliability: 7.8 },
+        userExperience: { learningCurve: 'advanced', interface: 'technical', documentation: 'excellent', support: 'community' },
+        analytics: { popularity: 75, growth: '+18%', lastUpdated: '2024-01-05', launchDate: '2023-11-21' },
+        community: { rating: 8.5, reviewCount: 4100, sentiment: 'positive' },
         description: 'Open-source AI video generation model based on Stable Diffusion, excellent for consistent character animation.',
         features: ['Image-to-video', 'Open source', 'Character consistency', 'Customizable'],
-        quality: 80,
-        speed: 75,
-        easeOfUse: 70,
-        price: 'Free',
+        capabilities: { inputTypes: ['image'], outputTypes: ['video'], integrations: ['python', 'api'], platforms: ['local', 'cloud'] },
+        vibeAlignment: { creative: 8, productive: 6, explorative: 10, relaxed: 5 },
+        roiScore: 6000,
         website: 'https://stability.ai/stable-video',
-        useCases: ['Character animation', 'Educational content', 'Research']
+        tasks: {
+            'Animate character': { effectiveness: 8.5, timeToComplete: '5 minutes', outputQuality: 'consistent' },
+            'Research experiments': { effectiveness: 9.0, timeToComplete: '10 minutes', outputQuality: 'customizable' },
+            'Educational demos': { effectiveness: 8.0, timeToComplete: '7 minutes', outputQuality: 'clear' }
+        }
     },
     {
         id: 'google-veo',
@@ -621,6 +642,12 @@ const appState = {
         useCase: 'all',
         pricing: 'all',
         sortBy: 'popularity'
+    },
+    pagination: {
+        currentPage: 1,
+        itemsPerPage: 12,
+        totalPages: 1,
+        totalItems: 0
     }
 };
 
@@ -645,7 +672,7 @@ function initializeApplication() {
 
     // Initialize all components
     populateVibeGrid();
-    populateModels(aiToolsDatabase);
+    displayToolsWithPagination(aiToolsDatabase);
     populateWorkflows();
     setupEventListeners();
     animateStats();
@@ -730,7 +757,9 @@ function selectVibe(vibeKey) {
 
     console.log(`Found ${vibeTools.length} tools for vibe ${vibeKey}:`, vibeTools.map(t => t.name));
 
-    populateModels(vibeTools);
+    // Reset to page 1 when selecting a vibe
+    appState.pagination.currentPage = 1;
+    displayToolsWithPagination(vibeTools);
 
     if (vibeTools.length > 0) {
         showNotification(`✨ ${vibe.name}: ${vibeTools.length} AI tools ready!`);
@@ -868,6 +897,16 @@ function setupEventListeners() {
     if (pricingFilter) pricingFilter.addEventListener('change', handleFilters);
     if (sortFilter) sortFilter.addEventListener('change', handleFilters);
 
+    // Pagination functionality
+    const prevPageBtn = document.getElementById('prevPageBtn');
+    const nextPageBtn = document.getElementById('nextPageBtn');
+    if (prevPageBtn) {
+        prevPageBtn.addEventListener('click', goToPreviousPage);
+    }
+    if (nextPageBtn) {
+        nextPageBtn.addEventListener('click', goToNextPage);
+    }
+
     // Vibe selection
     document.querySelectorAll('.vibe-card').forEach(card => {
         card.addEventListener('click', function() {
@@ -887,7 +926,7 @@ function setupEventListeners() {
 
 // Enhanced search handler
 function handleSearch() {
-    appState.searchTerm = searchInput.value;
+    appState.searchTerm = sanitizeSearchTerm(searchInput.value);
     applyFiltersAndSearch();
 }
 
@@ -901,8 +940,11 @@ function handleFilters() {
     applyFiltersAndSearch();
 }
 
-// Enhanced search with better algorithm
+// Enhanced search with better algorithm and pagination
 function applyFiltersAndSearch() {
+    // Reset to first page when filters change
+    appState.pagination.currentPage = 1;
+
     let filteredTools = [...aiToolsDatabase];
     console.log(`🔍 Starting search with ${aiToolsDatabase.length} tools`);
 
@@ -979,77 +1021,89 @@ function applyFiltersAndSearch() {
         }
     });
 
-    populateModels(filteredTools);
+    // Use pagination
+    displayToolsWithPagination(filteredTools);
     console.log(`🔍 Filtered to ${filteredTools.length} tools`);
 }
 
-// Comparison functionality
-let comparisonModels = [];
+// Pagination Functions
 
-function addToComparison(modelId) {
-    const model = aiVideoModels.find(m => m.id === modelId);
-    
-    if (comparisonModels.length < 2 && !comparisonModels.find(m => m.id === modelId)) {
-        comparisonModels.push(model);
-        updateComparisonTable();
-        
-        // Show success message
-        showNotification(`${model.name} added to comparison`);
-    } else if (comparisonModels.find(m => m.id === modelId)) {
-        showNotification(`${model.name} is already in comparison`);
-    } else {
-        showNotification('Maximum 2 models can be compared at once');
+// Display tools with pagination
+function displayToolsWithPagination(tools) {
+    // Calculate pagination
+    const start = (appState.pagination.currentPage - 1) * appState.pagination.itemsPerPage;
+    const end = start + appState.pagination.itemsPerPage;
+    const pageTools = tools.slice(start, end);
+
+    // Update pagination state
+    appState.pagination.totalPages = Math.ceil(tools.length / appState.pagination.itemsPerPage);
+    appState.pagination.totalItems = tools.length;
+
+    // Display the tools for this page
+    populateModels(pageTools);
+
+    // Update pagination controls
+    updatePaginationControls();
+}
+
+// Update pagination controls (buttons and info display)
+function updatePaginationControls() {
+    const prevBtn = document.getElementById('prevPageBtn');
+    const nextBtn = document.getElementById('nextPageBtn');
+    const pageInfo = document.getElementById('pageInfo');
+    const resultsInfo = document.getElementById('resultsInfo');
+    const paginationContainer = document.getElementById('paginationContainer');
+
+    if (!prevBtn || !nextBtn || !pageInfo || !resultsInfo || !paginationContainer) {
+        console.warn('updatePaginationControls: Pagination elements not found');
+        return;
+    }
+
+    // Hide pagination if no results
+    if (appState.pagination.totalItems === 0) {
+        paginationContainer.style.display = 'none';
+        return;
+    }
+
+    paginationContainer.style.display = 'flex';
+
+    // Enable/disable buttons
+    prevBtn.disabled = appState.pagination.currentPage === 1;
+    nextBtn.disabled = appState.pagination.currentPage === appState.pagination.totalPages || appState.pagination.totalPages === 0;
+
+    // Update page info
+    pageInfo.textContent = `Page ${appState.pagination.currentPage} of ${appState.pagination.totalPages}`;
+
+    // Update results info
+    const start = (appState.pagination.currentPage - 1) * appState.pagination.itemsPerPage + 1;
+    const end = Math.min(start + appState.pagination.itemsPerPage - 1, appState.pagination.totalItems);
+    resultsInfo.textContent = `Showing ${start}-${end} of ${appState.pagination.totalItems} tools`;
+}
+
+// Navigate to previous page
+function goToPreviousPage() {
+    if (appState.pagination.currentPage > 1) {
+        appState.pagination.currentPage--;
+        applyFiltersAndSearch();
+        scrollToModelsSection();
     }
 }
 
-function updateComparisonTable() {
-    const tableHead = document.querySelector('#comparisonTable thead tr');
-    const tableBody = document.querySelector('#comparisonTable tbody');
-    
-    // Update table headers
-    const headers = tableHead.querySelectorAll('th');
-    headers[0].textContent = 'Feature';
-    headers[1].textContent = comparisonModels[0] ? comparisonModels[0].name : 'Select Model';
-    headers[2].textContent = comparisonModels[1] ? comparisonModels[1].name : 'Select Model';
-    
-    // Update table body
-    tableBody.innerHTML = `
-        <tr>
-            <td>Company</td>
-            <td>${comparisonModels[0] ? comparisonModels[0].company : '-'}</td>
-            <td>${comparisonModels[1] ? comparisonModels[1].company : '-'}</td>
-        </tr>
-        <tr>
-            <td>Quality</td>
-            <td>${comparisonModels[0] ? comparisonModels[0].quality + '%' : '-'}</td>
-            <td>${comparisonModels[1] ? comparisonModels[1].quality + '%' : '-'}</td>
-        </tr>
-        <tr>
-            <td>Speed</td>
-            <td>${comparisonModels[0] ? comparisonModels[0].speed + '%' : '-'}</td>
-            <td>${comparisonModels[1] ? comparisonModels[1].speed + '%' : '-'}</td>
-        </tr>
-        <tr>
-            <td>Ease of Use</td>
-            <td>${comparisonModels[0] ? comparisonModels[0].easeOfUse + '%' : '-'}</td>
-            <td>${comparisonModels[1] ? comparisonModels[1].easeOfUse + '%' : '-'}</td>
-        </tr>
-        <tr>
-            <td>Pricing</td>
-            <td>${comparisonModels[0] ? comparisonModels[0].price : '-'}</td>
-            <td>${comparisonModels[1] ? comparisonModels[1].price : '-'}</td>
-        </tr>
-        <tr>
-            <td>Rating</td>
-            <td>${comparisonModels[0] ? comparisonModels[0].rating + '/10' : '-'}</td>
-            <td>${comparisonModels[1] ? comparisonModels[1].rating + '/10' : '-'}</td>
-        </tr>
-        <tr>
-            <td>Category</td>
-            <td>${comparisonModels[0] ? formatCategory(comparisonModels[0].category) : '-'}</td>
-            <td>${comparisonModels[1] ? formatCategory(comparisonModels[1].category) : '-'}</td>
-        </tr>
-    `;
+// Navigate to next page
+function goToNextPage() {
+    if (appState.pagination.currentPage < appState.pagination.totalPages) {
+        appState.pagination.currentPage++;
+        applyFiltersAndSearch();
+        scrollToModelsSection();
+    }
+}
+
+// Scroll to models section (smooth scroll to top of tools grid)
+function scrollToModelsSection() {
+    const modelsSection = document.getElementById('models');
+    if (modelsSection) {
+        modelsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
 
 function formatCategory(category) {
@@ -1253,14 +1307,68 @@ function scrollToSection(sectionId) {
     }
 }
 
+// Utility Functions for Validation and Sanitization
+
+// Email validation helper
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+// Search term sanitization
+function sanitizeSearchTerm(term) {
+    if (!term || typeof term !== 'string') return '';
+    // Trim whitespace, limit length, remove special chars that could cause issues
+    return term.trim().slice(0, 100).replace(/[<>]/g, '');
+}
+
+// Safe tool finder with error handling
+function findToolById(toolId) {
+    try {
+        if (!toolId) {
+            console.warn('findToolById: No tool ID provided');
+            return null;
+        }
+        const tool = aiToolsDatabase.find(t => t.id === toolId);
+        if (!tool) {
+            console.warn(`findToolById: Tool not found: ${toolId}`);
+            return null;
+        }
+        return tool;
+    } catch (error) {
+        console.error('findToolById: Error finding tool:', error);
+        return null;
+    }
+}
+
 function handleNewsletterSubmit(e) {
     e.preventDefault();
-    const email = e.target.querySelector('input[type="email"]').value;
+    const emailInput = e.target.querySelector('input[type="email"]');
+    const email = emailInput ? emailInput.value.trim() : '';
 
-    if (email) {
-        showNotification('Thanks for subscribing! 🎉');
-        e.target.reset();
+    if (!email) {
+        showNotification('Please enter an email address');
+        return;
     }
+
+    if (!isValidEmail(email)) {
+        showNotification('Please enter a valid email address');
+        return;
+    }
+
+    // Check if already subscribed
+    if (communityData.newsletterSubscribers && communityData.newsletterSubscribers.includes(email)) {
+        showNotification('You\'re already subscribed!');
+        return;
+    }
+
+    // Add to subscribers
+    if (communityData.newsletterSubscribers) {
+        communityData.newsletterSubscribers.push(email);
+    }
+
+    showNotification('Thanks for subscribing! 🎉');
+    e.target.reset();
 }
 
 function viewWorkflow(workflowId) {
@@ -1583,68 +1691,104 @@ function startWorkflow(workflowId) {
     showNotification('🚀 Workflow started! Check each tool for detailed instructions.');
 }
 
-// Enhanced comparison functionality
+// Enhanced comparison functionality with error handling
 function addToComparison(toolId) {
-    const tool = aiToolsDatabase.find(t => t.id === toolId);
+    try {
+        // Use safe tool finder
+        const tool = findToolById(toolId);
 
-    if (!tool) return;
+        if (!tool) {
+            showNotification('Tool not found');
+            return;
+        }
 
-    if (appState.comparisonTools.length < 3 && !appState.comparisonTools.find(t => t.id === toolId)) {
+        // Check if already in comparison
+        const alreadyAdded = appState.comparisonTools.find(t => t.id === toolId);
+
+        if (alreadyAdded) {
+            showNotification(`${tool.name} is already in comparison`);
+            return;
+        }
+
+        // Check max limit
+        if (appState.comparisonTools.length >= 3) {
+            showNotification('Maximum 3 tools can be compared at once');
+            return;
+        }
+
+        // Add to comparison
         appState.comparisonTools.push(tool);
         updateComparisonTable();
-
         showNotification(`${tool.name} added to comparison`);
-    } else if (appState.comparisonTools.find(t => t.id === toolId)) {
-        showNotification(`${tool.name} is already in comparison`);
-    } else {
-        showNotification('Maximum 3 tools can be compared at once');
+
+    } catch (error) {
+        console.error('Error adding to comparison:', error);
+        showNotification('Failed to add tool to comparison');
     }
 }
 
 function updateComparisonTable() {
-    const table = document.getElementById('comparisonTable');
-    if (!table) return;
-
-    const tbody = table.querySelector('tbody');
-    const headerRow = table.querySelector('thead tr');
-
-    // Update headers
-    const headers = headerRow.querySelectorAll('th');
-    headers[0] = 'Metric';
-
-    appState.comparisonTools.forEach((tool, index) => {
-        if (headers[index + 1]) {
-            headers[index + 1].textContent = tool.name;
+    try {
+        const table = document.getElementById('comparisonTable');
+        if (!table) {
+            console.warn('updateComparisonTable: Comparison table not found');
+            return;
         }
-    });
 
-    // Clear existing rows
-    tbody.innerHTML = '';
+        const tbody = table.querySelector('tbody');
+        const headerRow = table.querySelector('thead tr');
 
-    if (appState.comparisonTools.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="4">Select tools to compare</td></tr>';
-        return;
-    }
+        if (!tbody || !headerRow) {
+            console.warn('updateComparisonTable: Table structure incomplete');
+            return;
+        }
 
-    // Add comparison rows
-    const comparisonData = [
-        ['Company', ...appState.comparisonTools.map(t => t.company)],
-        ['Category', ...appState.comparisonTools.map(t => t.primaryCategory.replace('-', ' '))],
-        ['Quality Score', ...appState.comparisonTools.map(t => `${t.performance.quality}/10`)],
-        ['Popularity', ...appState.comparisonTools.map(t => `${t.analytics.popularity}%`)],
-        ['ROI Score', ...appState.comparisonTools.map(t => `${t.roiScore}%`)],
-        ['Pricing', ...appState.comparisonTools.map(t => `$${t.pricing.monthlyCost}/${t.pricing.model}`)]
-    ];
+        // Update headers
+        const headers = headerRow.querySelectorAll('th');
+        if (headers[0]) headers[0].textContent = 'Metric';
 
-    comparisonData.forEach(rowData => {
-        const row = document.createElement('tr');
-        rowData.forEach(cellData => {
-            const cell = document.createElement('td');
-            cell.textContent = cellData;
-            row.appendChild(cell);
+        appState.comparisonTools.forEach((tool, index) => {
+            if (headers[index + 1] && tool.name) {
+                headers[index + 1].textContent = tool.name;
+            }
         });
-        tbody.appendChild(row);
-    });
+
+        // Clear existing rows
+        tbody.innerHTML = '';
+
+        if (appState.comparisonTools.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="4">Select tools to compare</td></tr>';
+            return;
+        }
+
+        // Add comparison rows with safe property access
+        const comparisonData = [
+            ['Company', ...appState.comparisonTools.map(t => t.company || 'N/A')],
+            ['Category', ...appState.comparisonTools.map(t => (t.primaryCategory || t.category || 'N/A').replace('-', ' '))],
+            ['Quality Score', ...appState.comparisonTools.map(t => t.performance?.quality ? `${t.performance.quality}/10` : t.quality || 'N/A')],
+            ['Popularity', ...appState.comparisonTools.map(t => t.analytics?.popularity ? `${t.analytics.popularity}%` : t.popularity || 'N/A')],
+            ['ROI Score', ...appState.comparisonTools.map(t => t.roiScore ? `${t.roiScore}%` : 'N/A')],
+            ['Pricing', ...appState.comparisonTools.map(t => {
+                if (t.pricing?.monthlyCost !== undefined) {
+                    return `$${t.pricing.monthlyCost}/${t.pricing.model}`;
+                }
+                return t.pricing || t.price || 'N/A';
+            })]
+        ];
+
+        comparisonData.forEach(rowData => {
+            const row = document.createElement('tr');
+            rowData.forEach(cellData => {
+                const cell = document.createElement('td');
+                cell.textContent = cellData;
+                row.appendChild(cell);
+            });
+            tbody.appendChild(row);
+        });
+
+    } catch (error) {
+        console.error('Error updating comparison table:', error);
+    }
 }
 
 // Community features
