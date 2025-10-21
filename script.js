@@ -983,74 +983,6 @@ function applyFiltersAndSearch() {
     console.log(`🔍 Filtered to ${filteredTools.length} tools`);
 }
 
-// Comparison functionality
-let comparisonModels = [];
-
-function addToComparison(modelId) {
-    const model = aiVideoModels.find(m => m.id === modelId);
-    
-    if (comparisonModels.length < 2 && !comparisonModels.find(m => m.id === modelId)) {
-        comparisonModels.push(model);
-        updateComparisonTable();
-        
-        // Show success message
-        showNotification(`${model.name} added to comparison`);
-    } else if (comparisonModels.find(m => m.id === modelId)) {
-        showNotification(`${model.name} is already in comparison`);
-    } else {
-        showNotification('Maximum 2 models can be compared at once');
-    }
-}
-
-function updateComparisonTable() {
-    const tableHead = document.querySelector('#comparisonTable thead tr');
-    const tableBody = document.querySelector('#comparisonTable tbody');
-    
-    // Update table headers
-    const headers = tableHead.querySelectorAll('th');
-    headers[0].textContent = 'Feature';
-    headers[1].textContent = comparisonModels[0] ? comparisonModels[0].name : 'Select Model';
-    headers[2].textContent = comparisonModels[1] ? comparisonModels[1].name : 'Select Model';
-    
-    // Update table body
-    tableBody.innerHTML = `
-        <tr>
-            <td>Company</td>
-            <td>${comparisonModels[0] ? comparisonModels[0].company : '-'}</td>
-            <td>${comparisonModels[1] ? comparisonModels[1].company : '-'}</td>
-        </tr>
-        <tr>
-            <td>Quality</td>
-            <td>${comparisonModels[0] ? comparisonModels[0].quality + '%' : '-'}</td>
-            <td>${comparisonModels[1] ? comparisonModels[1].quality + '%' : '-'}</td>
-        </tr>
-        <tr>
-            <td>Speed</td>
-            <td>${comparisonModels[0] ? comparisonModels[0].speed + '%' : '-'}</td>
-            <td>${comparisonModels[1] ? comparisonModels[1].speed + '%' : '-'}</td>
-        </tr>
-        <tr>
-            <td>Ease of Use</td>
-            <td>${comparisonModels[0] ? comparisonModels[0].easeOfUse + '%' : '-'}</td>
-            <td>${comparisonModels[1] ? comparisonModels[1].easeOfUse + '%' : '-'}</td>
-        </tr>
-        <tr>
-            <td>Pricing</td>
-            <td>${comparisonModels[0] ? comparisonModels[0].price : '-'}</td>
-            <td>${comparisonModels[1] ? comparisonModels[1].price : '-'}</td>
-        </tr>
-        <tr>
-            <td>Rating</td>
-            <td>${comparisonModels[0] ? comparisonModels[0].rating + '/10' : '-'}</td>
-            <td>${comparisonModels[1] ? comparisonModels[1].rating + '/10' : '-'}</td>
-        </tr>
-        <tr>
-            <td>Category</td>
-            <td>${comparisonModels[0] ? formatCategory(comparisonModels[0].category) : '-'}</td>
-            <td>${comparisonModels[1] ? formatCategory(comparisonModels[1].category) : '-'}</td>
-        </tr>
-    `;
-}
 
 function formatCategory(category) {
     const categories = {
@@ -1610,7 +1542,7 @@ function updateComparisonTable() {
 
     // Update headers
     const headers = headerRow.querySelectorAll('th');
-    headers[0] = 'Metric';
+    headers[0].textContent = 'Metric';
 
     appState.comparisonTools.forEach((tool, index) => {
         if (headers[index + 1]) {
