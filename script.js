@@ -642,6 +642,12 @@ const appState = {
         useCase: 'all',
         pricing: 'all',
         sortBy: 'popularity'
+    },
+    pagination: {
+        currentPage: 1,
+        itemsPerPage: 12,
+        totalPages: 1,
+        totalItems: 0
     }
 };
 
@@ -666,7 +672,7 @@ function initializeApplication() {
 
     // Initialize all components
     populateVibeGrid();
-    populateModels(aiToolsDatabase);
+    displayToolsWithPagination(aiToolsDatabase);
     populateWorkflows();
     setupEventListeners();
     animateStats();
@@ -751,7 +757,9 @@ function selectVibe(vibeKey) {
 
     console.log(`Found ${vibeTools.length} tools for vibe ${vibeKey}:`, vibeTools.map(t => t.name));
 
-    populateModels(vibeTools);
+    // Reset to page 1 when selecting a vibe
+    appState.pagination.currentPage = 1;
+    displayToolsWithPagination(vibeTools);
 
     if (vibeTools.length > 0) {
         showNotification(`✨ ${vibe.name}: ${vibeTools.length} AI tools ready!`);
@@ -889,6 +897,16 @@ function setupEventListeners() {
     if (pricingFilter) pricingFilter.addEventListener('change', handleFilters);
     if (sortFilter) sortFilter.addEventListener('change', handleFilters);
 
+    // Pagination functionality
+    const prevPageBtn = document.getElementById('prevPageBtn');
+    const nextPageBtn = document.getElementById('nextPageBtn');
+    if (prevPageBtn) {
+        prevPageBtn.addEventListener('click', goToPreviousPage);
+    }
+    if (nextPageBtn) {
+        nextPageBtn.addEventListener('click', goToNextPage);
+    }
+
     // Vibe selection
     document.querySelectorAll('.vibe-card').forEach(card => {
         card.addEventListener('click', function() {
@@ -922,8 +940,11 @@ function handleFilters() {
     applyFiltersAndSearch();
 }
 
-// Enhanced search with better algorithm
+// Enhanced search with better algorithm and pagination
 function applyFiltersAndSearch() {
+    // Reset to first page when filters change
+    appState.pagination.currentPage = 1;
+
     let filteredTools = [...aiToolsDatabase];
     console.log(`🔍 Starting search with ${aiToolsDatabase.length} tools`);
 
@@ -1000,10 +1021,90 @@ function applyFiltersAndSearch() {
         }
     });
 
-    populateModels(filteredTools);
+    // Use pagination
+    displayToolsWithPagination(filteredTools);
     console.log(`🔍 Filtered to ${filteredTools.length} tools`);
 }
 
+// Pagination Functions
+
+// Display tools with pagination
+function displayToolsWithPagination(tools) {
+    // Calculate pagination
+    const start = (appState.pagination.currentPage - 1) * appState.pagination.itemsPerPage;
+    const end = start + appState.pagination.itemsPerPage;
+    const pageTools = tools.slice(start, end);
+
+    // Update pagination state
+    appState.pagination.totalPages = Math.ceil(tools.length / appState.pagination.itemsPerPage);
+    appState.pagination.totalItems = tools.length;
+
+    // Display the tools for this page
+    populateModels(pageTools);
+
+    // Update pagination controls
+    updatePaginationControls();
+}
+
+// Update pagination controls (buttons and info display)
+function updatePaginationControls() {
+    const prevBtn = document.getElementById('prevPageBtn');
+    const nextBtn = document.getElementById('nextPageBtn');
+    const pageInfo = document.getElementById('pageInfo');
+    const resultsInfo = document.getElementById('resultsInfo');
+    const paginationContainer = document.getElementById('paginationContainer');
+
+    if (!prevBtn || !nextBtn || !pageInfo || !resultsInfo || !paginationContainer) {
+        console.warn('updatePaginationControls: Pagination elements not found');
+        return;
+    }
+
+    // Hide pagination if no results
+    if (appState.pagination.totalItems === 0) {
+        paginationContainer.style.display = 'none';
+        return;
+    }
+
+    paginationContainer.style.display = 'flex';
+
+    // Enable/disable buttons
+    prevBtn.disabled = appState.pagination.currentPage === 1;
+    nextBtn.disabled = appState.pagination.currentPage === appState.pagination.totalPages || appState.pagination.totalPages === 0;
+
+    // Update page info
+    pageInfo.textContent = `Page ${appState.pagination.currentPage} of ${appState.pagination.totalPages}`;
+
+    // Update results info
+    const start = (appState.pagination.currentPage - 1) * appState.pagination.itemsPerPage + 1;
+    const end = Math.min(start + appState.pagination.itemsPerPage - 1, appState.pagination.totalItems);
+    resultsInfo.textContent = `Showing ${start}-${end} of ${appState.pagination.totalItems} tools`;
+}
+
+// Navigate to previous page
+function goToPreviousPage() {
+    if (appState.pagination.currentPage > 1) {
+        appState.pagination.currentPage--;
+        applyFiltersAndSearch();
+        scrollToModelsSection();
+    }
+}
+
+// Navigate to next page
+function goToNextPage() {
+    if (appState.pagination.currentPage < appState.pagination.totalPages) {
+        appState.pagination.currentPage++;
+        applyFiltersAndSearch();
+        scrollToModelsSection();
+    }
+}
+
+// Scroll to models section (smooth scroll to top of tools grid)
+function scrollToModelsSection() {
+    const modelsSection = document.getElementById('models');
+    if (modelsSection) {
+        modelsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
 
 function formatCategory(category) {
     const categories = {
