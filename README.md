@@ -343,27 +343,37 @@ Have an idea? We'd love to hear it!
 
 ## 📋 Current Status
 
-### Version 1.0 (Beta)
+### Version 1.0.1 (Beta) - Updated 2025-10-21
 
 **Status:** Active development
-**Stability:** Beta (some known bugs)
-**Production Ready:** Not yet
+**Stability:** Beta (critical bugs FIXED ✅)
+**Production Ready:** Getting closer! Core features now work correctly.
 
-### Known Issues
+### Recent Updates (v1.0.1)
 
-See `CODE_REVIEW.md` for detailed analysis, but key issues:
-1. ⚠️ Comparison feature has critical bugs (being fixed)
-2. ⚠️ Database schema inconsistency across some tools
-3. ⚠️ Missing input validation in some areas
+✅ **ALL PRIORITY 1 CRITICAL BUGS FIXED!**
+1. ✅ Comparison feature now works (fixed undefined variable bug)
+2. ✅ Table headers display correctly (fixed DOM manipulation)
+3. ✅ Removed 67 lines of duplicate code
+4. ✅ Added freemium badge styling (green-to-orange gradient)
+
+**Commit:** `6922ac4` - All critical bugs resolved
+
+### Remaining Known Issues
+
+See `CODE_REVIEW.md` for detailed analysis:
+1. ⚠️ Database schema inconsistency across some tools (Priority 2)
+2. ⚠️ Missing input validation in some areas (Priority 2)
+3. ⚠️ No pagination (affects performance with many tools) (Priority 3)
 
 **All issues are documented in `TODO.md` with fix priorities.**
 
 ### Roadmap
 
 **Short Term (Next 2 weeks):**
-- ✅ Fix critical bugs
-- ✅ Standardize database schema
-- ✅ Add input validation
+- ✅ Fix critical bugs (COMPLETED 2025-10-21!)
+- ⬜ Standardize database schema
+- ⬜ Add input validation
 - ⬜ Implement pagination
 - ⬜ Improve accessibility
 
@@ -394,11 +404,19 @@ See `TODO.md` for complete development checklist.
 - **GETTING_STARTED.md** - Beginner's guide to the codebase
 - **CODE_REVIEW.md** - Comprehensive code analysis
 - **TODO.md** - Development roadmap with priorities
+- **CLAUDE_CODE_TIPS.md** - Session management and workflow tips
+- **CHANGELOG.md** - Complete version history and changes
 
 ### For Contributors
+- **CONTRIBUTING.md** - Complete contribution guidelines
+  - Development workflow
+  - Commit message standards
+  - Code style guide
+  - Testing requirements
+  - Pull request process
 - Review `GETTING_STARTED.md` for code structure
 - Check `TODO.md` for ways to help
-- Follow existing code patterns
+- Follow `CONTRIBUTING.md` standards
 
 ---
 
@@ -440,19 +458,21 @@ Use browser DevTools (F12) → Toggle Device Toolbar
 ### Common Issues
 
 **Problem:** Comparison feature doesn't work
-- **Status:** Known bug, fix in progress
-- **Workaround:** See `TODO.md` Priority 1 for fix
-- **ETA:** Should be fixed in next commit
+- **Status:** ✅ FIXED in v1.0.1 (commit `6922ac4`)
+- **Solution:** Update to latest version or pull latest changes
+- **Fixed:** 2025-10-21
 
 **Problem:** Some tool badges don't show colors
-- **Status:** Known bug (missing freemium style)
-- **Fix:** See `TODO.md` Priority 1
-- **Quick fix:** Add `.model-badge.freemium` style to CSS
+- **Status:** ✅ FIXED in v1.0.1 (commit `6922ac4`)
+- **Solution:** Freemium badges now have green-to-orange gradient
+- **Fixed:** 2025-10-21
 
 **Problem:** Tools not filtering correctly
-- **Cause:** Database schema inconsistency
-- **Fix:** Long-term fix in `TODO.md` Priority 2
+- **Status:** ⚠️ Partial issue (database schema inconsistency)
+- **Cause:** Some tools use different data structure
+- **Fix:** Priority 2 task in `TODO.md`
 - **Impact:** Affects ~25% of tools
+- **Workaround:** Most common filters work correctly
 
 ### Getting Help
 
