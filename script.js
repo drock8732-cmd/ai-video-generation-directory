@@ -857,6 +857,7 @@ const appState = {
     selectedVibe: null,
     selectedTools: [],
     comparisonTools: [],
+    pricingCalculator: [],
     searchTerm: '',
     filters: {
         category: 'all',
@@ -1054,6 +1055,10 @@ function createToolCard(tool) {
                     <button class="btn btn-secondary" onclick="addToComparison('${tool.id}')">
                         <i class="fas fa-balance-scale"></i>
                         Compare
+                    </button>
+                    <button class="btn btn-secondary" onclick="addToCalculator('${tool.id}')">
+                        <i class="fas fa-calculator"></i>
+                        Calculator
                     </button>
                 </div>
             </div>
@@ -2257,6 +2262,89 @@ function updateToolCardBookmarks(toolId) {
 }
 
 // Export functions for external use
+// Pricing Calculator Functions
+function togglePricingCalculator() {
+    const panel = document.getElementById('pricingCalculatorPanel');
+    panel.classList.toggle('active');
+}
+
+function addToCalculator(toolId) {
+    const tool = findToolById(toolId);
+    if (!tool) {
+        showNotification('Tool not found');
+        return;
+    }
+
+    if (appState.pricingCalculator.find(t => t.id === toolId)) {
+        showNotification(`${tool.name} is already in calculator`);
+        return;
+    }
+
+    appState.pricingCalculator.push(tool);
+    updateCalculator();
+    showNotification(`${tool.name} added to calculator`);
+}
+
+function removeFromCalculator(toolId) {
+    appState.pricingCalculator = appState.pricingCalculator.filter(t => t.id !== toolId);
+    updateCalculator();
+}
+
+function clearCalculator() {
+    appState.pricingCalculator = [];
+    updateCalculator();
+    showNotification('Calculator cleared');
+}
+
+function updateCalculator() {
+    const toolsList = document.getElementById('calculatorToolsList');
+    const badge = document.getElementById('calculatorBadge');
+    const totalTools = document.getElementById('totalTools');
+    const freeTools = document.getElementById('freeTools');
+    const totalCost = document.getElementById('totalCost');
+
+    badge.textContent = appState.pricingCalculator.length;
+
+    if (appState.pricingCalculator.length === 0) {
+        toolsList.innerHTML = '<p class="calculator-empty">Click "+ Calculator" button on any tool to start building your stack!</p>';
+        totalTools.textContent = '0';
+        freeTools.textContent = '0';
+        totalCost.textContent = '$0';
+        return;
+    }
+
+    let monthlyCost = 0;
+    let freeCount = 0;
+
+    toolsList.innerHTML = appState.pricingCalculator.map(tool => {
+        let cost = 0;
+        if (tool.pricing && typeof tool.pricing === 'object') {
+            cost = tool.pricing.monthlyCost || 0;
+        }
+        if (cost === 0) freeCount++;
+        monthlyCost += cost;
+
+        return `
+            <div class="calculator-tool-item">
+                <div class="calculator-tool-info">
+                    <span class="calculator-tool-logo">${tool.logo}</span>
+                    <div>
+                        <strong>${tool.name}</strong>
+                        <div class="calculator-tool-price">${cost > 0 ? '$' + cost + '/mo' : 'Free'}</div>
+                    </div>
+                </div>
+                <button class="calculator-remove-btn" onclick="removeFromCalculator('${tool.id}')" title="Remove">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        `;
+    }).join('');
+
+    totalTools.textContent = appState.pricingCalculator.length;
+    freeTools.textContent = freeCount;
+    totalCost.textContent = '$' + monthlyCost;
+}
+
 window.AIIntelligenceHub = {
     selectVibe,
     addToComparison,
