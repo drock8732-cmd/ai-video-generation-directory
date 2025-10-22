@@ -973,6 +973,52 @@ const workflowTemplates = {
                 consistency: 'High'
             }
         }
+    ],
+    'development': [
+        {
+            id: 'saas-mvp-workflow',
+            name: 'Build a SaaS MVP',
+            description: 'Rapidly build and launch a minimum viable product for your SaaS idea',
+            category: 'development',
+            difficulty: 'advanced',
+            estimatedTime: 600,
+            tools: ['replit-agent', 'framer-ai', 'chatgpt'],
+            steps: [
+                'Define product requirements and user stories with ChatGPT',
+                'Build backend and core features with Replit Agent',
+                'Design and develop landing page with Framer AI',
+                'Integrate payment and authentication systems',
+                'Test, deploy, and launch MVP'
+            ],
+            benefits: {
+                timeSaved: '80 hours/week',
+                costSavings: 4000,
+                outputQuality: 'Professional',
+                consistency: 'High'
+            }
+        },
+        {
+            id: 'api-documentation-workflow',
+            name: 'API Documentation',
+            description: 'Create comprehensive, developer-friendly API documentation',
+            category: 'development',
+            difficulty: 'intermediate',
+            estimatedTime: 240,
+            tools: ['notebooklm', 'claude', 'grammarly'],
+            steps: [
+                'Analyze existing codebase and APIs with NotebookLM',
+                'Generate documentation structure and examples with Claude',
+                'Write detailed endpoint descriptions and use cases',
+                'Polish technical writing with Grammarly',
+                'Publish and maintain documentation site'
+            ],
+            benefits: {
+                timeSaved: '30 hours/week',
+                costSavings: 1500,
+                outputQuality: 'Excellent',
+                consistency: 'Very High'
+            }
+        }
     ]
 };
 
