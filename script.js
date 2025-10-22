@@ -1386,6 +1386,30 @@ function viewWorkflow(workflowId) {
 }
 
 function showWorkflowModal(workflow) {
+    // Calculate total monthly cost from actual tool prices
+    let totalMonthlyCost = 0;
+    const workflowTools = workflow.tools.map(toolId => {
+        const tool = findToolById(toolId);
+        if (tool) {
+            // Get monthly cost from tool pricing
+            let toolCost = 0;
+            if (tool.pricing) {
+                if (typeof tool.pricing === 'object' && tool.pricing.monthlyCost !== undefined) {
+                    toolCost = tool.pricing.monthlyCost;
+                } else if (typeof tool.pricing === 'string') {
+                    // Parse string pricing like "$20/month" or "freemium"
+                    const match = tool.pricing.match(/\$(\d+)/);
+                    if (match) {
+                        toolCost = parseInt(match[1]);
+                    }
+                }
+            }
+            totalMonthlyCost += toolCost;
+            return { ...tool, calculatedCost: toolCost };
+        }
+        return null;
+    }).filter(Boolean);
+
     // Create modal overlay
     const modalOverlay = document.createElement('div');
     modalOverlay.className = 'modal-overlay';
@@ -1405,7 +1429,7 @@ function showWorkflowModal(workflow) {
                     </div>
                     <div class="meta-item">
                         <i class="fas fa-dollar-sign"></i>
-                        <span><strong>Cost:</strong> $${workflow.totalCost}/month</span>
+                        <span><strong>Total Cost:</strong> $${totalMonthlyCost}/month</span>
                     </div>
                     <div class="meta-item">
                         <i class="fas fa-signal"></i>
@@ -1432,30 +1456,45 @@ function showWorkflowModal(workflow) {
                 </div>
 
                 <div class="workflow-tools-detailed">
-                    <h3>Tools Used</h3>
-                    <div class="tools-grid">
-                        ${workflow.tools.map(toolId => {
-                            const tool = aiToolsDatabase.find(t => t.id === toolId);
-                            return tool ? `
-                                <div class="workflow-tool-card">
-                                    <div class="tool-logo">${tool.logo}</div>
-                                    <div class="tool-info">
+                    <h3>Tools Used (${workflowTools.length})</h3>
+                    <div class="tools-grid-workflow">
+                        ${workflowTools.map(tool => `
+                            <div class="workflow-tool-card-enhanced">
+                                <div class="tool-header-workflow">
+                                    <div class="tool-logo-large">${tool.logo}</div>
+                                    <div class="tool-info-workflow">
                                         <h4>${tool.name}</h4>
-                                        <p>${tool.company}</p>
+                                        <p class="tool-company">${tool.company}</p>
                                     </div>
                                 </div>
-                            ` : '';
-                        }).join('')}
+                                <div class="tool-description-workflow">
+                                    <p>${tool.description ? tool.description.substring(0, 120) + '...' : 'AI-powered tool for enhanced productivity'}</p>
+                                </div>
+                                <div class="tool-footer-workflow">
+                                    <div class="tool-price-workflow">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        <span>${tool.calculatedCost > 0 ? '$' + tool.calculatedCost + '/mo' : 'Free'}</span>
+                                    </div>
+                                    <button class="btn-view-tool" onclick="event.stopPropagation(); viewTool('${tool.id}')">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        View Tool
+                                    </button>
+                                </div>
+                            </div>
+                        `).join('')}
                     </div>
                 </div>
 
                 <div class="workflow-steps">
-                    <h3>Step by Step Guide</h3>
-                    <ol class="steps-list">
+                    <h3>Step-by-Step Guide</h3>
+                    <ol class="steps-list-interactive">
                         ${workflow.steps.map((step, index) => `
-                            <li class="step-item">
-                                <span class="step-number">${index + 1}</span>
-                                <span class="step-text">${step}</span>
+                            <li class="step-item-interactive">
+                                <input type="checkbox" id="step-${workflow.id}-${index}" class="step-checkbox">
+                                <label for="step-${workflow.id}-${index}">
+                                    <span class="step-number-interactive">${index + 1}</span>
+                                    <span class="step-text-interactive">${step}</span>
+                                </label>
                             </li>
                         `).join('')}
                     </ol>
@@ -1684,6 +1723,119 @@ function closeModal() {
         modal.remove();
         document.body.style.overflow = ''; // Restore scrolling
     }
+}
+
+// View individual tool in modal
+function viewTool(toolId) {
+    const tool = findToolById(toolId);
+    if (!tool) {
+        showNotification('Tool not found');
+        return;
+    }
+
+    // Close existing modal if any
+    closeModal();
+
+    // Create modal overlay
+    const modalOverlay = document.createElement('div');
+    modalOverlay.className = 'modal-overlay';
+
+    // Calculate pricing display
+    let pricingDisplay = 'Free';
+    if (tool.pricing) {
+        if (typeof tool.pricing === 'object') {
+            if (tool.pricing.monthlyCost > 0) {
+                pricingDisplay = `$${tool.pricing.monthlyCost}/month`;
+            }
+            if (tool.pricing.freeTier) {
+                pricingDisplay += ' (Free tier available)';
+            }
+        } else if (typeof tool.pricing === 'string') {
+            pricingDisplay = tool.pricing;
+        }
+    }
+
+    modalOverlay.innerHTML = `
+        <div class="modal-content tool-detail-modal">
+            <div class="modal-header">
+                <div class="tool-header-modal">
+                    <div class="tool-logo-modal">${tool.logo}</div>
+                    <div>
+                        <h2>${tool.name}</h2>
+                        <p class="tool-company-modal">${tool.company}</p>
+                    </div>
+                </div>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="tool-badge-modal ${tool.pricing.model}">${tool.pricing.model}</div>
+
+                <p class="tool-description-modal">${tool.description}</p>
+
+                <div class="tool-detail-section">
+                    <h3>Pricing</h3>
+                    <p class="tool-pricing-detail">${pricingDisplay}</p>
+                </div>
+
+                <div class="tool-detail-section">
+                    <h3>Key Features</h3>
+                    <ul class="features-list-modal">
+                        ${tool.features?.map(feature => `<li>${feature}</li>`).join('') || '<li>No features listed</li>'}
+                    </ul>
+                </div>
+
+                <div class="tool-detail-section">
+                    <h3>Use Cases</h3>
+                    <div class="use-cases-grid">
+                        ${tool.useCases?.map(useCase => `<span class="use-case-tag">${useCase}</span>`).join('') || '<span>General purpose</span>'}
+                    </div>
+                </div>
+
+                <div class="tool-detail-section">
+                    <h3>Performance Metrics</h3>
+                    <div class="metrics-grid-modal">
+                        <div class="metric-card-modal">
+                            <div class="metric-value-modal">${tool.performance.quality}%</div>
+                            <div class="metric-label-modal">Quality</div>
+                        </div>
+                        <div class="metric-card-modal">
+                            <div class="metric-value-modal">${tool.performance.speed}%</div>
+                            <div class="metric-label-modal">Speed</div>
+                        </div>
+                        <div class="metric-card-modal">
+                            <div class="metric-value-modal">${tool.analytics.popularity}%</div>
+                            <div class="metric-label-modal">Popularity</div>
+                        </div>
+                        <div class="metric-card-modal">
+                            <div class="metric-value-modal">${tool.community.rating}/5</div>
+                            <div class="metric-label-modal">Rating</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+                <button class="btn btn-secondary" onclick="closeModal(); addToComparison('${tool.id}')">
+                    <i class="fas fa-balance-scale"></i>
+                    Compare
+                </button>
+                <a href="${tool.website}" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-external-link-alt"></i>
+                    Visit Website
+                </a>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(modalOverlay);
+    document.body.style.overflow = 'hidden';
+
+    // Add click outside to close
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+            closeModal();
+        }
+    });
 }
 
 function startWorkflow(workflowId) {
