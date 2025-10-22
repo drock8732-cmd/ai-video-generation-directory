@@ -9,23 +9,106 @@ This checklist tracks all improvements needed for your project. Check off items 
 ## 🚀 NEW! Priority 0: VERSION 1.1.0 - Major Platform Enhancement ⭐
 
 **See IMPLEMENTATION_PLAN_V2.md for complete details!**
+**✨ UPDATED after Claude AI consultation - new priority order based on user impact!**
 
-This is your roadmap to transform from a basic directory (22 tools, 2 workflows) into a comprehensive AI platform (60+ tools, 15+ workflows). Estimated: 11-16 hours across 5 sessions.
+**REFINED PRIORITY ORDER:**
+1. ⚡ Fix Workflows (1hr) → Immediate value, fixes broken UX
+2. 💰 Pricing Calculator (2hr) → Unique value prop, shareable
+3. 🛠️ Add 10 Critical Tools (2hr) → Fill biggest gaps
+4. 📋 Add 5 Strategic Workflows (2hr) → Shareable combinations
+5. ✨ Standout Features (3hr) → Differentiation
 
-### Session 1: Clickable Workflow Modals (1-2 hours)
+### Session 1: Fix Workflow Modals (1hr - START HERE!) ⚡
+**HIGHEST IMPACT - Makes existing workflows actually usable**
 - [ ] Enhance showWorkflowModal() to show tool details
 - [ ] Add step-by-step guide with interactive checkboxes
 - [ ] Display each tool with logo, description, and price
 - [ ] Add "View Tool" buttons that open individual tool modals
-- [ ] Add "Open All Tools" button (opens all workflow tools in tabs)
+- [ ] Calculate and display total monthly cost for workflow
+- [ ] Add "Tools Used" section with clickable links
 - [ ] Test workflow modals with existing 2 workflows
-- [ ] Commit: "feat: add interactive workflow modals with tool details"
+- [ ] Commit: "feat: add interactive workflow modals with tool details and pricing"
 
-**Start next session with:** `Read IMPLEMENTATION_PLAN_V2.md (Session 1)`
+**Start next session with:** `Read IMPLEMENTATION_PLAN_V2.md (Priority 1)`
 
 ---
 
-### Session 2: Add 13 New Workflows (2-3 hours)
+### Session 2: Build Pricing Calculator (2hr) 💰
+**HIGH IMPACT - Unique value proposition, helps users make decisions**
+- [ ] Add "Calculate My Stack" button/icon to header
+- [ ] Create pricing calculator modal/sidebar
+- [ ] Add "Add to Calculator" button on each tool card
+- [ ] Display selected tools with individual costs
+- [ ] Show total monthly cost (sum of all tools)
+- [ ] Show free tier limits for each tool
+- [ ] Add "Export" button (PDF or image of breakdown)
+- [ ] Add "Share My Stack" button (generate shareable link/image)
+- [ ] Calculate ROI (time saved vs cost) - optional
+- [ ] Test calculator with multiple tools
+- [ ] Commit: "feat: add pricing calculator with export and sharing"
+
+**Why this moved to #2:** Claude AI emphasized this as a unique differentiator and shareable content
+
+---
+
+### Session 3: Add 10 Critical Missing Tools (2hr) 🛠️
+**HIGH IMPACT - These specific tools are trending and most requested**
+
+Claude AI identified these as most valuable to add:
+- [ ] Cursor - AI code editor (already have, ensure proper metadata)
+- [ ] Perplexity - AI search engine (already have, ensure proper metadata)
+- [ ] ElevenLabs - Voice AI/cloning (already have, ensure proper metadata)
+- [ ] Anthropic Artifacts - Interactive creation (NEW - Claude feature)
+- [ ] NotebookLM - Google's research assistant (NEW - viral in 2024)
+- [ ] Replit Agent - Full-stack builder (NEW - code generation)
+- [ ] Framer AI - Website builder (NEW - no-code)
+- [ ] Opus Clip - Short-form video creator (NEW - social media)
+- [ ] Enhance Runway entry (update to latest features)
+- [ ] Enhance Pika Labs entry (add new features)
+- [ ] Test all tools display correctly
+- [ ] Test filters work with new tools
+- [ ] Commit: "feat: add 10 critical AI tools based on user demand"
+
+**Why this moved to #3:** These specific tools fill the biggest gaps and are highly requested
+
+---
+
+### Session 4: Add 5 High-Value Strategic Workflows (2hr) 📋
+**MEDIUM IMPACT - Unique shareable combinations**
+
+Claude AI recommended these specific workflow combinations:
+- [ ] "AI Employee Onboarding" workflow (Synthesia + Gamma + Copy.ai)
+- [ ] "Technical Documentation Suite" workflow (NotebookLM + Claude + DeepL)
+- [ ] "Personal Brand Builder" workflow (HeyGen + ElevenLabs + Jasper)
+- [ ] "Startup Launch Kit" workflow (v0.dev + Bolt.new + Copy.ai)
+- [ ] "Research to Revenue" workflow (Perplexity + Claude + Gamma)
+- [ ] Ensure each shows tool logos, steps, and total cost
+- [ ] Test all workflow modals display correctly
+- [ ] Commit: "feat: add 5 strategic high-value workflows"
+
+**Why this moved to #4:** Need tools from Session 3 first, then create combinations
+
+---
+
+### Session 5: Add Standout Features (3hr) ✨
+**MEDIUM IMPACT - Differentiation from competitors**
+- [ ] Tool Compatibility Matrix (show which tools work together)
+- [ ] "Stack Builder" drag-and-drop interface for custom workflows
+- [ ] Alternative tools suggestions ("Looking for ChatGPT alternatives?")
+- [ ] Free Tier Maximizer guide (get most value from free tiers)
+- [ ] Social sharing: "I save $X/month" badges
+- [ ] Social sharing: Visual workflow recipe cards
+- [ ] Social sharing: Tool comparison graphics
+- [ ] Export workflows as images
+- [ ] Test all features on mobile
+- [ ] Update CHANGELOG.md with v1.1.0 release notes
+- [ ] Commit: "feat: add standout differentiation features"
+
+**Why this is #5:** These require the foundation from sessions 1-4 to be most effective
+
+---
+
+### ORIGINAL Session 2-4 Tasks (Now Lower Priority)
 - [ ] Add YouTube Video Production workflow
 - [ ] Add Podcast Creation workflow
 - [ ] Add Newsletter Writing workflow

@@ -1,19 +1,90 @@
 # Implementation Plan v2.0 - Major Platform Enhancement
 
 **Created:** October 21, 2025
+**Updated:** October 21, 2025 (after Claude AI consultation)
 **Target Version:** v1.1.0 (major feature update)
 **Estimated Total Time:** 8-12 hours across multiple sessions
 
 ---
 
-## 🎯 Overview
+## 🆕 CLAUDE AI CONSULTATION INSIGHTS (PRIORITY ORDER UPDATED!)
+
+**Consulted with Claude.ai for strategic improvements. Key insights integrated below:**
+
+### **REFINED PRIORITY ORDER** (Based on User Impact):
+
+**PRIORITY 1: Fix Existing Workflows** ⚡ (1hr - HIGHEST IMPACT)
+- Make workflow cards clickable/interactive
+- Display tool logos within each workflow
+- Add step-by-step guides to workflows
+- Show total monthly cost per workflow
+- Add "Tools Used" section with links to each tool
+**Why First:** Immediate value, fixes existing broken UX, users can actually USE workflows
+
+**PRIORITY 2: Add Pricing Calculator** 💰 (2hr - HIGH IMPACT)
+- Select multiple tools → see combined monthly cost
+- Show free tier limits
+- Calculate ROI based on usage
+- Export/share pricing breakdowns
+**Why Second:** Unique value prop, helps users make decisions, shareable content
+
+**PRIORITY 3: Add 10 Critical Missing Tools** 🛠️ (2hr - HIGH IMPACT)
+Tools identified by Claude AI as most valuable:
+1. **Cursor** - AI code editor (developer favorite)
+2. **Perplexity** - AI search engine (research essential)
+3. **ElevenLabs** - Voice AI/cloning (content creation)
+4. **Runway** - Video generation (already have Gen-2, update to full)
+5. **Anthropic Artifacts** - Interactive creation (Claude feature)
+6. **NotebookLM** - Google's research assistant (viral in 2024)
+7. **Replit Agent** - Full-stack builder (code generation)
+8. **Framer AI** - Website builder (no-code)
+9. **Opus Clip** - Short-form video creator (social media)
+10. **Pika Labs** - Video generation (already have but enhance)
+**Why Third:** These specific tools are trending and highly requested
+
+**PRIORITY 4: Add 5 High-Value Workflows** 📋 (2hr - MEDIUM IMPACT)
+Strategic workflow combinations identified by Claude AI:
+1. **"AI Employee Onboarding"** - Synthesia + Gamma + Copy.ai
+2. **"Technical Documentation Suite"** - NotebookLM + Claude + DeepL
+3. **"Personal Brand Builder"** - HeyGen + ElevenLabs + Jasper
+4. **"Startup Launch Kit"** - v0.dev + Bolt.new + Copy.ai
+5. **"Research to Revenue"** - Perplexity + Claude + Gamma
+**Why Fourth:** These are unique, shareable, and solve real problems
+
+**PRIORITY 5: Standout Features** ✨ (3hr - MEDIUM IMPACT)
+- **Tool Compatibility Matrix** - Which tools work together
+- **"Stack Builder"** - Drag-and-drop interface for custom workflows
+- **Alternative Tools Suggestions** - "Looking for X alternatives?"
+- **Free Tier Maximizer Guide** - Get most value from free tiers
+**Why Fifth:** Differentiation features, but require more tools/workflows first
+
+### **SOCIAL SHARING FEATURES** (Add throughout implementation):
+- Generate "I save $X/month with AI tools" badges
+- Visual workflow recipe cards (Pinterest-style)
+- Tool comparison graphics (shareable on Twitter)
+- Weekly featured tool combinations
+- Export workflows as images
+
+### **TECHNICAL IMPLEMENTATION NOTES FROM CONSULTATION:**
+- Ensure workflow cards show tool logos prominently (visual appeal)
+- Add cost calculation to EVERY workflow (transparency)
+- Create shareable workflow URLs (virality)
+- Implement filtering by category AND price range
+- Add "export as image" for workflows (social sharing)
+- Show free tier limits on pricing calculator (value prop)
+
+---
+
+## 🎯 Original Overview (Updated with Consultation Insights)
 
 This plan addresses critical missing features identified:
 1. **Only 22 AI tools** (need 50+ for comprehensive coverage)
 2. **Only 2 workflows** (need 10+ across multiple categories)
-3. **Workflows not clickable** (just static cards)
-4. **Missing major 2025 AI tools** (Gemini, Droid, v0.dev, etc.)
-5. **No workflow tool details** (can't see which tools are used)
+3. **Workflows not clickable** (just static cards) ← **FIXED IN PRIORITY 1**
+4. **Missing major 2025 AI tools** (Gemini, Droid, v0.dev, etc.) ← **10 MOST CRITICAL IN PRIORITY 3**
+5. **No workflow tool details** (can't see which tools are used) ← **FIXED IN PRIORITY 1**
+6. **No pricing visibility** (users can't calculate costs) ← **FIXED IN PRIORITY 2** 🆕
+7. **No social sharing** (can't share discoveries) ← **ADDED THROUGHOUT** 🆕
 
 ---
 
