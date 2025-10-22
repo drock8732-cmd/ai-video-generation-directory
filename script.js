@@ -905,6 +905,74 @@ const workflowTemplates = {
                 consistency: 'High'
             }
         }
+    ],
+    'marketing': [
+        {
+            id: 'landing-page-workflow',
+            name: 'Landing Page Creation',
+            description: 'Design and launch high-converting landing pages for products and campaigns',
+            category: 'marketing',
+            difficulty: 'intermediate',
+            estimatedTime: 180,
+            tools: ['framer-ai', 'chatgpt', 'midjourney'],
+            steps: [
+                'Define value proposition and target audience with ChatGPT',
+                'Create hero images and visual assets with Midjourney',
+                'Build responsive landing page with Framer AI',
+                'Write compelling copy and CTAs',
+                'Test, optimize, and launch'
+            ],
+            benefits: {
+                timeSaved: '18 hours/week',
+                costSavings: 900,
+                outputQuality: 'Professional',
+                consistency: 'High'
+            }
+        },
+        {
+            id: 'social-ad-campaign-workflow',
+            name: 'Social Media Ad Campaign',
+            description: 'Create and launch data-driven social media advertising campaigns',
+            category: 'marketing',
+            difficulty: 'intermediate',
+            estimatedTime: 240,
+            tools: ['chatgpt', 'midjourney', 'capcut'],
+            steps: [
+                'Research audience and create ad strategy with ChatGPT',
+                'Design ad creatives and variations with Midjourney',
+                'Create video ads with CapCut',
+                'Write ad copy for multiple platforms',
+                'Launch, monitor, and optimize campaigns'
+            ],
+            benefits: {
+                timeSaved: '22 hours/week',
+                costSavings: 1100,
+                outputQuality: 'Professional',
+                consistency: 'Very High'
+            }
+        },
+        {
+            id: 'email-marketing-workflow',
+            name: 'Email Marketing Sequence',
+            description: 'Build automated email sequences that nurture leads and drive conversions',
+            category: 'marketing',
+            difficulty: 'beginner',
+            estimatedTime: 150,
+            tools: ['chatgpt', 'grammarly', 'notion-ai'],
+            steps: [
+                'Map customer journey and define sequence goals with ChatGPT',
+                'Write email series with compelling subject lines',
+                'Edit and optimize for clarity with Grammarly',
+                'Organize and schedule in Notion AI',
+                'Set up automation and track metrics'
+            ],
+            benefits: {
+                timeSaved: '15 hours/week',
+                costSavings: 750,
+                outputQuality: 'Professional',
+                consistency: 'High'
+            }
+        }
     ]
 };
 
