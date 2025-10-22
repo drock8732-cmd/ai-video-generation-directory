@@ -722,6 +722,72 @@ const workflowTemplates = {
                 outputQuality: 'Professional',
                 consistency: 'High'
             }
+        },
+        {
+            id: 'youtube-video-workflow',
+            name: 'YouTube Video Production',
+            description: 'Complete workflow for creating professional YouTube videos from script to upload',
+            category: 'content-creation',
+            difficulty: 'intermediate',
+            estimatedTime: 360,
+            tools: ['chatgpt', 'elevenlabs', 'capcut'],
+            steps: [
+                'Research trending topics and write script with ChatGPT',
+                'Generate voiceover narration with ElevenLabs',
+                'Create and edit video with CapCut (add visuals, effects, captions)',
+                'Design thumbnail and write SEO-optimized title/description',
+                'Upload to YouTube and optimize for discoverability'
+            ],
+            benefits: {
+                timeSaved: '25 hours/week',
+                costSavings: 1000,
+                outputQuality: 'Professional',
+                consistency: 'Very High'
+            }
+        },
+        {
+            id: 'podcast-creation-workflow',
+            name: 'Podcast Creation',
+            description: 'End-to-end podcast production from planning to distribution',
+            category: 'content-creation',
+            difficulty: 'intermediate',
+            estimatedTime: 300,
+            tools: ['chatgpt', 'elevenlabs', 'capcut'],
+            steps: [
+                'Generate episode outline and talking points with ChatGPT',
+                'Create intro/outro music and AI voice segments with ElevenLabs',
+                'Record and edit audio with CapCut (noise reduction, mixing)',
+                'Create audiogram clips for social media promotion',
+                'Distribute to podcast platforms with show notes'
+            ],
+            benefits: {
+                timeSaved: '20 hours/week',
+                costSavings: 800,
+                outputQuality: 'Professional',
+                consistency: 'High'
+            }
+        },
+        {
+            id: 'newsletter-writing-workflow',
+            name: 'Newsletter Writing',
+            description: 'Research, write, and publish engaging email newsletters consistently',
+            category: 'content-creation',
+            difficulty: 'beginner',
+            estimatedTime: 120,
+            tools: ['chatgpt', 'grammarly', 'notion-ai'],
+            steps: [
+                'Research topics and gather insights with ChatGPT',
+                'Write newsletter draft with compelling hooks and CTAs',
+                'Polish and check grammar with Grammarly',
+                'Format and organize in Notion AI',
+                'Schedule and send to email list'
+            ],
+            benefits: {
+                timeSaved: '10 hours/week',
+                costSavings: 400,
+                outputQuality: 'Professional',
+                consistency: 'Very High'
+            }
         }
     ],
     'business': [
