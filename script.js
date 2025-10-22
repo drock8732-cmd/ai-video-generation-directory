@@ -700,6 +700,122 @@ const workflowTemplates = {
                 consistency: 'High'
             }
         }
+    ],
+    'business': [
+        {
+            id: 'employee-onboarding-workflow',
+            name: 'AI Employee Onboarding',
+            description: 'Create comprehensive onboarding materials including videos, presentations, and documentation',
+            category: 'business',
+            difficulty: 'intermediate',
+            estimatedTime: 240,
+            tools: ['chatgpt', 'midjourney', 'grammarly'],
+            steps: [
+                'Draft onboarding script and documentation with ChatGPT',
+                'Create visual assets and presentation graphics with Midjourney',
+                'Polish all written materials with Grammarly',
+                'Compile into onboarding package',
+                'Test with new hire and iterate'
+            ],
+            benefits: {
+                timeSaved: '20 hours per new hire',
+                costSavings: 800,
+                outputQuality: 'Professional',
+                consistency: 'Very High'
+            }
+        },
+        {
+            id: 'startup-launch-workflow',
+            name: 'Startup Launch Kit',
+            description: 'Build your MVP, landing page, and marketing materials to launch your startup',
+            category: 'business',
+            difficulty: 'intermediate',
+            estimatedTime: 480,
+            tools: ['replit-agent', 'framer-ai', 'chatgpt'],
+            steps: [
+                'Build MVP application with Replit Agent',
+                'Create landing page and website with Framer AI',
+                'Generate marketing copy and pitch deck with ChatGPT',
+                'Set up analytics and tracking',
+                'Launch and gather feedback'
+            ],
+            benefits: {
+                timeSaved: '40 hours/week',
+                costSavings: 2000,
+                outputQuality: 'Professional',
+                consistency: 'High'
+            }
+        }
+    ],
+    'research': [
+        {
+            id: 'technical-docs-workflow',
+            name: 'Technical Documentation Suite',
+            description: 'Research, synthesize, and create comprehensive technical documentation',
+            category: 'research',
+            difficulty: 'intermediate',
+            estimatedTime: 300,
+            tools: ['notebooklm', 'claude', 'grammarly'],
+            steps: [
+                'Upload and analyze existing technical documents with NotebookLM',
+                'Generate comprehensive documentation with Claude',
+                'Create code examples and API references',
+                'Polish and ensure consistency with Grammarly',
+                'Publish and maintain documentation'
+            ],
+            benefits: {
+                timeSaved: '25 hours/week',
+                costSavings: 1200,
+                outputQuality: 'Excellent',
+                consistency: 'Very High'
+            }
+        },
+        {
+            id: 'research-to-revenue-workflow',
+            name: 'Research to Revenue',
+            description: 'Transform market research into actionable business strategies and presentations',
+            category: 'research',
+            difficulty: 'advanced',
+            estimatedTime: 360,
+            tools: ['perplexity', 'claude', 'chatgpt'],
+            steps: [
+                'Conduct comprehensive market research with Perplexity',
+                'Analyze data and generate insights with Claude',
+                'Create business strategy and recommendations with ChatGPT',
+                'Build presentation and visualizations',
+                'Present findings to stakeholders'
+            ],
+            benefits: {
+                timeSaved: '30 hours/week',
+                costSavings: 1500,
+                outputQuality: 'Excellent',
+                consistency: 'High'
+            }
+        }
+    ],
+    'creative': [
+        {
+            id: 'personal-brand-workflow',
+            name: 'Personal Brand Builder',
+            description: 'Build your personal brand with AI-generated content, visuals, and voice',
+            category: 'creative',
+            difficulty: 'intermediate',
+            estimatedTime: 420,
+            tools: ['chatgpt', 'midjourney', 'elevenlabs'],
+            steps: [
+                'Define brand identity and messaging with ChatGPT',
+                'Create visual brand assets and content with Midjourney',
+                'Generate voice content and audio branding with ElevenLabs',
+                'Build social media presence',
+                'Launch and grow your brand'
+            ],
+            benefits: {
+                timeSaved: '35 hours/week',
+                costSavings: 1800,
+                outputQuality: 'Professional',
+                consistency: 'High'
+            }
+        }
     ]
 };
 
