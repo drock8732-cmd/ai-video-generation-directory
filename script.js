@@ -648,7 +648,30 @@ const aiToolsDatabase = [
         analytics: { popularity: 88, growth: 'explosive', userSatisfaction: 93 },
         community: { rating: 4.8, reviewCount: 18000, activeUsers: '4M+' },
         roiScore: 3400,
-        website: 'https://claude.ai'
+        website: 'https://claude.ai',
+        alternatives: ['cursor', 'github-copilot', 'replit-agent']
+    },
+    {
+        id: 'capcut',
+        name: 'CapCut',
+        logo: '✂️',
+        company: 'ByteDance',
+        description: 'Free all-in-one video editing app with AI-powered features for creating engaging social media content',
+        primaryCategory: 'video-editing',
+        subcategories: ['content-creation', 'social-media', 'mobile-editing'],
+        pricing: { model: 'freemium', monthlyCost: 0, freeTier: true },
+        performance: { quality: 85, speed: 90, consistency: 87, reliability: 88 },
+        userExperience: { learningCurve: 'beginner', interfaceQuality: 91, documentation: 'good' },
+        features: ['AI auto-captions', 'Background removal', 'Text-to-speech', 'Trending effects', 'Multi-track editing'],
+        useCases: ['TikTok videos', 'Instagram Reels', 'YouTube Shorts', 'Social media content'],
+        integrations: ['TikTok', 'Direct export', 'Cloud storage'],
+        limitations: ['Pro features require subscription', 'Mobile-focused interface'],
+        vibeAlignment: { creative: 8, productive: 7, explorative: 5, relaxed: 9 },
+        analytics: { popularity: 92, growth: 'explosive', userSatisfaction: 89 },
+        community: { rating: 4.6, reviewCount: 250000, activeUsers: '200M+' },
+        roiScore: 3300,
+        website: 'https://capcut.com',
+        alternatives: ['opus-clip', 'descript', 'pictory']
     }
 ];
 
@@ -938,15 +961,36 @@ function populateModels(tools) {
 }
 
 // Populate workflows section
-function populateWorkflows() {
+function populateWorkflows(category = 'all') {
     if (!featuredWorkflows) return;
 
     featuredWorkflows.innerHTML = '';
 
-    Object.values(workflowTemplates).flat().slice(0, 6).forEach(workflow => {
+    let workflows = Object.values(workflowTemplates).flat();
+
+    // Filter by category if not 'all'
+    if (category !== 'all') {
+        workflows = workflows.filter(w => w.category === category);
+    }
+
+    if (workflows.length === 0) {
+        featuredWorkflows.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 2rem;">No workflows found for this category.</p>';
+        return;
+    }
+
+    workflows.forEach(workflow => {
         const workflowCard = createWorkflowCard(workflow);
         featuredWorkflows.appendChild(workflowCard);
     });
+}
+
+// Filter workflows by category
+function filterWorkflows() {
+    const select = document.getElementById('workflowCategoryFilter');
+    if (!select) return;
+
+    const category = select.value;
+    populateWorkflows(category);
 }
 
 // Vibe selection handler
@@ -2038,6 +2082,27 @@ function viewTool(toolId) {
                         </div>
                     </div>
                 </div>
+
+                ${tool.alternatives && tool.alternatives.length > 0 ? `
+                <div class="tool-detail-section">
+                    <h3>Similar Tools</h3>
+                    <div class="alternatives-grid">
+                        ${tool.alternatives.map(altId => {
+                            const altTool = findToolById(altId);
+                            if (!altTool) return '';
+                            return `
+                                <div class="alternative-tool-card" onclick="closeModal(); setTimeout(() => viewTool('${altId}'), 100)">
+                                    <span class="alt-logo">${altTool.logo}</span>
+                                    <div class="alt-info">
+                                        <strong>${altTool.name}</strong>
+                                        <span class="alt-price">${altTool.pricing.monthlyCost > 0 ? '$' + altTool.pricing.monthlyCost + '/mo' : 'Free'}</span>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+                ` : ''}
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" onclick="closeModal()">Close</button>

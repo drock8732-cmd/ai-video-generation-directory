@@ -2317,3 +2317,101 @@ html {
         font-size: 1rem;
     }
 }
+
+
+/* Alternative Tools Grid */
+.alternatives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.alternative-tool-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.alternative-tool-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+}
+
+.alt-logo {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.alt-info {
+    flex: 1;
+}
+
+.alt-info strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.alt-price {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Workflow Filters */
+.workflow-filters {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+}
+
+.workflow-filters label {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+#workflowCategoryFilter {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background: white;
+    color: var(--text-primary);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+#workflowCategoryFilter:hover {
+    border-color: var(--primary-color);
+}
+
+#workflowCategoryFilter:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+@media (max-width: 768px) {
+    .workflow-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #workflowCategoryFilter {
+        width: 100%;
+    }
+}
