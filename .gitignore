@@ -1,5 +1,73 @@
-# Ignore node modules and VS Code settings
-node_modules/
-.vscode/
-.env
+# AI Intelligence Hub - Git Ignore File
+# Vanilla JS project - NO npm/node_modules needed!
+
+# === Operating System Files ===
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# === Editor/IDE Files ===
+# VS Code
+.vscode/settings.json
+.vscode/launch.json
+.vscode/.ropeproject
+
+# But keep these VS Code files (shared settings)
+!.vscode/extensions.json
+!.vscode/settings.json.example
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# === Backup and Temporary Files ===
+*.bak
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+
+# Old versions (from refactoring)
+*.old
+*.backup
+*.orig
+
+# === Environment Files ===
+.env
+.env.local
+.env.*.local
+
+# === Build/Deploy Files ===
+# (We don't use build tools, but just in case)
+dist/
+build/
+*.min.js
+*.min.css
+
+# === Logs ===
+*.log
+logs/
+npm-debug.log*
+error.log
+
+# === Testing ===
+coverage/
+.nyc_output/
+
+# === Misc ===
+.cache/
+*.pid
+*.seed
+*.pid.lock

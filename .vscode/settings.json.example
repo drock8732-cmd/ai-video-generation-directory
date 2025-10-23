@@ -1,0 +1,97 @@
+{
+  "// Comment": "VS Code Settings - Vanilla JS Project (NO npm required!)",
+
+  "// === Auto-formatting (built-in) ===": "",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "HookyQR.beautify",
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+
+  "// === File formatting ===": "",
+  "[javascript]": {
+    "editor.defaultFormatter": "HookyQR.beautify",
+    "editor.tabSize": 4
+  },
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify",
+    "editor.tabSize": 4
+  },
+  "[css]": {
+    "editor.defaultFormatter": "HookyQR.beautify",
+    "editor.tabSize": 4
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": false
+  },
+
+  "// === Code quality ===": "",
+  "editor.wordWrap": "on",
+  "editor.rulers": [120],
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+
+  "// === Files ===": "",
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/*.old": true,
+    "**/*.backup": true
+  },
+
+  "// === Live Server ===": "",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.CustomBrowser": "chrome",
+
+  "// === Git ===": "",
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+
+  "// === Spell checker ===": "",
+  "cSpell.words": [
+    "aiToolsDatabase",
+    "workflowTemplates",
+    "vibeAlignment",
+    "primay Category",
+    "subcategories",
+    "freemium",
+    "ChatGPT",
+    "Gemini",
+    "HeyGen",
+    "Bolt",
+    "NotebookLM",
+    "CapCut",
+    "Synthesia"
+  ],
+
+  "// === Search ===": "",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/*.min.js": true,
+    "**/*.min.css": true
+  },
+
+  "// === JavaScript ===": "",
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": true,
+
+  "// === Emmet ===": "",
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "html"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "recommendations": [
+    // === Vanilla JS Development (NO npm required!) ===
+
+    // HTML/CSS helpers
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "zignd.html-css-class-completion",
+
+    // Live preview - Open index.html in browser automatically
+    "ritwickdey.liveserver",
+
+    // Git integration - Better git workflow
+    "eamodio.gitlens",
+
+    // Code quality - Works without npm!
+    "streetsidesoftware.code-spell-checker",
+
+    // Productivity
+    "christian-kohler.path-intellisense",
+    "wayou.vscode-todo-highlight",
+    "aaron-bond.better-comments",
+
+    // Markdown - For documentation
+    "yzhang.markdown-all-in-one",
+
+    // Formatting - Built-in VS Code formatter (no npm needed)
+    "hookyqr.beautify"
+  ],
+  "unwantedRecommendations": [
+    // Avoid these - they require npm install
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
+  ]
+}
