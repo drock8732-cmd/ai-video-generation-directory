@@ -1,0 +1,50 @@
+{
+  "name": "ai-intelligence-hub",
+  "version": "1.1.0",
+  "description": "Comprehensive AI tools discovery platform with 200+ tools across all categories",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 8000 -c-1 -o",
+    "dev:py": "python -m http.server 8000",
+    "lint": "eslint script.js --max-warnings 0",
+    "lint:fix": "eslint script.js --fix",
+    "format": "prettier --write \"**/*.{js,html,css,md}\"",
+    "format:check": "prettier --check \"**/*.{js,html,css,md}\"",
+    "validate:html": "html-validate index.html",
+    "validate:css": "stylelint \"*.css\"",
+    "validate": "npm run format:check && npm run lint && npm run validate:html",
+    "test": "echo \"No tests yet\" && exit 0",
+    "prepare": "echo \"Setting up development environment...\"",
+    "postinstall": "echo \"✅ Dependencies installed! Run 'npm run dev' to start development server.\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drock8732-cmd/ai-video-generation-directory.git"
+  },
+  "keywords": [
+    "ai",
+    "artificial-intelligence",
+    "tools",
+    "directory",
+    "discovery",
+    "comparison"
+  ],
+  "author": "AI Intelligence Hub Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drock8732-cmd/ai-video-generation-directory/issues"
+  },
+  "homepage": "https://github.com/drock8732-cmd/ai-video-generation-directory#readme",
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.3",
+    "http-server": "^14.1.1",
+    "html-validate": "^8.7.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

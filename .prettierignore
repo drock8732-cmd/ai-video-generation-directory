@@ -1,0 +1,22 @@
+# Ignore build outputs
+dist/
+build/
+coverage/
+
+# Ignore dependencies
+node_modules/
+package-lock.json
+
+# Ignore git
+.git/
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore markdown files (preserve manual formatting)
+*.md
+
+# Ignore configuration files
+.eslintrc.json
+.prettierrc.json
