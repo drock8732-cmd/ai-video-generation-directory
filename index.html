@@ -26,6 +26,10 @@
                 <a href="#compare" class="nav-link">Compare</a>
                 <a href="#analytics" class="nav-link">Analytics</a>
                 <a href="#about" class="nav-link">About</a>
+                <button class="pricing-calculator-btn" onclick="togglePricingCalculator()" title="Pricing Calculator">
+                    <i class="fas fa-calculator"></i>
+                    <span class="calculator-badge" id="calculatorBadge">0</span>
+                </button>
             </div>
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Search AI tools, tasks, workflows..." class="search-input">
@@ -33,6 +37,36 @@
             </div>
         </nav>
     </header>
+
+    <!-- Pricing Calculator Panel -->
+    <div class="pricing-calculator-panel" id="pricingCalculatorPanel">
+        <div class="calculator-header">
+            <h3>💰 Your AI Stack Calculator</h3>
+            <button class="calculator-close" onclick="togglePricingCalculator()">&times;</button>
+        </div>
+        <div class="calculator-body">
+            <div id="calculatorToolsList" class="calculator-tools-list">
+                <p class="calculator-empty">Click "+ Calculator" button on any tool to start building your stack!</p>
+            </div>
+            <div class="calculator-summary">
+                <div class="summary-row">
+                    <span>Total Tools:</span>
+                    <strong id="totalTools">0</strong>
+                </div>
+                <div class="summary-row">
+                    <span>Free Tools:</span>
+                    <strong id="freeTools">0</strong>
+                </div>
+                <div class="summary-row total">
+                    <span>Monthly Cost:</span>
+                    <strong id="totalCost">$0</strong>
+                </div>
+            </div>
+            <button class="btn btn-secondary" onclick="clearCalculator()" style="width: 100%; margin-top: 1rem;">
+                Clear All
+            </button>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -183,6 +217,20 @@
         <section id="workflows" class="workflows-section">
             <h2>AI Workflow Recommendations</h2>
             <p>Discover complete AI-powered workflows that combine multiple tools for maximum efficiency</p>
+
+            <div class="workflow-filters">
+                <label for="workflowCategoryFilter">Filter by Category:</label>
+                <select id="workflowCategoryFilter" onchange="filterWorkflows()">
+                    <option value="all">All Categories</option>
+                    <option value="content-creation">Content Creation</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="business">Business</option>
+                    <option value="research">Research</option>
+                    <option value="creative">Creative</option>
+                    <option value="development">Development</option>
+                    <option value="design">Design</option>
+                </select>
+            </div>
             
             <div class="workflow-categories">
                 <div class="workflow-category" data-category="content-creation">

@@ -544,6 +544,246 @@ const aiToolsDatabase = [
             'Analyze business data': { effectiveness: 9.0, timeToComplete: '10 minutes', outputQuality: 'comprehensive' },
             'Create dashboards': { effectiveness: 8.8, timeToComplete: '20 minutes', outputQuality: 'visual' }
         }
+    },
+    {
+        id: 'notebooklm',
+        name: 'NotebookLM',
+        logo: '📚',
+        company: 'Google',
+        description: 'AI-powered research assistant that helps you understand and synthesize information from your documents',
+        primaryCategory: 'productivity',
+        subcategories: ['research', 'note-taking', 'education'],
+        pricing: { model: 'free', monthlyCost: 0, freeTier: true },
+        performance: { quality: 90, speed: 85, consistency: 88, reliability: 92 },
+        userExperience: { learningCurve: 'beginner', interfaceQuality: 92, documentation: 'excellent' },
+        features: ['Document analysis', 'Source-grounded answers', 'Audio overviews', 'Multi-document synthesis', 'Citation tracking'],
+        useCases: ['Research', 'Study notes', 'Document analysis', 'Content synthesis'],
+        integrations: ['Google Drive', 'PDF upload', 'Text documents'],
+        limitations: ['Limited to 50 sources', 'No real-time collaboration'],
+        vibeAlignment: { creative: 6, productive: 9, explorative: 10, relaxed: 7 },
+        analytics: { popularity: 85, growth: 'rapid', userSatisfaction: 92 },
+        community: { rating: 4.7, reviewCount: 8500, activeUsers: '2M+' },
+        roiScore: 2850,
+        website: 'https://notebooklm.google.com'
+    },
+    {
+        id: 'replit-agent',
+        name: 'Replit Agent',
+        logo: '🤖',
+        company: 'Replit',
+        description: 'AI agent that builds full-stack applications from natural language descriptions',
+        primaryCategory: 'code-generation',
+        subcategories: ['development', 'automation', 'prototyping'],
+        pricing: { model: 'paid', monthlyCost: 25, freeTier: false },
+        performance: { quality: 85, speed: 88, consistency: 82, reliability: 86 },
+        userExperience: { learningCurve: 'beginner', interfaceQuality: 90, documentation: 'good' },
+        features: ['Full-stack app generation', 'Natural language coding', 'Instant deployment', 'Real-time collaboration', 'Multi-language support'],
+        useCases: ['Rapid prototyping', 'App development', 'Learning to code', 'Automating tasks'],
+        integrations: ['GitHub', 'npm', 'pip', 'Database hosting'],
+        limitations: ['Computing resource limits', 'Complex apps may need refinement'],
+        vibeAlignment: { creative: 8, productive: 9, explorative: 7, relaxed: 6 },
+        analytics: { popularity: 82, growth: 'rapid', userSatisfaction: 88 },
+        community: { rating: 4.5, reviewCount: 12000, activeUsers: '5M+' },
+        roiScore: 3200,
+        website: 'https://replit.com/agent'
+    },
+    {
+        id: 'framer-ai',
+        name: 'Framer AI',
+        logo: '🎨',
+        company: 'Framer',
+        description: 'AI-powered website builder that creates professional sites from text descriptions',
+        primaryCategory: 'design',
+        subcategories: ['web-design', 'prototyping', 'no-code'],
+        pricing: { model: 'freemium', monthlyCost: 15, freeTier: true },
+        performance: { quality: 88, speed: 90, consistency: 86, reliability: 89 },
+        userExperience: { learningCurve: 'beginner', interfaceQuality: 94, documentation: 'excellent' },
+        features: ['Text-to-website', 'Responsive design', 'Custom animations', 'CMS integration', 'SEO optimization'],
+        useCases: ['Landing pages', 'Portfolio sites', 'Marketing websites', 'Startup MVPs'],
+        integrations: ['Analytics', 'Forms', 'CMS', 'Custom code'],
+        limitations: ['Advanced customization requires plan upgrade', 'Learning curve for animations'],
+        vibeAlignment: { creative: 9, productive: 8, explorative: 6, relaxed: 7 },
+        analytics: { popularity: 86, growth: 'rapid', userSatisfaction: 91 },
+        community: { rating: 4.6, reviewCount: 15000, activeUsers: '3M+' },
+        roiScore: 3100,
+        website: 'https://framer.com/ai'
+    },
+    {
+        id: 'opus-clip',
+        name: 'Opus Clip',
+        logo: '✂️',
+        company: 'Opus Pro',
+        description: 'AI-powered tool that automatically creates viral short clips from long videos',
+        primaryCategory: 'video-editing',
+        subcategories: ['content-creation', 'social-media', 'automation'],
+        pricing: { model: 'freemium', monthlyCost: 29, freeTier: true },
+        performance: { quality: 87, speed: 92, consistency: 85, reliability: 88 },
+        userExperience: { learningCurve: 'beginner', interfaceQuality: 88, documentation: 'good' },
+        features: ['Auto clip generation', 'Viral score prediction', 'Auto captions', 'Brand customization', 'Multi-platform export'],
+        useCases: ['YouTube shorts', 'TikTok content', 'Instagram reels', 'Podcast clips'],
+        integrations: ['YouTube', 'Direct upload', 'Social media platforms'],
+        limitations: ['Clip quality depends on source', 'Limited customization on free tier'],
+        vibeAlignment: { creative: 8, productive: 9, explorative: 5, relaxed: 8 },
+        analytics: { popularity: 84, growth: 'rapid', userSatisfaction: 87 },
+        community: { rating: 4.4, reviewCount: 9500, activeUsers: '500K+' },
+        roiScore: 2900,
+        website: 'https://opus.pro'
+    },
+    {
+        id: 'claude-artifacts',
+        name: 'Claude Artifacts',
+        logo: '⚡',
+        company: 'Anthropic',
+        description: 'Interactive creation feature that generates live code, documents, and visualizations',
+        primaryCategory: 'ai-assistant',
+        subcategories: ['code-generation', 'content-creation', 'visualization'],
+        pricing: { model: 'freemium', monthlyCost: 20, freeTier: true },
+        performance: { quality: 92, speed: 88, consistency: 90, reliability: 91 },
+        userExperience: { learningCurve: 'beginner', interfaceQuality: 93, documentation: 'excellent' },
+        features: ['Live code execution', 'Interactive visualizations', 'Document creation', 'React components', 'SVG graphics'],
+        useCases: ['Prototyping', 'Data visualization', 'Learning code', 'Creating demos'],
+        integrations: ['Claude API', 'Web technologies'],
+        limitations: ['Requires Claude Pro for heavy usage', 'Limited to supported frameworks'],
+        vibeAlignment: { creative: 10, productive: 8, explorative: 9, relaxed: 6 },
+        analytics: { popularity: 88, growth: 'explosive', userSatisfaction: 93 },
+        community: { rating: 4.8, reviewCount: 18000, activeUsers: '4M+' },
+        roiScore: 3400,
+        website: 'https://claude.ai',
+        alternatives: ['cursor', 'github-copilot', 'replit-agent']
+    },
+    {
+        id: 'capcut',
+        name: 'CapCut',
+        logo: '✂️',
+        company: 'ByteDance',
+        description: 'Free all-in-one video editing app with AI-powered features for creating engaging social media content',
+        primaryCategory: 'video-editing',
+        subcategories: ['content-creation', 'social-media', 'mobile-editing'],
+        pricing: { model: 'freemium', monthlyCost: 0, freeTier: true },
+        performance: { quality: 85, speed: 90, consistency: 87, reliability: 88 },
+        userExperience: { learningCurve: 'beginner', interfaceQuality: 91, documentation: 'good' },
+        features: ['AI auto-captions', 'Background removal', 'Text-to-speech', 'Trending effects', 'Multi-track editing'],
+        useCases: ['TikTok videos', 'Instagram Reels', 'YouTube Shorts', 'Social media content'],
+        integrations: ['TikTok', 'Direct export', 'Cloud storage'],
+        limitations: ['Pro features require subscription', 'Mobile-focused interface'],
+        vibeAlignment: { creative: 8, productive: 7, explorative: 5, relaxed: 9 },
+        analytics: { popularity: 92, growth: 'explosive', userSatisfaction: 89 },
+        community: { rating: 4.6, reviewCount: 250000, activeUsers: '200M+' },
+        roiScore: 3300,
+        website: 'https://capcut.com',
+        alternatives: ['opus-clip', 'descript', 'pictory']
+    },
+
+    // PHASE 2 STEP 2A: 5 MAJOR AI TOOLS (2025)
+    {
+        id: 'gemini',
+        name: 'Gemini',
+        logo: '💎',
+        company: 'Google',
+        description: 'Google\'s most capable multimodal AI model with advanced reasoning, coding, and creative capabilities',
+        primaryCategory: 'text-generation',
+        subcategories: ['writing', 'coding', 'research', 'multimodal'],
+        pricing: { model: 'freemium', monthlyCost: 20, freeTier: true },
+        performance: { quality: 93, speed: 90, consistency: 91, reliability: 92 },
+        userExperience: { learningCurve: 'beginner', interfaceQuality: 92, documentation: 'excellent' },
+        features: ['Multimodal understanding', 'Advanced reasoning', 'Code generation', '1M token context', 'Image & video analysis'],
+        useCases: ['Research', 'Coding', 'Content creation', 'Data analysis', 'Document processing'],
+        integrations: ['Google Workspace', 'Google Cloud', 'API access'],
+        limitations: ['Some features require paid plan', 'Regional availability varies'],
+        vibeAlignment: { creative: 8, productive: 9, explorative: 10, relaxed: 7 },
+        analytics: { popularity: 89, growth: 'explosive', userSatisfaction: 91 },
+        community: { rating: 4.7, reviewCount: 45000, activeUsers: '100M+' },
+        roiScore: 3600,
+        website: 'https://gemini.google.com',
+        alternatives: ['chatgpt', 'claude', 'perplexity']
+    },
+    {
+        id: 'heygen',
+        name: 'HeyGen',
+        logo: '🎭',
+        company: 'HeyGen',
+        description: 'AI video generation platform that creates professional videos with realistic AI avatars and voices',
+        primaryCategory: 'video-generation',
+        subcategories: ['avatar-generation', 'text-to-video', 'content-creation'],
+        pricing: { model: 'freemium', monthlyCost: 29, freeTier: true },
+        performance: { quality: 90, speed: 85, consistency: 89, reliability: 90 },
+        userExperience: { learningCurve: 'beginner', interfaceQuality: 93, documentation: 'excellent' },
+        features: ['AI avatars', 'Voice cloning', 'Multi-language support', 'Custom avatars', 'Video translation'],
+        useCases: ['Marketing videos', 'Training content', 'Product demos', 'Social media', 'Corporate communications'],
+        integrations: ['API access', 'Zapier', 'Video editing tools'],
+        limitations: ['Credit-based usage', 'Video length limits on free tier'],
+        vibeAlignment: { creative: 8, productive: 9, explorative: 6, relaxed: 7 },
+        analytics: { popularity: 87, growth: 'rapid', userSatisfaction: 90 },
+        community: { rating: 4.6, reviewCount: 28000, activeUsers: '2M+' },
+        roiScore: 3500,
+        website: 'https://heygen.com',
+        alternatives: ['runway-gen2', 'synthesia', 'd-id']
+    },
+    {
+        id: 'v0-dev',
+        name: 'v0.dev',
+        logo: '⚡',
+        company: 'Vercel',
+        description: 'AI-powered web development tool that generates production-ready React code from text descriptions',
+        primaryCategory: 'code-generation',
+        subcategories: ['web-development', 'ui-design', 'prototyping'],
+        pricing: { model: 'freemium', monthlyCost: 20, freeTier: true },
+        performance: { quality: 89, speed: 92, consistency: 88, reliability: 90 },
+        userExperience: { learningCurve: 'intermediate', interfaceQuality: 94, documentation: 'excellent' },
+        features: ['Text-to-UI', 'React components', 'Tailwind CSS', 'shadcn/ui integration', 'Copy-paste code'],
+        useCases: ['UI prototyping', 'Component generation', 'Landing pages', 'Dashboard templates', 'App interfaces'],
+        integrations: ['Next.js', 'Vercel deployment', 'shadcn/ui', 'Tailwind CSS'],
+        limitations: ['Requires React knowledge for customization', 'Limited to supported frameworks'],
+        vibeAlignment: { creative: 7, productive: 10, explorative: 8, relaxed: 6 },
+        analytics: { popularity: 86, growth: 'explosive', userSatisfaction: 92 },
+        community: { rating: 4.8, reviewCount: 35000, activeUsers: '1M+' },
+        roiScore: 3700,
+        website: 'https://v0.dev',
+        alternatives: ['replit-agent', 'bolt-new', 'cursor']
+    },
+    {
+        id: 'bolt-new',
+        name: 'Bolt.new',
+        logo: '⚡',
+        company: 'StackBlitz',
+        description: 'AI-powered full-stack development environment that builds and deploys web apps in seconds',
+        primaryCategory: 'code-generation',
+        subcategories: ['web-development', 'full-stack', 'deployment'],
+        pricing: { model: 'freemium', monthlyCost: 20, freeTier: true },
+        performance: { quality: 88, speed: 95, consistency: 87, reliability: 89 },
+        userExperience: { learningCurve: 'beginner', interfaceQuality: 95, documentation: 'good' },
+        features: ['Instant dev environment', 'Full-stack apps', 'Live preview', 'NPM package support', 'One-click deploy'],
+        useCases: ['Rapid prototyping', 'MVPs', 'Code experiments', 'Learning projects', 'Portfolio sites'],
+        integrations: ['GitHub', 'NPM', 'Vite', 'Node.js', 'WebContainers'],
+        limitations: ['Browser-based limitations', 'Performance constraints on complex apps'],
+        vibeAlignment: { creative: 8, productive: 9, explorative: 9, relaxed: 7 },
+        analytics: { popularity: 85, growth: 'explosive', userSatisfaction: 90 },
+        community: { rating: 4.7, reviewCount: 22000, activeUsers: '800K+' },
+        roiScore: 3400,
+        website: 'https://bolt.new',
+        alternatives: ['v0-dev', 'replit-agent', 'github-copilot']
+    },
+    {
+        id: 'jasper-ai',
+        name: 'Jasper AI',
+        logo: '✍️',
+        company: 'Jasper',
+        description: 'Enterprise AI content platform for creating on-brand marketing copy, blog posts, and social content',
+        primaryCategory: 'text-generation',
+        subcategories: ['content-creation', 'marketing', 'copywriting'],
+        pricing: { model: 'paid', monthlyCost: 49, freeTier: false },
+        performance: { quality: 87, speed: 90, consistency: 88, reliability: 89 },
+        userExperience: { learningCurve: 'beginner', interfaceQuality: 90, documentation: 'excellent' },
+        features: ['Brand voice', 'SEO optimization', '50+ templates', 'Multi-language', 'Team collaboration'],
+        useCases: ['Blog writing', 'Ad copy', 'Email campaigns', 'Social media posts', 'Product descriptions'],
+        integrations: ['Surfer SEO', 'Grammarly', 'Copyscape', 'Browser extension'],
+        limitations: ['Higher price point', 'Word count limits', 'No free tier'],
+        vibeAlignment: { creative: 8, productive: 9, explorative: 5, relaxed: 7 },
+        analytics: { popularity: 83, growth: 'steady', userSatisfaction: 86 },
+        community: { rating: 4.4, reviewCount: 18000, activeUsers: '100K+' },
+        roiScore: 2900,
+        website: 'https://jasper.ai',
+        alternatives: ['chatgpt', 'claude', 'copy-ai']
     }
 ];
 
@@ -594,6 +834,302 @@ const workflowTemplates = {
                 outputQuality: 'Professional',
                 consistency: 'High'
             }
+        },
+        {
+            id: 'youtube-video-workflow',
+            name: 'YouTube Video Production',
+            description: 'Complete workflow for creating professional YouTube videos from script to upload',
+            category: 'content-creation',
+            difficulty: 'intermediate',
+            estimatedTime: 360,
+            tools: ['chatgpt', 'elevenlabs', 'capcut'],
+            steps: [
+                'Research trending topics and write script with ChatGPT',
+                'Generate voiceover narration with ElevenLabs',
+                'Create and edit video with CapCut (add visuals, effects, captions)',
+                'Design thumbnail and write SEO-optimized title/description',
+                'Upload to YouTube and optimize for discoverability'
+            ],
+            benefits: {
+                timeSaved: '25 hours/week',
+                costSavings: 1000,
+                outputQuality: 'Professional',
+                consistency: 'Very High'
+            }
+        },
+        {
+            id: 'podcast-creation-workflow',
+            name: 'Podcast Creation',
+            description: 'End-to-end podcast production from planning to distribution',
+            category: 'content-creation',
+            difficulty: 'intermediate',
+            estimatedTime: 300,
+            tools: ['chatgpt', 'elevenlabs', 'capcut'],
+            steps: [
+                'Generate episode outline and talking points with ChatGPT',
+                'Create intro/outro music and AI voice segments with ElevenLabs',
+                'Record and edit audio with CapCut (noise reduction, mixing)',
+                'Create audiogram clips for social media promotion',
+                'Distribute to podcast platforms with show notes'
+            ],
+            benefits: {
+                timeSaved: '20 hours/week',
+                costSavings: 800,
+                outputQuality: 'Professional',
+                consistency: 'High'
+            }
+        },
+        {
+            id: 'newsletter-writing-workflow',
+            name: 'Newsletter Writing',
+            description: 'Research, write, and publish engaging email newsletters consistently',
+            category: 'content-creation',
+            difficulty: 'beginner',
+            estimatedTime: 120,
+            tools: ['chatgpt', 'grammarly', 'notion-ai'],
+            steps: [
+                'Research topics and gather insights with ChatGPT',
+                'Write newsletter draft with compelling hooks and CTAs',
+                'Polish and check grammar with Grammarly',
+                'Format and organize in Notion AI',
+                'Schedule and send to email list'
+            ],
+            benefits: {
+                timeSaved: '10 hours/week',
+                costSavings: 400,
+                outputQuality: 'Professional',
+                consistency: 'Very High'
+            }
+        }
+    ],
+    'business': [
+        {
+            id: 'employee-onboarding-workflow',
+            name: 'AI Employee Onboarding',
+            description: 'Create comprehensive onboarding materials including videos, presentations, and documentation',
+            category: 'business',
+            difficulty: 'intermediate',
+            estimatedTime: 240,
+            tools: ['chatgpt', 'midjourney', 'grammarly'],
+            steps: [
+                'Draft onboarding script and documentation with ChatGPT',
+                'Create visual assets and presentation graphics with Midjourney',
+                'Polish all written materials with Grammarly',
+                'Compile into onboarding package',
+                'Test with new hire and iterate'
+            ],
+            benefits: {
+                timeSaved: '20 hours per new hire',
+                costSavings: 800,
+                outputQuality: 'Professional',
+                consistency: 'Very High'
+            }
+        },
+        {
+            id: 'startup-launch-workflow',
+            name: 'Startup Launch Kit',
+            description: 'Build your MVP, landing page, and marketing materials to launch your startup',
+            category: 'business',
+            difficulty: 'intermediate',
+            estimatedTime: 480,
+            tools: ['replit-agent', 'framer-ai', 'chatgpt'],
+            steps: [
+                'Build MVP application with Replit Agent',
+                'Create landing page and website with Framer AI',
+                'Generate marketing copy and pitch deck with ChatGPT',
+                'Set up analytics and tracking',
+                'Launch and gather feedback'
+            ],
+            benefits: {
+                timeSaved: '40 hours/week',
+                costSavings: 2000,
+                outputQuality: 'Professional',
+                consistency: 'High'
+            }
+        }
+    ],
+    'research': [
+        {
+            id: 'technical-docs-workflow',
+            name: 'Technical Documentation Suite',
+            description: 'Research, synthesize, and create comprehensive technical documentation',
+            category: 'research',
+            difficulty: 'intermediate',
+            estimatedTime: 300,
+            tools: ['notebooklm', 'claude', 'grammarly'],
+            steps: [
+                'Upload and analyze existing technical documents with NotebookLM',
+                'Generate comprehensive documentation with Claude',
+                'Create code examples and API references',
+                'Polish and ensure consistency with Grammarly',
+                'Publish and maintain documentation'
+            ],
+            benefits: {
+                timeSaved: '25 hours/week',
+                costSavings: 1200,
+                outputQuality: 'Excellent',
+                consistency: 'Very High'
+            }
+        },
+        {
+            id: 'research-to-revenue-workflow',
+            name: 'Research to Revenue',
+            description: 'Transform market research into actionable business strategies and presentations',
+            category: 'research',
+            difficulty: 'advanced',
+            estimatedTime: 360,
+            tools: ['perplexity', 'claude', 'chatgpt'],
+            steps: [
+                'Conduct comprehensive market research with Perplexity',
+                'Analyze data and generate insights with Claude',
+                'Create business strategy and recommendations with ChatGPT',
+                'Build presentation and visualizations',
+                'Present findings to stakeholders'
+            ],
+            benefits: {
+                timeSaved: '30 hours/week',
+                costSavings: 1500,
+                outputQuality: 'Excellent',
+                consistency: 'High'
+            }
+        }
+    ],
+    'creative': [
+        {
+            id: 'personal-brand-workflow',
+            name: 'Personal Brand Builder',
+            description: 'Build your personal brand with AI-generated content, visuals, and voice',
+            category: 'creative',
+            difficulty: 'intermediate',
+            estimatedTime: 420,
+            tools: ['chatgpt', 'midjourney', 'elevenlabs'],
+            steps: [
+                'Define brand identity and messaging with ChatGPT',
+                'Create visual brand assets and content with Midjourney',
+                'Generate voice content and audio branding with ElevenLabs',
+                'Build social media presence',
+                'Launch and grow your brand'
+            ],
+            benefits: {
+                timeSaved: '35 hours/week',
+                costSavings: 1800,
+                outputQuality: 'Professional',
+                consistency: 'High'
+            }
+        }
+    ],
+    'marketing': [
+        {
+            id: 'landing-page-workflow',
+            name: 'Landing Page Creation',
+            description: 'Design and launch high-converting landing pages for products and campaigns',
+            category: 'marketing',
+            difficulty: 'intermediate',
+            estimatedTime: 180,
+            tools: ['framer-ai', 'chatgpt', 'midjourney'],
+            steps: [
+                'Define value proposition and target audience with ChatGPT',
+                'Create hero images and visual assets with Midjourney',
+                'Build responsive landing page with Framer AI',
+                'Write compelling copy and CTAs',
+                'Test, optimize, and launch'
+            ],
+            benefits: {
+                timeSaved: '18 hours/week',
+                costSavings: 900,
+                outputQuality: 'Professional',
+                consistency: 'High'
+            }
+        },
+        {
+            id: 'social-ad-campaign-workflow',
+            name: 'Social Media Ad Campaign',
+            description: 'Create and launch data-driven social media advertising campaigns',
+            category: 'marketing',
+            difficulty: 'intermediate',
+            estimatedTime: 240,
+            tools: ['chatgpt', 'midjourney', 'capcut'],
+            steps: [
+                'Research audience and create ad strategy with ChatGPT',
+                'Design ad creatives and variations with Midjourney',
+                'Create video ads with CapCut',
+                'Write ad copy for multiple platforms',
+                'Launch, monitor, and optimize campaigns'
+            ],
+            benefits: {
+                timeSaved: '22 hours/week',
+                costSavings: 1100,
+                outputQuality: 'Professional',
+                consistency: 'Very High'
+            }
+        },
+        {
+            id: 'email-marketing-workflow',
+            name: 'Email Marketing Sequence',
+            description: 'Build automated email sequences that nurture leads and drive conversions',
+            category: 'marketing',
+            difficulty: 'beginner',
+            estimatedTime: 150,
+            tools: ['chatgpt', 'grammarly', 'notion-ai'],
+            steps: [
+                'Map customer journey and define sequence goals with ChatGPT',
+                'Write email series with compelling subject lines',
+                'Edit and optimize for clarity with Grammarly',
+                'Organize and schedule in Notion AI',
+                'Set up automation and track metrics'
+            ],
+            benefits: {
+                timeSaved: '15 hours/week',
+                costSavings: 750,
+                outputQuality: 'Professional',
+                consistency: 'High'
+            }
+        }
+    ],
+    'development': [
+        {
+            id: 'saas-mvp-workflow',
+            name: 'Build a SaaS MVP',
+            description: 'Rapidly build and launch a minimum viable product for your SaaS idea',
+            category: 'development',
+            difficulty: 'advanced',
+            estimatedTime: 600,
+            tools: ['replit-agent', 'framer-ai', 'chatgpt'],
+            steps: [
+                'Define product requirements and user stories with ChatGPT',
+                'Build backend and core features with Replit Agent',
+                'Design and develop landing page with Framer AI',
+                'Integrate payment and authentication systems',
+                'Test, deploy, and launch MVP'
+            ],
+            benefits: {
+                timeSaved: '80 hours/week',
+                costSavings: 4000,
+                outputQuality: 'Professional',
+                consistency: 'High'
+            }
+        },
+        {
+            id: 'api-documentation-workflow',
+            name: 'API Documentation',
+            description: 'Create comprehensive, developer-friendly API documentation',
+            category: 'development',
+            difficulty: 'intermediate',
+            estimatedTime: 240,
+            tools: ['notebooklm', 'claude', 'grammarly'],
+            steps: [
+                'Analyze existing codebase and APIs with NotebookLM',
+                'Generate documentation structure and examples with Claude',
+                'Write detailed endpoint descriptions and use cases',
+                'Polish technical writing with Grammarly',
+                'Publish and maintain documentation site'
+            ],
+            benefits: {
+                timeSaved: '30 hours/week',
+                costSavings: 1500,
+                outputQuality: 'Excellent',
+                consistency: 'Very High'
+            }
         }
     ]
 };
@@ -636,6 +1172,7 @@ const appState = {
     selectedVibe: null,
     selectedTools: [],
     comparisonTools: [],
+    pricingCalculator: [],
     searchTerm: '',
     filters: {
         category: 'all',
@@ -716,15 +1253,36 @@ function populateModels(tools) {
 }
 
 // Populate workflows section
-function populateWorkflows() {
+function populateWorkflows(category = 'all') {
     if (!featuredWorkflows) return;
 
     featuredWorkflows.innerHTML = '';
 
-    Object.values(workflowTemplates).flat().slice(0, 6).forEach(workflow => {
+    let workflows = Object.values(workflowTemplates).flat();
+
+    // Filter by category if not 'all'
+    if (category !== 'all') {
+        workflows = workflows.filter(w => w.category === category);
+    }
+
+    if (workflows.length === 0) {
+        featuredWorkflows.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 2rem;">No workflows found for this category.</p>';
+        return;
+    }
+
+    workflows.forEach(workflow => {
         const workflowCard = createWorkflowCard(workflow);
         featuredWorkflows.appendChild(workflowCard);
     });
+}
+
+// Filter workflows by category
+function filterWorkflows() {
+    const select = document.getElementById('workflowCategoryFilter');
+    if (!select) return;
+
+    const category = select.value;
+    populateWorkflows(category);
 }
 
 // Vibe selection handler
@@ -833,6 +1391,10 @@ function createToolCard(tool) {
                     <button class="btn btn-secondary" onclick="addToComparison('${tool.id}')">
                         <i class="fas fa-balance-scale"></i>
                         Compare
+                    </button>
+                    <button class="btn btn-secondary" onclick="addToCalculator('${tool.id}')">
+                        <i class="fas fa-calculator"></i>
+                        Calculator
                     </button>
                 </div>
             </div>
@@ -1386,6 +1948,30 @@ function viewWorkflow(workflowId) {
 }
 
 function showWorkflowModal(workflow) {
+    // Calculate total monthly cost from actual tool prices
+    let totalMonthlyCost = 0;
+    const workflowTools = workflow.tools.map(toolId => {
+        const tool = findToolById(toolId);
+        if (tool) {
+            // Get monthly cost from tool pricing
+            let toolCost = 0;
+            if (tool.pricing) {
+                if (typeof tool.pricing === 'object' && tool.pricing.monthlyCost !== undefined) {
+                    toolCost = tool.pricing.monthlyCost;
+                } else if (typeof tool.pricing === 'string') {
+                    // Parse string pricing like "$20/month" or "freemium"
+                    const match = tool.pricing.match(/\$(\d+)/);
+                    if (match) {
+                        toolCost = parseInt(match[1]);
+                    }
+                }
+            }
+            totalMonthlyCost += toolCost;
+            return { ...tool, calculatedCost: toolCost };
+        }
+        return null;
+    }).filter(Boolean);
+
     // Create modal overlay
     const modalOverlay = document.createElement('div');
     modalOverlay.className = 'modal-overlay';
@@ -1405,7 +1991,7 @@ function showWorkflowModal(workflow) {
                     </div>
                     <div class="meta-item">
                         <i class="fas fa-dollar-sign"></i>
-                        <span><strong>Cost:</strong> $${workflow.totalCost}/month</span>
+                        <span><strong>Total Cost:</strong> $${totalMonthlyCost}/month</span>
                     </div>
                     <div class="meta-item">
                         <i class="fas fa-signal"></i>
@@ -1432,30 +2018,45 @@ function showWorkflowModal(workflow) {
                 </div>
 
                 <div class="workflow-tools-detailed">
-                    <h3>Tools Used</h3>
-                    <div class="tools-grid">
-                        ${workflow.tools.map(toolId => {
-                            const tool = aiToolsDatabase.find(t => t.id === toolId);
-                            return tool ? `
-                                <div class="workflow-tool-card">
-                                    <div class="tool-logo">${tool.logo}</div>
-                                    <div class="tool-info">
+                    <h3>Tools Used (${workflowTools.length})</h3>
+                    <div class="tools-grid-workflow">
+                        ${workflowTools.map(tool => `
+                            <div class="workflow-tool-card-enhanced">
+                                <div class="tool-header-workflow">
+                                    <div class="tool-logo-large">${tool.logo}</div>
+                                    <div class="tool-info-workflow">
                                         <h4>${tool.name}</h4>
-                                        <p>${tool.company}</p>
+                                        <p class="tool-company">${tool.company}</p>
                                     </div>
                                 </div>
-                            ` : '';
-                        }).join('')}
+                                <div class="tool-description-workflow">
+                                    <p>${tool.description ? tool.description.substring(0, 120) + '...' : 'AI-powered tool for enhanced productivity'}</p>
+                                </div>
+                                <div class="tool-footer-workflow">
+                                    <div class="tool-price-workflow">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        <span>${tool.calculatedCost > 0 ? '$' + tool.calculatedCost + '/mo' : 'Free'}</span>
+                                    </div>
+                                    <button class="btn-view-tool" onclick="event.stopPropagation(); viewTool('${tool.id}')">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        View Tool
+                                    </button>
+                                </div>
+                            </div>
+                        `).join('')}
                     </div>
                 </div>
 
                 <div class="workflow-steps">
-                    <h3>Step by Step Guide</h3>
-                    <ol class="steps-list">
+                    <h3>Step-by-Step Guide</h3>
+                    <ol class="steps-list-interactive">
                         ${workflow.steps.map((step, index) => `
-                            <li class="step-item">
-                                <span class="step-number">${index + 1}</span>
-                                <span class="step-text">${step}</span>
+                            <li class="step-item-interactive">
+                                <input type="checkbox" id="step-${workflow.id}-${index}" class="step-checkbox">
+                                <label for="step-${workflow.id}-${index}">
+                                    <span class="step-number-interactive">${index + 1}</span>
+                                    <span class="step-text-interactive">${step}</span>
+                                </label>
                             </li>
                         `).join('')}
                     </ol>
@@ -1686,6 +2287,140 @@ function closeModal() {
     }
 }
 
+// View individual tool in modal
+function viewTool(toolId) {
+    const tool = findToolById(toolId);
+    if (!tool) {
+        showNotification('Tool not found');
+        return;
+    }
+
+    // Close existing modal if any
+    closeModal();
+
+    // Create modal overlay
+    const modalOverlay = document.createElement('div');
+    modalOverlay.className = 'modal-overlay';
+
+    // Calculate pricing display
+    let pricingDisplay = 'Free';
+    if (tool.pricing) {
+        if (typeof tool.pricing === 'object') {
+            if (tool.pricing.monthlyCost > 0) {
+                pricingDisplay = `$${tool.pricing.monthlyCost}/month`;
+            }
+            if (tool.pricing.freeTier) {
+                pricingDisplay += ' (Free tier available)';
+            }
+        } else if (typeof tool.pricing === 'string') {
+            pricingDisplay = tool.pricing;
+        }
+    }
+
+    modalOverlay.innerHTML = `
+        <div class="modal-content tool-detail-modal">
+            <div class="modal-header">
+                <div class="tool-header-modal">
+                    <div class="tool-logo-modal">${tool.logo}</div>
+                    <div>
+                        <h2>${tool.name}</h2>
+                        <p class="tool-company-modal">${tool.company}</p>
+                    </div>
+                </div>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="tool-badge-modal ${tool.pricing.model}">${tool.pricing.model}</div>
+
+                <p class="tool-description-modal">${tool.description}</p>
+
+                <div class="tool-detail-section">
+                    <h3>Pricing</h3>
+                    <p class="tool-pricing-detail">${pricingDisplay}</p>
+                </div>
+
+                <div class="tool-detail-section">
+                    <h3>Key Features</h3>
+                    <ul class="features-list-modal">
+                        ${tool.features?.map(feature => `<li>${feature}</li>`).join('') || '<li>No features listed</li>'}
+                    </ul>
+                </div>
+
+                <div class="tool-detail-section">
+                    <h3>Use Cases</h3>
+                    <div class="use-cases-grid">
+                        ${tool.useCases?.map(useCase => `<span class="use-case-tag">${useCase}</span>`).join('') || '<span>General purpose</span>'}
+                    </div>
+                </div>
+
+                <div class="tool-detail-section">
+                    <h3>Performance Metrics</h3>
+                    <div class="metrics-grid-modal">
+                        <div class="metric-card-modal">
+                            <div class="metric-value-modal">${tool.performance.quality}%</div>
+                            <div class="metric-label-modal">Quality</div>
+                        </div>
+                        <div class="metric-card-modal">
+                            <div class="metric-value-modal">${tool.performance.speed}%</div>
+                            <div class="metric-label-modal">Speed</div>
+                        </div>
+                        <div class="metric-card-modal">
+                            <div class="metric-value-modal">${tool.analytics.popularity}%</div>
+                            <div class="metric-label-modal">Popularity</div>
+                        </div>
+                        <div class="metric-card-modal">
+                            <div class="metric-value-modal">${tool.community.rating}/5</div>
+                            <div class="metric-label-modal">Rating</div>
+                        </div>
+                    </div>
+                </div>
+
+                ${tool.alternatives && tool.alternatives.length > 0 ? `
+                <div class="tool-detail-section">
+                    <h3>Similar Tools</h3>
+                    <div class="alternatives-grid">
+                        ${tool.alternatives.map(altId => {
+                            const altTool = findToolById(altId);
+                            if (!altTool) return '';
+                            return `
+                                <div class="alternative-tool-card" onclick="closeModal(); setTimeout(() => viewTool('${altId}'), 100)">
+                                    <span class="alt-logo">${altTool.logo}</span>
+                                    <div class="alt-info">
+                                        <strong>${altTool.name}</strong>
+                                        <span class="alt-price">${altTool.pricing.monthlyCost > 0 ? '$' + altTool.pricing.monthlyCost + '/mo' : 'Free'}</span>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+                ` : ''}
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+                <button class="btn btn-secondary" onclick="closeModal(); addToComparison('${tool.id}')">
+                    <i class="fas fa-balance-scale"></i>
+                    Compare
+                </button>
+                <a href="${tool.website}" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-external-link-alt"></i>
+                    Visit Website
+                </a>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(modalOverlay);
+    document.body.style.overflow = 'hidden';
+
+    // Add click outside to close
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+            closeModal();
+        }
+    });
+}
+
 function startWorkflow(workflowId) {
     closeModal();
     showNotification('🚀 Workflow started! Check each tool for detailed instructions.');
@@ -1884,6 +2619,89 @@ function updateToolCardBookmarks(toolId) {
 }
 
 // Export functions for external use
+// Pricing Calculator Functions
+function togglePricingCalculator() {
+    const panel = document.getElementById('pricingCalculatorPanel');
+    panel.classList.toggle('active');
+}
+
+function addToCalculator(toolId) {
+    const tool = findToolById(toolId);
+    if (!tool) {
+        showNotification('Tool not found');
+        return;
+    }
+
+    if (appState.pricingCalculator.find(t => t.id === toolId)) {
+        showNotification(`${tool.name} is already in calculator`);
+        return;
+    }
+
+    appState.pricingCalculator.push(tool);
+    updateCalculator();
+    showNotification(`${tool.name} added to calculator`);
+}
+
+function removeFromCalculator(toolId) {
+    appState.pricingCalculator = appState.pricingCalculator.filter(t => t.id !== toolId);
+    updateCalculator();
+}
+
+function clearCalculator() {
+    appState.pricingCalculator = [];
+    updateCalculator();
+    showNotification('Calculator cleared');
+}
+
+function updateCalculator() {
+    const toolsList = document.getElementById('calculatorToolsList');
+    const badge = document.getElementById('calculatorBadge');
+    const totalTools = document.getElementById('totalTools');
+    const freeTools = document.getElementById('freeTools');
+    const totalCost = document.getElementById('totalCost');
+
+    badge.textContent = appState.pricingCalculator.length;
+
+    if (appState.pricingCalculator.length === 0) {
+        toolsList.innerHTML = '<p class="calculator-empty">Click "+ Calculator" button on any tool to start building your stack!</p>';
+        totalTools.textContent = '0';
+        freeTools.textContent = '0';
+        totalCost.textContent = '$0';
+        return;
+    }
+
+    let monthlyCost = 0;
+    let freeCount = 0;
+
+    toolsList.innerHTML = appState.pricingCalculator.map(tool => {
+        let cost = 0;
+        if (tool.pricing && typeof tool.pricing === 'object') {
+            cost = tool.pricing.monthlyCost || 0;
+        }
+        if (cost === 0) freeCount++;
+        monthlyCost += cost;
+
+        return `
+            <div class="calculator-tool-item">
+                <div class="calculator-tool-info">
+                    <span class="calculator-tool-logo">${tool.logo}</span>
+                    <div>
+                        <strong>${tool.name}</strong>
+                        <div class="calculator-tool-price">${cost > 0 ? '$' + cost + '/mo' : 'Free'}</div>
+                    </div>
+                </div>
+                <button class="calculator-remove-btn" onclick="removeFromCalculator('${tool.id}')" title="Remove">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        `;
+    }).join('');
+
+    totalTools.textContent = appState.pricingCalculator.length;
+    freeTools.textContent = freeCount;
+    totalCost.textContent = '$' + monthlyCost;
+}
+
 window.AIIntelligenceHub = {
     selectVibe,
     addToComparison,
