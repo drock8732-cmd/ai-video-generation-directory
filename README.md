@@ -290,6 +290,26 @@ See trends and insights:
 
 We welcome contributions! Here's how you can help:
 
+### 🆕 New Developer Setup
+
+**Quick Start:**
+```bash
+# Clone repository
+git clone <repo-url>
+cd ai-video-generation-directory
+
+# Install dev tools (optional)
+npm install
+
+# Start development
+npm run dev
+```
+
+**Read These First:**
+1. **QUICK_REFERENCE.md** - Commands and quick tips
+2. **BEST_PRACTICES.md** - Coding standards (650+ lines!)
+3. **DEVELOPMENT.md** - Complete setup guide
+
 ### Adding a New AI Tool
 
 1. Open `script.js`
@@ -400,7 +420,14 @@ See `TODO.md` for complete development checklist.
 - **README.md** (this file) - Project overview and usage
 - Just open and use - no setup required!
 
-### For Developers
+### For Developers (NEW! 🎉)
+
+**⭐ Start Here:**
+- **QUICK_REFERENCE.md** - Essential commands and quick tips (NEW!)
+- **BEST_PRACTICES.md** - Comprehensive coding standards guide (NEW!)
+- **DEVELOPMENT.md** - Complete setup and workflow guide (NEW!)
+
+**Additional Resources:**
 - **GETTING_STARTED.md** - Beginner's guide to the codebase
 - **CODE_REVIEW.md** - Comprehensive code analysis
 - **TODO.md** - Development roadmap with priorities
@@ -414,7 +441,14 @@ See `TODO.md` for complete development checklist.
   - Code style guide
   - Testing requirements
   - Pull request process
-- Review `GETTING_STARTED.md` for code structure
+- **NEW: Development Tooling**
+  - ESLint configuration for code quality
+  - Prettier for consistent formatting
+  - EditorConfig for cross-editor consistency
+  - VS Code workspace settings
+  - npm scripts for common tasks
+- Review `BEST_PRACTICES.md` for coding standards
+- Check `DEVELOPMENT.md` for setup instructions
 - Check `TODO.md` for ways to help
 - Follow `CONTRIBUTING.md` standards
 
