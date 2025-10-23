@@ -42,7 +42,7 @@ git push             # Push to GitHub
 
 ### Add a Tool
 1. Open `script.js`
-2. Find `aiToolsDatabase` (line 7)
+2. Find `aiToolsDatabase` array (near the top of the file)
 3. Copy an existing tool object
 4. Modify for your new tool
 5. Test in browser
@@ -50,7 +50,7 @@ git push             # Push to GitHub
 
 ### Add a Workflow
 1. Open `script.js`
-2. Find `workflowTemplates` (line 791)
+2. Find `workflowTemplates` object (after the tools database)
 3. Find the category array
 4. Add your workflow object
 5. Test in browser
@@ -66,11 +66,11 @@ git push             # Push to GitHub
 
 ## 🔍 File Locations
 
-| Task | File | Line |
-|------|------|------|
-| Add tool | script.js | 7-788 |
-| Add workflow | script.js | 791-1135 |
-| Edit styles | styles.css | Any |
+| Task | File | Location |
+|------|------|----------|
+| Add tool | script.js | aiToolsDatabase array |
+| Add workflow | script.js | workflowTemplates object |
+| Edit styles | styles.css | Find relevant section |
 | Edit HTML | index.html | Any |
 | Constants | constants.js | Any |
 
@@ -151,8 +151,8 @@ var message = 'Found ' + tools.length + ' tools';
 ```
 project/
 ├── index.html           # HTML structure
-├── script.js            # All JavaScript (1,753 lines)
-├── styles.css           # All CSS (1,646 lines)
+├── script.js            # All JavaScript
+├── styles.css           # All CSS
 ├── constants.js         # Configuration
 ├── package.json         # Dependencies & scripts
 ├── .eslintrc.json       # Code quality rules
