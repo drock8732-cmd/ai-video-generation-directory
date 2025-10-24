@@ -1,782 +1,2575 @@
 [
-    // TEXT GENERATION TOOLS
-    {
-        id: 'chatgpt',
-        name: 'ChatGPT',
-        company: 'OpenAI',
-        logo: '🤖',
-        primaryCategory: 'text-generation',
-        subcategories: ['writing', 'conversation', 'productivity'],
-        useCases: ['writing', 'coding', 'analysis', 'customer-support'],
-        pricing: { model: 'freemium', monthlyCost: 20, freeTier: true },
-        performance: { quality: 9.2, speed: 8.8, consistency: 9.0, reliability: 9.3 },
-        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
-        analytics: { popularity: 95, growth: '+12%', lastUpdated: '2024-01-15', launchDate: '2022-11-30' },
-        community: { rating: 4.7, reviewCount: 15420, sentiment: 'positive' },
-        description: 'Advanced conversational AI that can understand and generate human-like text for a wide variety of tasks.',
-        features: ['Natural conversation', 'Code generation', 'Text analysis', 'Multi-language support', 'API access'],
-        capabilities: { inputTypes: ['text'], outputTypes: ['text'], integrations: ['api', 'zapier'], platforms: ['web', 'api'] },
-        vibeAlignment: { creative: 8, productive: 9, explorative: 9, relaxed: 8 },
-        roiScore: 6900,
-        website: 'https://chat.openai.com',
-        tasks: {
-            'Write a blog post': { effectiveness: 9.2, timeToComplete: '5 minutes', outputQuality: 'professional' },
-            'Generate product descriptions': { effectiveness: 8.8, timeToComplete: '2 minutes', outputQuality: 'commercial' },
-            'Create social media content': { effectiveness: 8.5, timeToComplete: '3 minutes', outputQuality: 'engaging' }
-        }
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "company": "OpenAI",
+    "logo": "🤖",
+    "primaryCategory": "text-generation",
+    "subcategories": [
+      "writing",
+      "conversation",
+      "productivity"
+    ],
+    "useCases": [
+      "writing",
+      "coding",
+      "analysis",
+      "customer-support"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 20,
+      "freeTier": true
     },
-    {
-        id: 'claude',
-        name: 'Claude',
-        company: 'Anthropic',
-        logo: '🧠',
-        primaryCategory: 'text-generation',
-        subcategories: ['writing', 'analysis', 'research'],
-        useCases: ['writing', 'research', 'analysis', 'coding'],
-        pricing: { model: 'freemium', monthlyCost: 20, freeTier: true },
-        performance: { quality: 9.5, speed: 8.5, consistency: 9.2, reliability: 9.4 },
-        userExperience: { learningCurve: 'intermediate', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
-        analytics: { popularity: 78, growth: '+25%', lastUpdated: '2024-01-15', launchDate: '2023-03-14' },
-        community: { rating: 4.8, reviewCount: 8930, sentiment: 'positive' },
-        description: 'Constitutional AI assistant focused on safety and helpfulness, with strong reasoning capabilities.',
-        features: ['Constitutional AI', 'Strong reasoning', 'Safety-focused', 'Long context', 'Code analysis'],
-        capabilities: { inputTypes: ['text'], outputTypes: ['text'], integrations: ['api'], platforms: ['web', 'api'] },
-        vibeAlignment: { creative: 7, productive: 9, explorative: 8, relaxed: 7 },
-        roiScore: 6350,
-        website: 'https://claude.ai',
-        tasks: {
-            'Research complex topics': { effectiveness: 9.5, timeToComplete: '10 minutes', outputQuality: 'comprehensive' },
-            'Analyze documents': { effectiveness: 9.2, timeToComplete: '8 minutes', outputQuality: 'detailed' }
-        }
+    "performance": {
+      "quality": 9.2,
+      "speed": 8.8,
+      "consistency": 9,
+      "reliability": 9.3
     },
-    {
-        id: 'runway-gen2',
-        name: 'Gen-2',
-        company: 'Runway ML',
-        logo: '🚀',
-        primaryCategory: 'text-to-video',
-        subcategories: ['video-generation', 'image-to-video', 'video-editing'],
-        useCases: ['Professional video editing', 'Content creation', 'Art projects'],
-        pricing: { model: 'freemium', monthlyCost: 15, freeTier: true },
-        performance: { quality: 9.0, speed: 8.0, consistency: 8.5, reliability: 8.8 },
-        userExperience: { learningCurve: 'intermediate', interface: 'professional', documentation: 'good', support: 'responsive' },
-        analytics: { popularity: 88, growth: '+15%', lastUpdated: '2024-01-15', launchDate: '2023-03-01' },
-        community: { rating: 9.2, reviewCount: 3200, sentiment: 'positive' },
-        description: 'Professional AI video generation tool with advanced controls for text, image, and video-to-video conversion.',
-        features: ['Text-to-video', 'Image-to-video', 'Video-to-video', 'Style presets'],
-        capabilities: { inputTypes: ['text', 'image', 'video'], outputTypes: ['video'], integrations: ['api'], platforms: ['web', 'api'] },
-        vibeAlignment: { creative: 9, productive: 8, explorative: 8, relaxed: 6 },
-        roiScore: 7920,
-        website: 'https://runwayml.com',
-        tasks: {
-            'Generate video from text': { effectiveness: 9.0, timeToComplete: '2 minutes', outputQuality: 'professional' },
-            'Convert image to video': { effectiveness: 8.8, timeToComplete: '90 seconds', outputQuality: 'high-quality' },
-            'Edit existing videos': { effectiveness: 8.5, timeToComplete: '3 minutes', outputQuality: 'polished' }
-        }
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interface": "intuitive",
+      "documentation": "excellent",
+      "support": "responsive"
     },
-    {
-        id: 'pika-labs',
-        name: 'Pika Labs',
-        company: 'Pika Labs',
-        logo: '🎨',
-        primaryCategory: 'text-to-video',
-        subcategories: ['video-generation', 'art-generation', 'creative-tools'],
-        useCases: ['Creative projects', 'Social media content', 'Art generation'],
-        pricing: { model: 'freemium', monthlyCost: 8, freeTier: true },
-        performance: { quality: 8.5, speed: 9.0, consistency: 8.2, reliability: 8.5 },
-        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'good', support: 'community' },
-        analytics: { popularity: 82, growth: '+20%', lastUpdated: '2024-01-10', launchDate: '2023-04-15' },
-        community: { rating: 8.8, reviewCount: 2850, sentiment: 'positive' },
-        description: 'Creative AI video generation platform known for artistic and stylized video creation.',
-        features: ['Text-to-video', 'Artistic styles', 'Character consistency', 'Custom models'],
-        capabilities: { inputTypes: ['text', 'image'], outputTypes: ['video'], integrations: [], platforms: ['web'] },
-        vibeAlignment: { creative: 10, productive: 7, explorative: 9, relaxed: 8 },
-        roiScore: 6560,
-        website: 'https://pika.art',
-        tasks: {
-            'Create artistic video': { effectiveness: 8.8, timeToComplete: '1.5 minutes', outputQuality: 'stylized' },
-            'Generate social media clips': { effectiveness: 9.0, timeToComplete: '1 minute', outputQuality: 'engaging' },
-            'Experimental art projects': { effectiveness: 8.5, timeToComplete: '2 minutes', outputQuality: 'unique' }
-        }
+    "analytics": {
+      "popularity": 95,
+      "growth": "+12%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2022-11-30"
     },
-    {
-        id: 'stable-video-diffusion',
-        name: 'Stable Video Diffusion',
-        company: 'Stability AI',
-        logo: '🔬',
-        primaryCategory: 'image-to-video',
-        subcategories: ['video-generation', 'animation', 'open-source'],
-        useCases: ['Character animation', 'Educational content', 'Research'],
-        pricing: { model: 'free', monthlyCost: 0, freeTier: true },
-        performance: { quality: 8.0, speed: 7.5, consistency: 8.2, reliability: 7.8 },
-        userExperience: { learningCurve: 'advanced', interface: 'technical', documentation: 'excellent', support: 'community' },
-        analytics: { popularity: 75, growth: '+18%', lastUpdated: '2024-01-05', launchDate: '2023-11-21' },
-        community: { rating: 8.5, reviewCount: 4100, sentiment: 'positive' },
-        description: 'Open-source AI video generation model based on Stable Diffusion, excellent for consistent character animation.',
-        features: ['Image-to-video', 'Open source', 'Character consistency', 'Customizable'],
-        capabilities: { inputTypes: ['image'], outputTypes: ['video'], integrations: ['python', 'api'], platforms: ['local', 'cloud'] },
-        vibeAlignment: { creative: 8, productive: 6, explorative: 10, relaxed: 5 },
-        roiScore: 6000,
-        website: 'https://stability.ai/stable-video',
-        tasks: {
-            'Animate character': { effectiveness: 8.5, timeToComplete: '5 minutes', outputQuality: 'consistent' },
-            'Research experiments': { effectiveness: 9.0, timeToComplete: '10 minutes', outputQuality: 'customizable' },
-            'Educational demos': { effectiveness: 8.0, timeToComplete: '7 minutes', outputQuality: 'clear' }
-        }
+    "community": {
+      "rating": 4.7,
+      "reviewCount": 15420,
+      "sentiment": "positive"
     },
-    {
-        id: 'google-veo',
-        name: 'Veo',
-        company: 'Google',
-        logo: '🌟',
-        category: 'text-to-video',
-        pricing: 'paid',
-        rating: 9.0,
-        popularity: 78,
-        description: 'Google\'s advanced AI video generation model with excellent prompt understanding and high-quality output.',
-        features: ['Text-to-video', 'High resolution', 'Complex prompts', 'Google integration'],
-        quality: 88,
-        speed: 82,
-        easeOfUse: 85,
-        price: 'Contact for pricing',
-        website: 'https://deepmind.google/veo',
-        useCases: ['Professional content', 'Marketing', 'Enterprise solutions']
+    "description": "Advanced conversational AI that can understand and generate human-like text for a wide variety of tasks.",
+    "features": [
+      "Natural conversation",
+      "Code generation",
+      "Text analysis",
+      "Multi-language support",
+      "API access"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "text"
+      ],
+      "outputTypes": [
+        "text"
+      ],
+      "integrations": [
+        "api",
+        "zapier"
+      ],
+      "platforms": [
+        "web",
+        "api"
+      ]
     },
-    {
-        id: 'luma-dream-machine',
-        name: 'Dream Machine',
-        company: 'Luma AI',
-        logo: '⚡',
-        category: 'text-to-video',
-        pricing: 'freemium',
-        rating: 8.7,
-        popularity: 80,
-        description: 'Fast and efficient AI video generation with focus on motion quality and realistic movements.',
-        features: ['Text-to-video', 'Fast generation', 'Motion focus', 'Realistic physics'],
-        quality: 82,
-        speed: 95,
-        easeOfUse: 83,
-        price: 'Free tier, $29/month Pro',
-        website: 'https://lumalabs.ai/dream-machine',
-        useCases: ['Quick content creation', 'Social media', 'Dynamic scenes']
+    "vibeAlignment": {
+      "creative": 8,
+      "productive": 9,
+      "explorative": 9,
+      "relaxed": 8
     },
-    {
-        id: 'kling-ai',
-        name: 'Kling AI',
-        company: 'Kling AI',
-        logo: '🎭',
-        category: 'text-to-video',
-        pricing: 'freemium',
-        rating: 8.6,
-        popularity: 73,
-        description: 'Chinese AI video generation model known for detailed scenes and realistic video output.',
-        features: ['Text-to-video', 'Detailed scenes', 'Realistic rendering', 'Asian language support'],
-        quality: 86,
-        speed: 78,
-        easeOfUse: 75,
-        price: 'Free tier, ¥99/month Pro',
-        website: 'https://klingai.com',
-        useCases: ['Detailed storytelling', 'Realistic scenes', 'Asian markets']
-    },
-    // IMAGE GENERATION TOOLS
-    {
-        id: 'midjourney',
-        name: 'Midjourney',
-        company: 'Midjourney',
-        logo: '🎨',
-        primaryCategory: 'image-generation',
-        subcategories: ['art', 'design', 'creative'],
-        useCases: ['art', 'design', 'marketing', 'social-media'],
-        pricing: { model: 'freemium', monthlyCost: 10, freeTier: true },
-        performance: { quality: 9.3, speed: 7.5, consistency: 8.8, reliability: 8.9 },
-        userExperience: { learningCurve: 'intermediate', interface: 'moderate', documentation: 'good', support: 'community' },
-        analytics: { popularity: 88, growth: '+18%', lastUpdated: '2024-01-15', launchDate: '2022-07-12' },
-        community: { rating: 4.6, reviewCount: 12450, sentiment: 'positive' },
-        description: 'AI art generation tool that creates stunning images from text prompts, popular among artists and designers.',
-        features: ['High-quality art', 'Style variety', 'Community gallery', 'Discord integration'],
-        capabilities: { inputTypes: ['text'], outputTypes: ['image'], integrations: ['discord'], platforms: ['web'] },
-        vibeAlignment: { creative: 10, productive: 6, explorative: 8, relaxed: 9 },
-        roiScore: 3800,
-        website: 'https://midjourney.com',
-        tasks: {
-            'Create concept art': { effectiveness: 9.3, timeToComplete: '2 minutes', outputQuality: 'artistic' },
-            'Design social media graphics': { effectiveness: 8.7, timeToComplete: '3 minutes', outputQuality: 'professional' }
-        }
-    },
-    {
-        id: 'dalle-3',
-        name: 'DALL-E 3',
-        company: 'OpenAI',
-        logo: '🎭',
-        primaryCategory: 'image-generation',
-        subcategories: ['art', 'design', 'creative'],
-        useCases: ['art', 'design', 'illustration', 'marketing'],
-        pricing: { model: 'paid', monthlyCost: 20, freeTier: false },
-        performance: { quality: 9.1, speed: 8.2, consistency: 8.9, reliability: 9.2 },
-        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
-        analytics: { popularity: 82, growth: '+15%', lastUpdated: '2024-01-15', launchDate: '2023-10-01' },
-        community: { rating: 4.5, reviewCount: 9870, sentiment: 'positive' },
-        description: 'OpenAI\'s latest image generation model with improved understanding and higher quality outputs.',
-        features: ['Text-to-image', 'High coherence', 'Style consistency', 'ChatGPT integration'],
-        capabilities: { inputTypes: ['text'], outputTypes: ['image'], integrations: ['chatgpt'], platforms: ['web'] },
-        vibeAlignment: { creative: 9, productive: 8, explorative: 7, relaxed: 8 },
-        roiScore: 4100,
-        website: 'https://openai.com/dall-e-3',
-        tasks: {
-            'Generate product images': { effectiveness: 9.1, timeToComplete: '2 minutes', outputQuality: 'commercial' },
-            'Create illustrations': { effectiveness: 8.9, timeToComplete: '3 minutes', outputQuality: 'artistic' }
-        }
-    },
-
-    // CODE GENERATION TOOLS
-    {
-        id: 'github-copilot',
-        name: 'GitHub Copilot',
-        company: 'GitHub',
-        logo: '💻',
-        primaryCategory: 'code-generation',
-        subcategories: ['coding', 'debugging', 'documentation'],
-        useCases: ['coding', 'debugging', 'documentation', 'learning'],
-        pricing: { model: 'paid', monthlyCost: 10, freeTier: false },
-        performance: { quality: 9.4, speed: 9.5, consistency: 9.1, reliability: 9.3 },
-        userExperience: { learningCurve: 'intermediate', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
-        analytics: { popularity: 91, growth: '+22%', lastUpdated: '2024-01-15', launchDate: '2021-06-29' },
-        community: { rating: 4.7, reviewCount: 23450, sentiment: 'positive' },
-        description: 'AI pair programming tool that suggests code completions and entire functions in real-time.',
-        features: ['Code completion', 'Function suggestions', 'Multi-language support', 'IDE integration'],
-        capabilities: { inputTypes: ['code'], outputTypes: ['code'], integrations: ['vscode', 'jetbrains'], platforms: ['web', 'desktop'] },
-        vibeAlignment: { creative: 6, productive: 10, explorative: 7, relaxed: 5 },
-        roiScore: 4200,
-        website: 'https://github.com/features/copilot',
-        tasks: {
-            'Write function code': { effectiveness: 9.4, timeToComplete: '1 minute', outputQuality: 'professional' },
-            'Debug existing code': { effectiveness: 8.8, timeToComplete: '5 minutes', outputQuality: 'accurate' }
-        }
-    },
-
-    // VIDEO GENERATION TOOLS
-    {
-        id: 'sora',
-        name: 'Sora',
-        company: 'OpenAI',
-        logo: '🎬',
-        primaryCategory: 'video-generation',
-        subcategories: ['text-to-video', 'creative'],
-        useCases: ['marketing', 'entertainment', 'education'],
-        pricing: { model: 'paid', monthlyCost: 15, freeTier: false },
-        performance: { quality: 9.5, speed: 8.5, consistency: 9.2, reliability: 9.0 },
-        userExperience: { learningCurve: 'intermediate', interface: 'intuitive', documentation: 'good', support: 'responsive' },
-        analytics: { popularity: 95, growth: '+45%', lastUpdated: '2024-01-15', launchDate: '2024-02-15' },
-        community: { rating: 4.8, reviewCount: 5670, sentiment: 'positive' },
-        description: 'Advanced text-to-video generation model capable of creating highly realistic and imaginative scenes.',
-        features: ['Text-to-video', 'High realism', 'Complex scenes', 'Creative control'],
-        capabilities: { inputTypes: ['text'], outputTypes: ['video'], integrations: ['api'], platforms: ['web'] },
-        vibeAlignment: { creative: 10, productive: 7, explorative: 8, relaxed: 6 },
-        roiScore: 5200,
-        website: 'https://openai.com/sora',
-        tasks: {
-            'Create marketing videos': { effectiveness: 9.5, timeToComplete: '10 minutes', outputQuality: 'professional' },
-            'Generate educational content': { effectiveness: 9.0, timeToComplete: '8 minutes', outputQuality: 'educational' }
-        }
-    },
-
-    // AUDIO GENERATION TOOLS
-    {
-        id: 'elevenlabs',
-        name: 'ElevenLabs',
-        company: 'ElevenLabs',
-        logo: '🎵',
-        primaryCategory: 'audio-generation',
-        subcategories: ['speech', 'voice', 'entertainment'],
-        useCases: ['podcasting', 'audiobooks', 'gaming', 'accessibility'],
-        pricing: { model: 'freemium', monthlyCost: 22, freeTier: true },
-        performance: { quality: 9.2, speed: 8.7, consistency: 9.0, reliability: 8.8 },
-        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
-        analytics: { popularity: 79, growth: '+35%', lastUpdated: '2024-01-15', launchDate: '2022-01-01' },
-        community: { rating: 4.6, reviewCount: 7890, sentiment: 'positive' },
-        description: 'Ultra-realistic voice synthesis and cloning platform for content creators and businesses.',
-        features: ['Voice synthesis', 'Voice cloning', 'Multi-language', 'Emotional control', 'API access'],
-        capabilities: { inputTypes: ['text'], outputTypes: ['audio'], integrations: ['api', 'zapier'], platforms: ['web', 'api'] },
-        vibeAlignment: { creative: 8, productive: 8, explorative: 7, relaxed: 9 },
-        roiScore: 3100,
-        website: 'https://elevenlabs.io',
-        tasks: {
-            'Create podcast voiceovers': { effectiveness: 9.2, timeToComplete: '5 minutes', outputQuality: 'natural' },
-            'Generate audiobooks': { effectiveness: 8.9, timeToComplete: '15 minutes', outputQuality: 'expressive' }
-        }
-    },
-
-    // DATA ANALYSIS TOOLS
-    {
-        id: 'julius',
-        name: 'Julius AI',
-        company: 'Julius',
-        logo: '📊',
-        primaryCategory: 'data-analysis',
-        subcategories: ['analytics', 'business-intelligence'],
-        useCases: ['analysis', 'reporting', 'business'],
-        pricing: { model: 'freemium', monthlyCost: 29, freeTier: true },
-        performance: { quality: 8.8, speed: 9.0, consistency: 8.7, reliability: 8.9 },
-        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
-        analytics: { popularity: 73, growth: '+28%', lastUpdated: '2024-01-15', launchDate: '2023-06-01' },
-        community: { rating: 4.4, reviewCount: 3420, sentiment: 'positive' },
-        description: 'AI-powered data analysis and visualization tool that makes complex data accessible to everyone.',
-        features: ['Natural language queries', 'Automated insights', 'Interactive visualizations', 'Report generation'],
-        capabilities: { inputTypes: ['text', 'data'], outputTypes: ['data', 'insights'], integrations: ['api'], platforms: ['web'] },
-        vibeAlignment: { creative: 6, productive: 9, explorative: 8, relaxed: 7 },
-        roiScore: 2850,
-        website: 'https://julius.ai',
-        tasks: {
-            'Analyze datasets': { effectiveness: 8.8, timeToComplete: '3 minutes', outputQuality: 'comprehensive' },
-            'Generate reports': { effectiveness: 8.5, timeToComplete: '5 minutes', outputQuality: 'professional' }
-        }
-    },
-
-    // PRODUCTIVITY TOOLS
-    {
-        id: 'notion-ai',
-        name: 'Notion AI',
-        company: 'Notion',
-        logo: '📝',
-        primaryCategory: 'productivity',
-        subcategories: ['writing', 'organization', 'collaboration'],
-        useCases: ['writing', 'project-management', 'documentation'],
-        pricing: { model: 'freemium', monthlyCost: 10, freeTier: true },
-        performance: { quality: 8.6, speed: 8.9, consistency: 8.8, reliability: 9.1 },
-        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
-        analytics: { popularity: 89, growth: '+15%', lastUpdated: '2024-01-15', launchDate: '2022-11-01' },
-        community: { rating: 4.7, reviewCount: 28900, sentiment: 'positive' },
-        description: 'AI-enhanced workspace that combines notes, docs, and project management with intelligent assistance.',
-        features: ['AI writing', 'Auto-summarization', 'Task management', 'Real-time collaboration'],
-        capabilities: { inputTypes: ['text'], outputTypes: ['text'], integrations: ['api'], platforms: ['web', 'desktop', 'mobile'] },
-        vibeAlignment: { creative: 7, productive: 10, explorative: 6, relaxed: 8 },
-        roiScore: 3200,
-        website: 'https://notion.so',
-        tasks: {
-            'Write project briefs': { effectiveness: 8.6, timeToComplete: '4 minutes', outputQuality: 'structured' },
-            'Summarize meeting notes': { effectiveness: 8.9, timeToComplete: '2 minutes', outputQuality: 'concise' }
-        }
-    },
-
-    // MORE TEXT GENERATION TOOLS
-    {
-        id: 'perplexity',
-        name: 'Perplexity AI',
-        company: 'Perplexity',
-        logo: '🔍',
-        primaryCategory: 'text-generation',
-        subcategories: ['research', 'search', 'analysis'],
-        useCases: ['research', 'analysis', 'learning'],
-        pricing: { model: 'freemium', monthlyCost: 20, freeTier: true },
-        performance: { quality: 8.9, speed: 9.2, consistency: 8.7, reliability: 9.0 },
-        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
-        analytics: { popularity: 76, growth: '+35%', lastUpdated: '2024-01-15', launchDate: '2022-12-01' },
-        community: { rating: 4.5, reviewCount: 5670, sentiment: 'positive' },
-        description: 'AI-powered search engine that provides comprehensive answers with source citations and real-time information.',
-        features: ['Source citations', 'Real-time search', 'Follow-up questions', 'Export answers'],
-        capabilities: { inputTypes: ['text'], outputTypes: ['text'], integrations: ['api'], platforms: ['web', 'mobile'] },
-        vibeAlignment: { creative: 6, productive: 8, explorative: 10, relaxed: 7 },
-        roiScore: 2850,
-        website: 'https://perplexity.ai',
-        tasks: {
-            'Research any topic': { effectiveness: 8.9, timeToComplete: '3 minutes', outputQuality: 'comprehensive' },
-            'Find latest information': { effectiveness: 9.2, timeToComplete: '2 minutes', outputQuality: 'current' }
-        }
-    },
-
-    // DESIGN TOOLS
-    {
-        id: 'canva-magic',
-        name: 'Canva Magic Studio',
-        company: 'Canva',
-        logo: '🎨',
-        primaryCategory: 'image-generation',
-        subcategories: ['design', 'social-media', 'marketing'],
-        useCases: ['design', 'social-media', 'marketing'],
-        pricing: { model: 'freemium', monthlyCost: 13, freeTier: true },
-        performance: { quality: 8.4, speed: 9.5, consistency: 8.8, reliability: 9.2 },
-        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
-        analytics: { popularity: 92, growth: '+18%', lastUpdated: '2024-01-15', launchDate: '2023-03-01' },
-        community: { rating: 4.6, reviewCount: 34500, sentiment: 'positive' },
-        description: 'AI-powered design platform that makes professional graphics accessible to everyone.',
-        features: ['Magic Studio', 'Template library', 'Brand kit', 'Team collaboration', 'AI image generation'],
-        capabilities: { inputTypes: ['text'], outputTypes: ['image'], integrations: ['api'], platforms: ['web', 'mobile'] },
-        vibeAlignment: { creative: 9, productive: 9, explorative: 6, relaxed: 10 },
-        roiScore: 4100,
-        website: 'https://canva.com/magic',
-        tasks: {
-            'Create social media posts': { effectiveness: 8.4, timeToComplete: '5 minutes', outputQuality: 'professional' },
-            'Design presentations': { effectiveness: 8.2, timeToComplete: '10 minutes', outputQuality: 'polished' }
-        }
-    },
-
-    // PRODUCTIVITY TOOLS
-    {
-        id: 'grammarly',
-        name: 'Grammarly',
-        company: 'Grammarly',
-        logo: '✏️',
-        primaryCategory: 'productivity',
-        subcategories: ['writing', 'editing', 'grammar'],
-        useCases: ['writing', 'editing', 'proofreading'],
-        pricing: { model: 'freemium', monthlyCost: 12, freeTier: true },
-        performance: { quality: 9.1, speed: 9.3, consistency: 9.4, reliability: 9.5 },
-        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
-        analytics: { popularity: 88, growth: '+8%', lastUpdated: '2024-01-15', launchDate: '2009-01-01' },
-        community: { rating: 4.7, reviewCount: 45600, sentiment: 'positive' },
-        description: 'AI-powered writing assistant that helps with grammar, clarity, and tone.',
-        features: ['Grammar checking', 'Style suggestions', 'Tone detection', 'Plagiarism detection'],
-        capabilities: { inputTypes: ['text'], outputTypes: ['text'], integrations: ['browser', 'api'], platforms: ['web', 'desktop', 'mobile'] },
-        vibeAlignment: { creative: 7, productive: 10, explorative: 5, relaxed: 8 },
-        roiScore: 3200,
-        website: 'https://grammarly.com',
-        tasks: {
-            'Edit writing': { effectiveness: 9.1, timeToComplete: '2 minutes', outputQuality: 'polished' },
-            'Check grammar': { effectiveness: 9.4, timeToComplete: '1 minute', outputQuality: 'accurate' }
-        }
-    },
-
-    // MORE CODE TOOLS
-    {
-        id: 'cursor',
-        name: 'Cursor',
-        company: 'Cursor',
-        logo: '⚡',
-        primaryCategory: 'code-generation',
-        subcategories: ['coding', 'ai-assistance', 'productivity'],
-        useCases: ['coding', 'debugging', 'documentation'],
-        pricing: { model: 'freemium', monthlyCost: 20, freeTier: true },
-        performance: { quality: 9.1, speed: 9.3, consistency: 8.9, reliability: 9.0 },
-        userExperience: { learningCurve: 'intermediate', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
-        analytics: { popularity: 71, growth: '+45%', lastUpdated: '2024-01-15', launchDate: '2023-01-01' },
-        community: { rating: 4.6, reviewCount: 7890, sentiment: 'positive' },
-        description: 'AI-first code editor with advanced autocomplete and intelligent suggestions.',
-        features: ['AI autocomplete', 'Code generation', 'Debugging help', 'Multi-language support'],
-        capabilities: { inputTypes: ['code'], outputTypes: ['code'], integrations: ['api'], platforms: ['web', 'desktop'] },
-        vibeAlignment: { creative: 7, productive: 10, explorative: 8, relaxed: 6 },
-        roiScore: 3800,
-        website: 'https://cursor.sh',
-        tasks: {
-            'Write code faster': { effectiveness: 9.1, timeToComplete: 'varies', outputQuality: 'professional' },
-            'Debug code': { effectiveness: 8.7, timeToComplete: '5 minutes', outputQuality: 'accurate' }
-        }
-    },
-
-    // MORE VIDEO TOOLS
-    {
-        id: 'kapwing',
-        name: 'Kapwing',
-        company: 'Kapwing',
-        logo: '🎬',
-        primaryCategory: 'video-generation',
-        subcategories: ['editing', 'social-media', 'marketing'],
-        useCases: ['video-editing', 'social-media', 'marketing'],
-        pricing: { model: 'freemium', monthlyCost: 16, freeTier: true },
-        performance: { quality: 8.3, speed: 8.8, consistency: 8.5, reliability: 8.7 },
-        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
-        analytics: { popularity: 74, growth: '+22%', lastUpdated: '2024-01-15', launchDate: '2018-01-01' },
-        community: { rating: 4.4, reviewCount: 12340, sentiment: 'positive' },
-        description: 'Collaborative video editing platform with AI-powered features for social media content.',
-        features: ['AI video editing', 'Subtitle generation', 'Template library', 'Team collaboration'],
-        capabilities: { inputTypes: ['video', 'text'], outputTypes: ['video'], integrations: ['api'], platforms: ['web'] },
-        vibeAlignment: { creative: 8, productive: 9, explorative: 6, relaxed: 8 },
-        roiScore: 2650,
-        website: 'https://kapwing.com',
-        tasks: {
-            'Edit social videos': { effectiveness: 8.3, timeToComplete: '15 minutes', outputQuality: 'professional' },
-            'Add subtitles': { effectiveness: 8.6, timeToComplete: '5 minutes', outputQuality: 'accurate' }
-        }
-    },
-
-    // MORE AUDIO TOOLS
-    {
-        id: 'murf',
-        name: 'Murf.ai',
-        company: 'Murf',
-        logo: '🎙️',
-        primaryCategory: 'audio-generation',
-        subcategories: ['voice', 'speech', 'marketing'],
-        useCases: ['voiceover', 'marketing', 'accessibility'],
-        pricing: { model: 'freemium', monthlyCost: 19, freeTier: true },
-        performance: { quality: 8.7, speed: 8.5, consistency: 8.9, reliability: 8.6 },
-        userExperience: { learningCurve: 'beginner', interface: 'intuitive', documentation: 'excellent', support: 'responsive' },
-        analytics: { popularity: 68, growth: '+28%', lastUpdated: '2024-01-15', launchDate: '2020-01-01' },
-        community: { rating: 4.3, reviewCount: 4560, sentiment: 'positive' },
-        description: 'AI voice generator that creates realistic voiceovers in multiple languages and accents.',
-        features: ['Voice synthesis', 'Multi-language', 'Custom voices', 'Commercial usage'],
-        capabilities: { inputTypes: ['text'], outputTypes: ['audio'], integrations: ['api'], platforms: ['web'] },
-        vibeAlignment: { creative: 7, productive: 8, explorative: 6, relaxed: 9 },
-        roiScore: 2350,
-        website: 'https://murf.ai',
-        tasks: {
-            'Create voiceovers': { effectiveness: 8.7, timeToComplete: '5 minutes', outputQuality: 'natural' },
-            'Generate podcasts': { effectiveness: 8.2, timeToComplete: '10 minutes', outputQuality: 'engaging' }
-        }
-    },
-
-    // MORE DATA ANALYSIS TOOLS
-    {
-        id: 'tableau-ai',
-        name: 'Tableau AI',
-        company: 'Salesforce',
-        logo: '📊',
-        primaryCategory: 'data-analysis',
-        subcategories: ['analytics', 'visualization', 'business-intelligence'],
-        useCases: ['analysis', 'reporting', 'business-intelligence'],
-        pricing: { model: 'paid', monthlyCost: 70, freeTier: false },
-        performance: { quality: 9.0, speed: 8.2, consistency: 9.1, reliability: 9.3 },
-        userExperience: { learningCurve: 'intermediate', interface: 'moderate', documentation: 'excellent', support: 'responsive' },
-        analytics: { popularity: 82, growth: '+12%', lastUpdated: '2024-01-15', launchDate: '2023-05-01' },
-        community: { rating: 4.5, reviewCount: 23400, sentiment: 'positive' },
-        description: 'Enterprise-grade data visualization and business intelligence platform with AI-powered insights.',
-        features: ['AI data analysis', 'Interactive dashboards', 'Natural language queries', 'Predictive analytics'],
-        capabilities: { inputTypes: ['data'], outputTypes: ['data', 'insights'], integrations: ['api'], platforms: ['web', 'desktop'] },
-        vibeAlignment: { creative: 5, productive: 9, explorative: 8, relaxed: 6 },
-        roiScore: 3150,
-        website: 'https://tableau.com/ai',
-        tasks: {
-            'Analyze business data': { effectiveness: 9.0, timeToComplete: '10 minutes', outputQuality: 'comprehensive' },
-            'Create dashboards': { effectiveness: 8.8, timeToComplete: '20 minutes', outputQuality: 'visual' }
-        }
-    },
-    {
-        id: 'notebooklm',
-        name: 'NotebookLM',
-        logo: '📚',
-        company: 'Google',
-        description: 'AI-powered research assistant that helps you understand and synthesize information from your documents',
-        primaryCategory: 'productivity',
-        subcategories: ['research', 'note-taking', 'education'],
-        pricing: { model: 'free', monthlyCost: 0, freeTier: true },
-        performance: { quality: 90, speed: 85, consistency: 88, reliability: 92 },
-        userExperience: { learningCurve: 'beginner', interfaceQuality: 92, documentation: 'excellent' },
-        features: ['Document analysis', 'Source-grounded answers', 'Audio overviews', 'Multi-document synthesis', 'Citation tracking'],
-        useCases: ['Research', 'Study notes', 'Document analysis', 'Content synthesis'],
-        integrations: ['Google Drive', 'PDF upload', 'Text documents'],
-        limitations: ['Limited to 50 sources', 'No real-time collaboration'],
-        vibeAlignment: { creative: 6, productive: 9, explorative: 10, relaxed: 7 },
-        analytics: { popularity: 85, growth: 'rapid', userSatisfaction: 92 },
-        community: { rating: 4.7, reviewCount: 8500, activeUsers: '2M+' },
-        roiScore: 2850,
-        website: 'https://notebooklm.google.com'
-    },
-    {
-        id: 'replit-agent',
-        name: 'Replit Agent',
-        logo: '🤖',
-        company: 'Replit',
-        description: 'AI agent that builds full-stack applications from natural language descriptions',
-        primaryCategory: 'code-generation',
-        subcategories: ['development', 'automation', 'prototyping'],
-        pricing: { model: 'paid', monthlyCost: 25, freeTier: false },
-        performance: { quality: 85, speed: 88, consistency: 82, reliability: 86 },
-        userExperience: { learningCurve: 'beginner', interfaceQuality: 90, documentation: 'good' },
-        features: ['Full-stack app generation', 'Natural language coding', 'Instant deployment', 'Real-time collaboration', 'Multi-language support'],
-        useCases: ['Rapid prototyping', 'App development', 'Learning to code', 'Automating tasks'],
-        integrations: ['GitHub', 'npm', 'pip', 'Database hosting'],
-        limitations: ['Computing resource limits', 'Complex apps may need refinement'],
-        vibeAlignment: { creative: 8, productive: 9, explorative: 7, relaxed: 6 },
-        analytics: { popularity: 82, growth: 'rapid', userSatisfaction: 88 },
-        community: { rating: 4.5, reviewCount: 12000, activeUsers: '5M+' },
-        roiScore: 3200,
-        website: 'https://replit.com/agent'
-    },
-    {
-        id: 'framer-ai',
-        name: 'Framer AI',
-        logo: '🎨',
-        company: 'Framer',
-        description: 'AI-powered website builder that creates professional sites from text descriptions',
-        primaryCategory: 'design',
-        subcategories: ['web-design', 'prototyping', 'no-code'],
-        pricing: { model: 'freemium', monthlyCost: 15, freeTier: true },
-        performance: { quality: 88, speed: 90, consistency: 86, reliability: 89 },
-        userExperience: { learningCurve: 'beginner', interfaceQuality: 94, documentation: 'excellent' },
-        features: ['Text-to-website', 'Responsive design', 'Custom animations', 'CMS integration', 'SEO optimization'],
-        useCases: ['Landing pages', 'Portfolio sites', 'Marketing websites', 'Startup MVPs'],
-        integrations: ['Analytics', 'Forms', 'CMS', 'Custom code'],
-        limitations: ['Advanced customization requires plan upgrade', 'Learning curve for animations'],
-        vibeAlignment: { creative: 9, productive: 8, explorative: 6, relaxed: 7 },
-        analytics: { popularity: 86, growth: 'rapid', userSatisfaction: 91 },
-        community: { rating: 4.6, reviewCount: 15000, activeUsers: '3M+' },
-        roiScore: 3100,
-        website: 'https://framer.com/ai'
-    },
-    {
-        id: 'opus-clip',
-        name: 'Opus Clip',
-        logo: '✂️',
-        company: 'Opus Pro',
-        description: 'AI-powered tool that automatically creates viral short clips from long videos',
-        primaryCategory: 'video-editing',
-        subcategories: ['content-creation', 'social-media', 'automation'],
-        pricing: { model: 'freemium', monthlyCost: 29, freeTier: true },
-        performance: { quality: 87, speed: 92, consistency: 85, reliability: 88 },
-        userExperience: { learningCurve: 'beginner', interfaceQuality: 88, documentation: 'good' },
-        features: ['Auto clip generation', 'Viral score prediction', 'Auto captions', 'Brand customization', 'Multi-platform export'],
-        useCases: ['YouTube shorts', 'TikTok content', 'Instagram reels', 'Podcast clips'],
-        integrations: ['YouTube', 'Direct upload', 'Social media platforms'],
-        limitations: ['Clip quality depends on source', 'Limited customization on free tier'],
-        vibeAlignment: { creative: 8, productive: 9, explorative: 5, relaxed: 8 },
-        analytics: { popularity: 84, growth: 'rapid', userSatisfaction: 87 },
-        community: { rating: 4.4, reviewCount: 9500, activeUsers: '500K+' },
-        roiScore: 2900,
-        website: 'https://opus.pro'
-    },
-    {
-        id: 'claude-artifacts',
-        name: 'Claude Artifacts',
-        logo: '⚡',
-        company: 'Anthropic',
-        description: 'Interactive creation feature that generates live code, documents, and visualizations',
-        primaryCategory: 'ai-assistant',
-        subcategories: ['code-generation', 'content-creation', 'visualization'],
-        pricing: { model: 'freemium', monthlyCost: 20, freeTier: true },
-        performance: { quality: 92, speed: 88, consistency: 90, reliability: 91 },
-        userExperience: { learningCurve: 'beginner', interfaceQuality: 93, documentation: 'excellent' },
-        features: ['Live code execution', 'Interactive visualizations', 'Document creation', 'React components', 'SVG graphics'],
-        useCases: ['Prototyping', 'Data visualization', 'Learning code', 'Creating demos'],
-        integrations: ['Claude API', 'Web technologies'],
-        limitations: ['Requires Claude Pro for heavy usage', 'Limited to supported frameworks'],
-        vibeAlignment: { creative: 10, productive: 8, explorative: 9, relaxed: 6 },
-        analytics: { popularity: 88, growth: 'explosive', userSatisfaction: 93 },
-        community: { rating: 4.8, reviewCount: 18000, activeUsers: '4M+' },
-        roiScore: 3400,
-        website: 'https://claude.ai',
-        alternatives: ['cursor', 'github-copilot', 'replit-agent']
-    },
-    {
-        id: 'capcut',
-        name: 'CapCut',
-        logo: '✂️',
-        company: 'ByteDance',
-        description: 'Free all-in-one video editing app with AI-powered features for creating engaging social media content',
-        primaryCategory: 'video-editing',
-        subcategories: ['content-creation', 'social-media', 'mobile-editing'],
-        pricing: { model: 'freemium', monthlyCost: 0, freeTier: true },
-        performance: { quality: 85, speed: 90, consistency: 87, reliability: 88 },
-        userExperience: { learningCurve: 'beginner', interfaceQuality: 91, documentation: 'good' },
-        features: ['AI auto-captions', 'Background removal', 'Text-to-speech', 'Trending effects', 'Multi-track editing'],
-        useCases: ['TikTok videos', 'Instagram Reels', 'YouTube Shorts', 'Social media content'],
-        integrations: ['TikTok', 'Direct export', 'Cloud storage'],
-        limitations: ['Pro features require subscription', 'Mobile-focused interface'],
-        vibeAlignment: { creative: 8, productive: 7, explorative: 5, relaxed: 9 },
-        analytics: { popularity: 92, growth: 'explosive', userSatisfaction: 89 },
-        community: { rating: 4.6, reviewCount: 250000, activeUsers: '200M+' },
-        roiScore: 3300,
-        website: 'https://capcut.com',
-        alternatives: ['opus-clip', 'descript', 'pictory']
-    },
-
-    // PHASE 2 STEP 2A: 5 MAJOR AI TOOLS (2025)
-    {
-        id: 'gemini',
-        name: 'Gemini',
-        logo: '💎',
-        company: 'Google',
-        description: 'Google\'s most capable multimodal AI model with advanced reasoning, coding, and creative capabilities',
-        primaryCategory: 'text-generation',
-        subcategories: ['writing', 'coding', 'research', 'multimodal'],
-        pricing: { model: 'freemium', monthlyCost: 20, freeTier: true },
-        performance: { quality: 93, speed: 90, consistency: 91, reliability: 92 },
-        userExperience: { learningCurve: 'beginner', interfaceQuality: 92, documentation: 'excellent' },
-        features: ['Multimodal understanding', 'Advanced reasoning', 'Code generation', '1M token context', 'Image & video analysis'],
-        useCases: ['Research', 'Coding', 'Content creation', 'Data analysis', 'Document processing'],
-        integrations: ['Google Workspace', 'Google Cloud', 'API access'],
-        limitations: ['Some features require paid plan', 'Regional availability varies'],
-        vibeAlignment: { creative: 8, productive: 9, explorative: 10, relaxed: 7 },
-        analytics: { popularity: 89, growth: 'explosive', userSatisfaction: 91 },
-        community: { rating: 4.7, reviewCount: 45000, activeUsers: '100M+' },
-        roiScore: 3600,
-        website: 'https://gemini.google.com',
-        alternatives: ['chatgpt', 'claude', 'perplexity']
-    },
-    {
-        id: 'heygen',
-        name: 'HeyGen',
-        logo: '🎭',
-        company: 'HeyGen',
-        description: 'AI video generation platform that creates professional videos with realistic AI avatars and voices',
-        primaryCategory: 'video-generation',
-        subcategories: ['avatar-generation', 'text-to-video', 'content-creation'],
-        pricing: { model: 'freemium', monthlyCost: 29, freeTier: true },
-        performance: { quality: 90, speed: 85, consistency: 89, reliability: 90 },
-        userExperience: { learningCurve: 'beginner', interfaceQuality: 93, documentation: 'excellent' },
-        features: ['AI avatars', 'Voice cloning', 'Multi-language support', 'Custom avatars', 'Video translation'],
-        useCases: ['Marketing videos', 'Training content', 'Product demos', 'Social media', 'Corporate communications'],
-        integrations: ['API access', 'Zapier', 'Video editing tools'],
-        limitations: ['Credit-based usage', 'Video length limits on free tier'],
-        vibeAlignment: { creative: 8, productive: 9, explorative: 6, relaxed: 7 },
-        analytics: { popularity: 87, growth: 'rapid', userSatisfaction: 90 },
-        community: { rating: 4.6, reviewCount: 28000, activeUsers: '2M+' },
-        roiScore: 3500,
-        website: 'https://heygen.com',
-        alternatives: ['runway-gen2', 'synthesia', 'd-id']
-    },
-    {
-        id: 'v0-dev',
-        name: 'v0.dev',
-        logo: '⚡',
-        company: 'Vercel',
-        description: 'AI-powered web development tool that generates production-ready React code from text descriptions',
-        primaryCategory: 'code-generation',
-        subcategories: ['web-development', 'ui-design', 'prototyping'],
-        pricing: { model: 'freemium', monthlyCost: 20, freeTier: true },
-        performance: { quality: 89, speed: 92, consistency: 88, reliability: 90 },
-        userExperience: { learningCurve: 'intermediate', interfaceQuality: 94, documentation: 'excellent' },
-        features: ['Text-to-UI', 'React components', 'Tailwind CSS', 'shadcn/ui integration', 'Copy-paste code'],
-        useCases: ['UI prototyping', 'Component generation', 'Landing pages', 'Dashboard templates', 'App interfaces'],
-        integrations: ['Next.js', 'Vercel deployment', 'shadcn/ui', 'Tailwind CSS'],
-        limitations: ['Requires React knowledge for customization', 'Limited to supported frameworks'],
-        vibeAlignment: { creative: 7, productive: 10, explorative: 8, relaxed: 6 },
-        analytics: { popularity: 86, growth: 'explosive', userSatisfaction: 92 },
-        community: { rating: 4.8, reviewCount: 35000, activeUsers: '1M+' },
-        roiScore: 3700,
-        website: 'https://v0.dev',
-        alternatives: ['replit-agent', 'bolt-new', 'cursor']
-    },
-    {
-        id: 'bolt-new',
-        name: 'Bolt.new',
-        logo: '⚡',
-        company: 'StackBlitz',
-        description: 'AI-powered full-stack development environment that builds and deploys web apps in seconds',
-        primaryCategory: 'code-generation',
-        subcategories: ['web-development', 'full-stack', 'deployment'],
-        pricing: { model: 'freemium', monthlyCost: 20, freeTier: true },
-        performance: { quality: 88, speed: 95, consistency: 87, reliability: 89 },
-        userExperience: { learningCurve: 'beginner', interfaceQuality: 95, documentation: 'good' },
-        features: ['Instant dev environment', 'Full-stack apps', 'Live preview', 'NPM package support', 'One-click deploy'],
-        useCases: ['Rapid prototyping', 'MVPs', 'Code experiments', 'Learning projects', 'Portfolio sites'],
-        integrations: ['GitHub', 'NPM', 'Vite', 'Node.js', 'WebContainers'],
-        limitations: ['Browser-based limitations', 'Performance constraints on complex apps'],
-        vibeAlignment: { creative: 8, productive: 9, explorative: 9, relaxed: 7 },
-        analytics: { popularity: 85, growth: 'explosive', userSatisfaction: 90 },
-        community: { rating: 4.7, reviewCount: 22000, activeUsers: '800K+' },
-        roiScore: 3400,
-        website: 'https://bolt.new',
-        alternatives: ['v0-dev', 'replit-agent', 'github-copilot']
-    },
-    {
-        id: 'jasper-ai',
-        name: 'Jasper AI',
-        logo: '✍️',
-        company: 'Jasper',
-        description: 'Enterprise AI content platform for creating on-brand marketing copy, blog posts, and social content',
-        primaryCategory: 'text-generation',
-        subcategories: ['content-creation', 'marketing', 'copywriting'],
-        pricing: { model: 'paid', monthlyCost: 49, freeTier: false },
-        performance: { quality: 87, speed: 90, consistency: 88, reliability: 89 },
-        userExperience: { learningCurve: 'beginner', interfaceQuality: 90, documentation: 'excellent' },
-        features: ['Brand voice', 'SEO optimization', '50+ templates', 'Multi-language', 'Team collaboration'],
-        useCases: ['Blog writing', 'Ad copy', 'Email campaigns', 'Social media posts', 'Product descriptions'],
-        integrations: ['Surfer SEO', 'Grammarly', 'Copyscape', 'Browser extension'],
-        limitations: ['Higher price point', 'Word count limits', 'No free tier'],
-        vibeAlignment: { creative: 8, productive: 9, explorative: 5, relaxed: 7 },
-        analytics: { popularity: 83, growth: 'steady', userSatisfaction: 86 },
-        community: { rating: 4.4, reviewCount: 18000, activeUsers: '100K+' },
-        roiScore: 2900,
-        website: 'https://jasper.ai',
-        alternatives: ['chatgpt', 'claude', 'copy-ai']
+    "roiScore": 6900,
+    "website": "https://chat.openai.com",
+    "tasks": {
+      "Write a blog post": {
+        "effectiveness": 9.2,
+        "timeToComplete": "5 minutes",
+        "outputQuality": "professional"
+      },
+      "Generate product descriptions": {
+        "effectiveness": 8.8,
+        "timeToComplete": "2 minutes",
+        "outputQuality": "commercial"
+      },
+      "Create social media content": {
+        "effectiveness": 8.5,
+        "timeToComplete": "3 minutes",
+        "outputQuality": "engaging"
+      }
     }
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "company": "Anthropic",
+    "logo": "🧠",
+    "primaryCategory": "text-generation",
+    "subcategories": [
+      "writing",
+      "analysis",
+      "research"
+    ],
+    "useCases": [
+      "writing",
+      "research",
+      "analysis",
+      "coding"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 20,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 9.5,
+      "speed": 8.5,
+      "consistency": 9.2,
+      "reliability": 9.4
+    },
+    "userExperience": {
+      "learningCurve": "intermediate",
+      "interface": "intuitive",
+      "documentation": "excellent",
+      "support": "responsive"
+    },
+    "analytics": {
+      "popularity": 78,
+      "growth": "+25%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2023-03-14"
+    },
+    "community": {
+      "rating": 4.8,
+      "reviewCount": 8930,
+      "sentiment": "positive"
+    },
+    "description": "Constitutional AI assistant focused on safety and helpfulness, with strong reasoning capabilities.",
+    "features": [
+      "Constitutional AI",
+      "Strong reasoning",
+      "Safety-focused",
+      "Long context",
+      "Code analysis"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "text"
+      ],
+      "outputTypes": [
+        "text"
+      ],
+      "integrations": [
+        "api"
+      ],
+      "platforms": [
+        "web",
+        "api"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 7,
+      "productive": 9,
+      "explorative": 8,
+      "relaxed": 7
+    },
+    "roiScore": 6350,
+    "website": "https://claude.ai",
+    "tasks": {
+      "Research complex topics": {
+        "effectiveness": 9.5,
+        "timeToComplete": "10 minutes",
+        "outputQuality": "comprehensive"
+      },
+      "Analyze documents": {
+        "effectiveness": 9.2,
+        "timeToComplete": "8 minutes",
+        "outputQuality": "detailed"
+      }
+    }
+  },
+  {
+    "id": "runway-gen2",
+    "name": "Gen-2",
+    "company": "Runway ML",
+    "logo": "🚀",
+    "primaryCategory": "text-to-video",
+    "subcategories": [
+      "video-generation",
+      "image-to-video",
+      "video-editing"
+    ],
+    "useCases": [
+      "Professional video editing",
+      "Content creation",
+      "Art projects"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 15,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 9,
+      "speed": 8,
+      "consistency": 8.5,
+      "reliability": 8.8
+    },
+    "userExperience": {
+      "learningCurve": "intermediate",
+      "interface": "professional",
+      "documentation": "good",
+      "support": "responsive"
+    },
+    "analytics": {
+      "popularity": 88,
+      "growth": "+15%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2023-03-01"
+    },
+    "community": {
+      "rating": 9.2,
+      "reviewCount": 3200,
+      "sentiment": "positive"
+    },
+    "description": "Professional AI video generation tool with advanced controls for text, image, and video-to-video conversion.",
+    "features": [
+      "Text-to-video",
+      "Image-to-video",
+      "Video-to-video",
+      "Style presets"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "text",
+        "image",
+        "video"
+      ],
+      "outputTypes": [
+        "video"
+      ],
+      "integrations": [
+        "api"
+      ],
+      "platforms": [
+        "web",
+        "api"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 9,
+      "productive": 8,
+      "explorative": 8,
+      "relaxed": 6
+    },
+    "roiScore": 7920,
+    "website": "https://runwayml.com",
+    "tasks": {
+      "Generate video from text": {
+        "effectiveness": 9,
+        "timeToComplete": "2 minutes",
+        "outputQuality": "professional"
+      },
+      "Convert image to video": {
+        "effectiveness": 8.8,
+        "timeToComplete": "90 seconds",
+        "outputQuality": "high-quality"
+      },
+      "Edit existing videos": {
+        "effectiveness": 8.5,
+        "timeToComplete": "3 minutes",
+        "outputQuality": "polished"
+      }
+    }
+  },
+  {
+    "id": "pika-labs",
+    "name": "Pika Labs",
+    "company": "Pika Labs",
+    "logo": "🎨",
+    "primaryCategory": "text-to-video",
+    "subcategories": [
+      "video-generation",
+      "art-generation",
+      "creative-tools"
+    ],
+    "useCases": [
+      "Creative projects",
+      "Social media content",
+      "Art generation"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 8,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 8.5,
+      "speed": 9,
+      "consistency": 8.2,
+      "reliability": 8.5
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interface": "intuitive",
+      "documentation": "good",
+      "support": "community"
+    },
+    "analytics": {
+      "popularity": 82,
+      "growth": "+20%",
+      "lastUpdated": "2024-01-10",
+      "launchDate": "2023-04-15"
+    },
+    "community": {
+      "rating": 8.8,
+      "reviewCount": 2850,
+      "sentiment": "positive"
+    },
+    "description": "Creative AI video generation platform known for artistic and stylized video creation.",
+    "features": [
+      "Text-to-video",
+      "Artistic styles",
+      "Character consistency",
+      "Custom models"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "text",
+        "image"
+      ],
+      "outputTypes": [
+        "video"
+      ],
+      "integrations": [],
+      "platforms": [
+        "web"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 10,
+      "productive": 7,
+      "explorative": 9,
+      "relaxed": 8
+    },
+    "roiScore": 6560,
+    "website": "https://pika.art",
+    "tasks": {
+      "Create artistic video": {
+        "effectiveness": 8.8,
+        "timeToComplete": "1.5 minutes",
+        "outputQuality": "stylized"
+      },
+      "Generate social media clips": {
+        "effectiveness": 9,
+        "timeToComplete": "1 minute",
+        "outputQuality": "engaging"
+      },
+      "Experimental art projects": {
+        "effectiveness": 8.5,
+        "timeToComplete": "2 minutes",
+        "outputQuality": "unique"
+      }
+    }
+  },
+  {
+    "id": "stable-video-diffusion",
+    "name": "Stable Video Diffusion",
+    "company": "Stability AI",
+    "logo": "🔬",
+    "primaryCategory": "image-to-video",
+    "subcategories": [
+      "video-generation",
+      "animation",
+      "open-source"
+    ],
+    "useCases": [
+      "Character animation",
+      "Educational content",
+      "Research"
+    ],
+    "pricing": {
+      "model": "free",
+      "monthlyCost": 0,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 8,
+      "speed": 7.5,
+      "consistency": 8.2,
+      "reliability": 7.8
+    },
+    "userExperience": {
+      "learningCurve": "advanced",
+      "interface": "technical",
+      "documentation": "excellent",
+      "support": "community"
+    },
+    "analytics": {
+      "popularity": 75,
+      "growth": "+18%",
+      "lastUpdated": "2024-01-05",
+      "launchDate": "2023-11-21"
+    },
+    "community": {
+      "rating": 8.5,
+      "reviewCount": 4100,
+      "sentiment": "positive"
+    },
+    "description": "Open-source AI video generation model based on Stable Diffusion, excellent for consistent character animation.",
+    "features": [
+      "Image-to-video",
+      "Open source",
+      "Character consistency",
+      "Customizable"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "image"
+      ],
+      "outputTypes": [
+        "video"
+      ],
+      "integrations": [
+        "python",
+        "api"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 8,
+      "productive": 6,
+      "explorative": 10,
+      "relaxed": 5
+    },
+    "roiScore": 6000,
+    "website": "https://stability.ai/stable-video",
+    "tasks": {
+      "Animate character": {
+        "effectiveness": 8.5,
+        "timeToComplete": "5 minutes",
+        "outputQuality": "consistent"
+      },
+      "Research experiments": {
+        "effectiveness": 9,
+        "timeToComplete": "10 minutes",
+        "outputQuality": "customizable"
+      },
+      "Educational demos": {
+        "effectiveness": 8,
+        "timeToComplete": "7 minutes",
+        "outputQuality": "clear"
+      }
+    }
+  },
+  {
+    "id": "google-veo",
+    "name": "Veo",
+    "company": "Google",
+    "logo": "🌟",
+    "category": "text-to-video",
+    "pricing": "paid",
+    "rating": 9,
+    "popularity": 78,
+    "description": "Google's advanced AI video generation model with excellent prompt understanding and high-quality output.",
+    "features": [
+      "Text-to-video",
+      "High resolution",
+      "Complex prompts",
+      "Google integration"
+    ],
+    "quality": 88,
+    "speed": 82,
+    "easeOfUse": 85,
+    "price": "Contact for pricing",
+    "website": "https://deepmind.google/veo",
+    "useCases": [
+      "Professional content",
+      "Marketing",
+      "Enterprise solutions"
+    ]
+  },
+  {
+    "id": "luma-dream-machine",
+    "name": "Dream Machine",
+    "company": "Luma AI",
+    "logo": "⚡",
+    "category": "text-to-video",
+    "pricing": "freemium",
+    "rating": 8.7,
+    "popularity": 80,
+    "description": "Fast and efficient AI video generation with focus on motion quality and realistic movements.",
+    "features": [
+      "Text-to-video",
+      "Fast generation",
+      "Motion focus",
+      "Realistic physics"
+    ],
+    "quality": 82,
+    "speed": 95,
+    "easeOfUse": 83,
+    "price": "Free tier, $29/month Pro",
+    "website": "https://lumalabs.ai/dream-machine",
+    "useCases": [
+      "Quick content creation",
+      "Social media",
+      "Dynamic scenes"
+    ]
+  },
+  {
+    "id": "kling-ai",
+    "name": "Kling AI",
+    "company": "Kling AI",
+    "logo": "🎭",
+    "category": "text-to-video",
+    "pricing": "freemium",
+    "rating": 8.6,
+    "popularity": 73,
+    "description": "Chinese AI video generation model known for detailed scenes and realistic video output.",
+    "features": [
+      "Text-to-video",
+      "Detailed scenes",
+      "Realistic rendering",
+      "Asian language support"
+    ],
+    "quality": 86,
+    "speed": 78,
+    "easeOfUse": 75,
+    "price": "Free tier, ¥99/month Pro",
+    "website": "https://klingai.com",
+    "useCases": [
+      "Detailed storytelling",
+      "Realistic scenes",
+      "Asian markets"
+    ]
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "company": "Midjourney",
+    "logo": "🎨",
+    "primaryCategory": "image-generation",
+    "subcategories": [
+      "art",
+      "design",
+      "creative"
+    ],
+    "useCases": [
+      "art",
+      "design",
+      "marketing",
+      "social-media"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 10,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 9.3,
+      "speed": 7.5,
+      "consistency": 8.8,
+      "reliability": 8.9
+    },
+    "userExperience": {
+      "learningCurve": "intermediate",
+      "interface": "moderate",
+      "documentation": "good",
+      "support": "community"
+    },
+    "analytics": {
+      "popularity": 88,
+      "growth": "+18%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2022-07-12"
+    },
+    "community": {
+      "rating": 4.6,
+      "reviewCount": 12450,
+      "sentiment": "positive"
+    },
+    "description": "AI art generation tool that creates stunning images from text prompts, popular among artists and designers.",
+    "features": [
+      "High-quality art",
+      "Style variety",
+      "Community gallery",
+      "Discord integration"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "text"
+      ],
+      "outputTypes": [
+        "image"
+      ],
+      "integrations": [
+        "discord"
+      ],
+      "platforms": [
+        "web"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 10,
+      "productive": 6,
+      "explorative": 8,
+      "relaxed": 9
+    },
+    "roiScore": 3800,
+    "website": "https://midjourney.com",
+    "tasks": {
+      "Create concept art": {
+        "effectiveness": 9.3,
+        "timeToComplete": "2 minutes",
+        "outputQuality": "artistic"
+      },
+      "Design social media graphics": {
+        "effectiveness": 8.7,
+        "timeToComplete": "3 minutes",
+        "outputQuality": "professional"
+      }
+    }
+  },
+  {
+    "id": "dalle-3",
+    "name": "DALL-E 3",
+    "company": "OpenAI",
+    "logo": "🎭",
+    "primaryCategory": "image-generation",
+    "subcategories": [
+      "art",
+      "design",
+      "creative"
+    ],
+    "useCases": [
+      "art",
+      "design",
+      "illustration",
+      "marketing"
+    ],
+    "pricing": {
+      "model": "paid",
+      "monthlyCost": 20,
+      "freeTier": false
+    },
+    "performance": {
+      "quality": 9.1,
+      "speed": 8.2,
+      "consistency": 8.9,
+      "reliability": 9.2
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interface": "intuitive",
+      "documentation": "excellent",
+      "support": "responsive"
+    },
+    "analytics": {
+      "popularity": 82,
+      "growth": "+15%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2023-10-01"
+    },
+    "community": {
+      "rating": 4.5,
+      "reviewCount": 9870,
+      "sentiment": "positive"
+    },
+    "description": "OpenAI's latest image generation model with improved understanding and higher quality outputs.",
+    "features": [
+      "Text-to-image",
+      "High coherence",
+      "Style consistency",
+      "ChatGPT integration"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "text"
+      ],
+      "outputTypes": [
+        "image"
+      ],
+      "integrations": [
+        "chatgpt"
+      ],
+      "platforms": [
+        "web"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 9,
+      "productive": 8,
+      "explorative": 7,
+      "relaxed": 8
+    },
+    "roiScore": 4100,
+    "website": "https://openai.com/dall-e-3",
+    "tasks": {
+      "Generate product images": {
+        "effectiveness": 9.1,
+        "timeToComplete": "2 minutes",
+        "outputQuality": "commercial"
+      },
+      "Create illustrations": {
+        "effectiveness": 8.9,
+        "timeToComplete": "3 minutes",
+        "outputQuality": "artistic"
+      }
+    }
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "company": "GitHub",
+    "logo": "💻",
+    "primaryCategory": "code-generation",
+    "subcategories": [
+      "coding",
+      "debugging",
+      "documentation"
+    ],
+    "useCases": [
+      "coding",
+      "debugging",
+      "documentation",
+      "learning"
+    ],
+    "pricing": {
+      "model": "paid",
+      "monthlyCost": 10,
+      "freeTier": false
+    },
+    "performance": {
+      "quality": 9.4,
+      "speed": 9.5,
+      "consistency": 9.1,
+      "reliability": 9.3
+    },
+    "userExperience": {
+      "learningCurve": "intermediate",
+      "interface": "intuitive",
+      "documentation": "excellent",
+      "support": "responsive"
+    },
+    "analytics": {
+      "popularity": 91,
+      "growth": "+22%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2021-06-29"
+    },
+    "community": {
+      "rating": 4.7,
+      "reviewCount": 23450,
+      "sentiment": "positive"
+    },
+    "description": "AI pair programming tool that suggests code completions and entire functions in real-time.",
+    "features": [
+      "Code completion",
+      "Function suggestions",
+      "Multi-language support",
+      "IDE integration"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "code"
+      ],
+      "outputTypes": [
+        "code"
+      ],
+      "integrations": [
+        "vscode",
+        "jetbrains"
+      ],
+      "platforms": [
+        "web",
+        "desktop"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 6,
+      "productive": 10,
+      "explorative": 7,
+      "relaxed": 5
+    },
+    "roiScore": 4200,
+    "website": "https://github.com/features/copilot",
+    "tasks": {
+      "Write function code": {
+        "effectiveness": 9.4,
+        "timeToComplete": "1 minute",
+        "outputQuality": "professional"
+      },
+      "Debug existing code": {
+        "effectiveness": 8.8,
+        "timeToComplete": "5 minutes",
+        "outputQuality": "accurate"
+      }
+    }
+  },
+  {
+    "id": "sora",
+    "name": "Sora",
+    "company": "OpenAI",
+    "logo": "🎬",
+    "primaryCategory": "video-generation",
+    "subcategories": [
+      "text-to-video",
+      "creative"
+    ],
+    "useCases": [
+      "marketing",
+      "entertainment",
+      "education"
+    ],
+    "pricing": {
+      "model": "paid",
+      "monthlyCost": 15,
+      "freeTier": false
+    },
+    "performance": {
+      "quality": 9.5,
+      "speed": 8.5,
+      "consistency": 9.2,
+      "reliability": 9
+    },
+    "userExperience": {
+      "learningCurve": "intermediate",
+      "interface": "intuitive",
+      "documentation": "good",
+      "support": "responsive"
+    },
+    "analytics": {
+      "popularity": 95,
+      "growth": "+45%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2024-02-15"
+    },
+    "community": {
+      "rating": 4.8,
+      "reviewCount": 5670,
+      "sentiment": "positive"
+    },
+    "description": "Advanced text-to-video generation model capable of creating highly realistic and imaginative scenes.",
+    "features": [
+      "Text-to-video",
+      "High realism",
+      "Complex scenes",
+      "Creative control"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "text"
+      ],
+      "outputTypes": [
+        "video"
+      ],
+      "integrations": [
+        "api"
+      ],
+      "platforms": [
+        "web"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 10,
+      "productive": 7,
+      "explorative": 8,
+      "relaxed": 6
+    },
+    "roiScore": 5200,
+    "website": "https://openai.com/sora",
+    "tasks": {
+      "Create marketing videos": {
+        "effectiveness": 9.5,
+        "timeToComplete": "10 minutes",
+        "outputQuality": "professional"
+      },
+      "Generate educational content": {
+        "effectiveness": 9,
+        "timeToComplete": "8 minutes",
+        "outputQuality": "educational"
+      }
+    }
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "company": "ElevenLabs",
+    "logo": "🎵",
+    "primaryCategory": "audio-generation",
+    "subcategories": [
+      "speech",
+      "voice",
+      "entertainment"
+    ],
+    "useCases": [
+      "podcasting",
+      "audiobooks",
+      "gaming",
+      "accessibility"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 22,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 9.2,
+      "speed": 8.7,
+      "consistency": 9,
+      "reliability": 8.8
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interface": "intuitive",
+      "documentation": "excellent",
+      "support": "responsive"
+    },
+    "analytics": {
+      "popularity": 79,
+      "growth": "+35%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2022-01-01"
+    },
+    "community": {
+      "rating": 4.6,
+      "reviewCount": 7890,
+      "sentiment": "positive"
+    },
+    "description": "Ultra-realistic voice synthesis and cloning platform for content creators and businesses.",
+    "features": [
+      "Voice synthesis",
+      "Voice cloning",
+      "Multi-language",
+      "Emotional control",
+      "API access"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "text"
+      ],
+      "outputTypes": [
+        "audio"
+      ],
+      "integrations": [
+        "api",
+        "zapier"
+      ],
+      "platforms": [
+        "web",
+        "api"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 8,
+      "productive": 8,
+      "explorative": 7,
+      "relaxed": 9
+    },
+    "roiScore": 3100,
+    "website": "https://elevenlabs.io",
+    "tasks": {
+      "Create podcast voiceovers": {
+        "effectiveness": 9.2,
+        "timeToComplete": "5 minutes",
+        "outputQuality": "natural"
+      },
+      "Generate audiobooks": {
+        "effectiveness": 8.9,
+        "timeToComplete": "15 minutes",
+        "outputQuality": "expressive"
+      }
+    }
+  },
+  {
+    "id": "julius",
+    "name": "Julius AI",
+    "company": "Julius",
+    "logo": "📊",
+    "primaryCategory": "data-analysis",
+    "subcategories": [
+      "analytics",
+      "business-intelligence"
+    ],
+    "useCases": [
+      "analysis",
+      "reporting",
+      "business"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 29,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 8.8,
+      "speed": 9,
+      "consistency": 8.7,
+      "reliability": 8.9
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interface": "intuitive",
+      "documentation": "excellent",
+      "support": "responsive"
+    },
+    "analytics": {
+      "popularity": 73,
+      "growth": "+28%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2023-06-01"
+    },
+    "community": {
+      "rating": 4.4,
+      "reviewCount": 3420,
+      "sentiment": "positive"
+    },
+    "description": "AI-powered data analysis and visualization tool that makes complex data accessible to everyone.",
+    "features": [
+      "Natural language queries",
+      "Automated insights",
+      "Interactive visualizations",
+      "Report generation"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "text",
+        "data"
+      ],
+      "outputTypes": [
+        "data",
+        "insights"
+      ],
+      "integrations": [
+        "api"
+      ],
+      "platforms": [
+        "web"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 6,
+      "productive": 9,
+      "explorative": 8,
+      "relaxed": 7
+    },
+    "roiScore": 2850,
+    "website": "https://julius.ai",
+    "tasks": {
+      "Analyze datasets": {
+        "effectiveness": 8.8,
+        "timeToComplete": "3 minutes",
+        "outputQuality": "comprehensive"
+      },
+      "Generate reports": {
+        "effectiveness": 8.5,
+        "timeToComplete": "5 minutes",
+        "outputQuality": "professional"
+      }
+    }
+  },
+  {
+    "id": "notion-ai",
+    "name": "Notion AI",
+    "company": "Notion",
+    "logo": "📝",
+    "primaryCategory": "productivity",
+    "subcategories": [
+      "writing",
+      "organization",
+      "collaboration"
+    ],
+    "useCases": [
+      "writing",
+      "project-management",
+      "documentation"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 10,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 8.6,
+      "speed": 8.9,
+      "consistency": 8.8,
+      "reliability": 9.1
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interface": "intuitive",
+      "documentation": "excellent",
+      "support": "responsive"
+    },
+    "analytics": {
+      "popularity": 89,
+      "growth": "+15%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2022-11-01"
+    },
+    "community": {
+      "rating": 4.7,
+      "reviewCount": 28900,
+      "sentiment": "positive"
+    },
+    "description": "AI-enhanced workspace that combines notes, docs, and project management with intelligent assistance.",
+    "features": [
+      "AI writing",
+      "Auto-summarization",
+      "Task management",
+      "Real-time collaboration"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "text"
+      ],
+      "outputTypes": [
+        "text"
+      ],
+      "integrations": [
+        "api"
+      ],
+      "platforms": [
+        "web",
+        "desktop",
+        "mobile"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 7,
+      "productive": 10,
+      "explorative": 6,
+      "relaxed": 8
+    },
+    "roiScore": 3200,
+    "website": "https://notion.so",
+    "tasks": {
+      "Write project briefs": {
+        "effectiveness": 8.6,
+        "timeToComplete": "4 minutes",
+        "outputQuality": "structured"
+      },
+      "Summarize meeting notes": {
+        "effectiveness": 8.9,
+        "timeToComplete": "2 minutes",
+        "outputQuality": "concise"
+      }
+    }
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity AI",
+    "company": "Perplexity",
+    "logo": "🔍",
+    "primaryCategory": "text-generation",
+    "subcategories": [
+      "research",
+      "search",
+      "analysis"
+    ],
+    "useCases": [
+      "research",
+      "analysis",
+      "learning"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 20,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 8.9,
+      "speed": 9.2,
+      "consistency": 8.7,
+      "reliability": 9
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interface": "intuitive",
+      "documentation": "excellent",
+      "support": "responsive"
+    },
+    "analytics": {
+      "popularity": 76,
+      "growth": "+35%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2022-12-01"
+    },
+    "community": {
+      "rating": 4.5,
+      "reviewCount": 5670,
+      "sentiment": "positive"
+    },
+    "description": "AI-powered search engine that provides comprehensive answers with source citations and real-time information.",
+    "features": [
+      "Source citations",
+      "Real-time search",
+      "Follow-up questions",
+      "Export answers"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "text"
+      ],
+      "outputTypes": [
+        "text"
+      ],
+      "integrations": [
+        "api"
+      ],
+      "platforms": [
+        "web",
+        "mobile"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 6,
+      "productive": 8,
+      "explorative": 10,
+      "relaxed": 7
+    },
+    "roiScore": 2850,
+    "website": "https://perplexity.ai",
+    "tasks": {
+      "Research any topic": {
+        "effectiveness": 8.9,
+        "timeToComplete": "3 minutes",
+        "outputQuality": "comprehensive"
+      },
+      "Find latest information": {
+        "effectiveness": 9.2,
+        "timeToComplete": "2 minutes",
+        "outputQuality": "current"
+      }
+    }
+  },
+  {
+    "id": "canva-magic",
+    "name": "Canva Magic Studio",
+    "company": "Canva",
+    "logo": "🎨",
+    "primaryCategory": "image-generation",
+    "subcategories": [
+      "design",
+      "social-media",
+      "marketing"
+    ],
+    "useCases": [
+      "design",
+      "social-media",
+      "marketing"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 13,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 8.4,
+      "speed": 9.5,
+      "consistency": 8.8,
+      "reliability": 9.2
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interface": "intuitive",
+      "documentation": "excellent",
+      "support": "responsive"
+    },
+    "analytics": {
+      "popularity": 92,
+      "growth": "+18%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2023-03-01"
+    },
+    "community": {
+      "rating": 4.6,
+      "reviewCount": 34500,
+      "sentiment": "positive"
+    },
+    "description": "AI-powered design platform that makes professional graphics accessible to everyone.",
+    "features": [
+      "Magic Studio",
+      "Template library",
+      "Brand kit",
+      "Team collaboration",
+      "AI image generation"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "text"
+      ],
+      "outputTypes": [
+        "image"
+      ],
+      "integrations": [
+        "api"
+      ],
+      "platforms": [
+        "web",
+        "mobile"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 9,
+      "productive": 9,
+      "explorative": 6,
+      "relaxed": 10
+    },
+    "roiScore": 4100,
+    "website": "https://canva.com/magic",
+    "tasks": {
+      "Create social media posts": {
+        "effectiveness": 8.4,
+        "timeToComplete": "5 minutes",
+        "outputQuality": "professional"
+      },
+      "Design presentations": {
+        "effectiveness": 8.2,
+        "timeToComplete": "10 minutes",
+        "outputQuality": "polished"
+      }
+    }
+  },
+  {
+    "id": "grammarly",
+    "name": "Grammarly",
+    "company": "Grammarly",
+    "logo": "✏️",
+    "primaryCategory": "productivity",
+    "subcategories": [
+      "writing",
+      "editing",
+      "grammar"
+    ],
+    "useCases": [
+      "writing",
+      "editing",
+      "proofreading"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 12,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 9.1,
+      "speed": 9.3,
+      "consistency": 9.4,
+      "reliability": 9.5
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interface": "intuitive",
+      "documentation": "excellent",
+      "support": "responsive"
+    },
+    "analytics": {
+      "popularity": 88,
+      "growth": "+8%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2009-01-01"
+    },
+    "community": {
+      "rating": 4.7,
+      "reviewCount": 45600,
+      "sentiment": "positive"
+    },
+    "description": "AI-powered writing assistant that helps with grammar, clarity, and tone.",
+    "features": [
+      "Grammar checking",
+      "Style suggestions",
+      "Tone detection",
+      "Plagiarism detection"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "text"
+      ],
+      "outputTypes": [
+        "text"
+      ],
+      "integrations": [
+        "browser",
+        "api"
+      ],
+      "platforms": [
+        "web",
+        "desktop",
+        "mobile"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 7,
+      "productive": 10,
+      "explorative": 5,
+      "relaxed": 8
+    },
+    "roiScore": 3200,
+    "website": "https://grammarly.com",
+    "tasks": {
+      "Edit writing": {
+        "effectiveness": 9.1,
+        "timeToComplete": "2 minutes",
+        "outputQuality": "polished"
+      },
+      "Check grammar": {
+        "effectiveness": 9.4,
+        "timeToComplete": "1 minute",
+        "outputQuality": "accurate"
+      }
+    }
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "company": "Cursor",
+    "logo": "⚡",
+    "primaryCategory": "code-generation",
+    "subcategories": [
+      "coding",
+      "ai-assistance",
+      "productivity"
+    ],
+    "useCases": [
+      "coding",
+      "debugging",
+      "documentation"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 20,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 9.1,
+      "speed": 9.3,
+      "consistency": 8.9,
+      "reliability": 9
+    },
+    "userExperience": {
+      "learningCurve": "intermediate",
+      "interface": "intuitive",
+      "documentation": "excellent",
+      "support": "responsive"
+    },
+    "analytics": {
+      "popularity": 71,
+      "growth": "+45%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2023-01-01"
+    },
+    "community": {
+      "rating": 4.6,
+      "reviewCount": 7890,
+      "sentiment": "positive"
+    },
+    "description": "AI-first code editor with advanced autocomplete and intelligent suggestions.",
+    "features": [
+      "AI autocomplete",
+      "Code generation",
+      "Debugging help",
+      "Multi-language support"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "code"
+      ],
+      "outputTypes": [
+        "code"
+      ],
+      "integrations": [
+        "api"
+      ],
+      "platforms": [
+        "web",
+        "desktop"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 7,
+      "productive": 10,
+      "explorative": 8,
+      "relaxed": 6
+    },
+    "roiScore": 3800,
+    "website": "https://cursor.sh",
+    "tasks": {
+      "Write code faster": {
+        "effectiveness": 9.1,
+        "timeToComplete": "varies",
+        "outputQuality": "professional"
+      },
+      "Debug code": {
+        "effectiveness": 8.7,
+        "timeToComplete": "5 minutes",
+        "outputQuality": "accurate"
+      }
+    }
+  },
+  {
+    "id": "kapwing",
+    "name": "Kapwing",
+    "company": "Kapwing",
+    "logo": "🎬",
+    "primaryCategory": "video-generation",
+    "subcategories": [
+      "editing",
+      "social-media",
+      "marketing"
+    ],
+    "useCases": [
+      "video-editing",
+      "social-media",
+      "marketing"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 16,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 8.3,
+      "speed": 8.8,
+      "consistency": 8.5,
+      "reliability": 8.7
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interface": "intuitive",
+      "documentation": "excellent",
+      "support": "responsive"
+    },
+    "analytics": {
+      "popularity": 74,
+      "growth": "+22%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2018-01-01"
+    },
+    "community": {
+      "rating": 4.4,
+      "reviewCount": 12340,
+      "sentiment": "positive"
+    },
+    "description": "Collaborative video editing platform with AI-powered features for social media content.",
+    "features": [
+      "AI video editing",
+      "Subtitle generation",
+      "Template library",
+      "Team collaboration"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "video",
+        "text"
+      ],
+      "outputTypes": [
+        "video"
+      ],
+      "integrations": [
+        "api"
+      ],
+      "platforms": [
+        "web"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 8,
+      "productive": 9,
+      "explorative": 6,
+      "relaxed": 8
+    },
+    "roiScore": 2650,
+    "website": "https://kapwing.com",
+    "tasks": {
+      "Edit social videos": {
+        "effectiveness": 8.3,
+        "timeToComplete": "15 minutes",
+        "outputQuality": "professional"
+      },
+      "Add subtitles": {
+        "effectiveness": 8.6,
+        "timeToComplete": "5 minutes",
+        "outputQuality": "accurate"
+      }
+    }
+  },
+  {
+    "id": "murf",
+    "name": "Murf.ai",
+    "company": "Murf",
+    "logo": "🎙️",
+    "primaryCategory": "audio-generation",
+    "subcategories": [
+      "voice",
+      "speech",
+      "marketing"
+    ],
+    "useCases": [
+      "voiceover",
+      "marketing",
+      "accessibility"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 19,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 8.7,
+      "speed": 8.5,
+      "consistency": 8.9,
+      "reliability": 8.6
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interface": "intuitive",
+      "documentation": "excellent",
+      "support": "responsive"
+    },
+    "analytics": {
+      "popularity": 68,
+      "growth": "+28%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2020-01-01"
+    },
+    "community": {
+      "rating": 4.3,
+      "reviewCount": 4560,
+      "sentiment": "positive"
+    },
+    "description": "AI voice generator that creates realistic voiceovers in multiple languages and accents.",
+    "features": [
+      "Voice synthesis",
+      "Multi-language",
+      "Custom voices",
+      "Commercial usage"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "text"
+      ],
+      "outputTypes": [
+        "audio"
+      ],
+      "integrations": [
+        "api"
+      ],
+      "platforms": [
+        "web"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 7,
+      "productive": 8,
+      "explorative": 6,
+      "relaxed": 9
+    },
+    "roiScore": 2350,
+    "website": "https://murf.ai",
+    "tasks": {
+      "Create voiceovers": {
+        "effectiveness": 8.7,
+        "timeToComplete": "5 minutes",
+        "outputQuality": "natural"
+      },
+      "Generate podcasts": {
+        "effectiveness": 8.2,
+        "timeToComplete": "10 minutes",
+        "outputQuality": "engaging"
+      }
+    }
+  },
+  {
+    "id": "tableau-ai",
+    "name": "Tableau AI",
+    "company": "Salesforce",
+    "logo": "📊",
+    "primaryCategory": "data-analysis",
+    "subcategories": [
+      "analytics",
+      "visualization",
+      "business-intelligence"
+    ],
+    "useCases": [
+      "analysis",
+      "reporting",
+      "business-intelligence"
+    ],
+    "pricing": {
+      "model": "paid",
+      "monthlyCost": 70,
+      "freeTier": false
+    },
+    "performance": {
+      "quality": 9,
+      "speed": 8.2,
+      "consistency": 9.1,
+      "reliability": 9.3
+    },
+    "userExperience": {
+      "learningCurve": "intermediate",
+      "interface": "moderate",
+      "documentation": "excellent",
+      "support": "responsive"
+    },
+    "analytics": {
+      "popularity": 82,
+      "growth": "+12%",
+      "lastUpdated": "2024-01-15",
+      "launchDate": "2023-05-01"
+    },
+    "community": {
+      "rating": 4.5,
+      "reviewCount": 23400,
+      "sentiment": "positive"
+    },
+    "description": "Enterprise-grade data visualization and business intelligence platform with AI-powered insights.",
+    "features": [
+      "AI data analysis",
+      "Interactive dashboards",
+      "Natural language queries",
+      "Predictive analytics"
+    ],
+    "capabilities": {
+      "inputTypes": [
+        "data"
+      ],
+      "outputTypes": [
+        "data",
+        "insights"
+      ],
+      "integrations": [
+        "api"
+      ],
+      "platforms": [
+        "web",
+        "desktop"
+      ]
+    },
+    "vibeAlignment": {
+      "creative": 5,
+      "productive": 9,
+      "explorative": 8,
+      "relaxed": 6
+    },
+    "roiScore": 3150,
+    "website": "https://tableau.com/ai",
+    "tasks": {
+      "Analyze business data": {
+        "effectiveness": 9,
+        "timeToComplete": "10 minutes",
+        "outputQuality": "comprehensive"
+      },
+      "Create dashboards": {
+        "effectiveness": 8.8,
+        "timeToComplete": "20 minutes",
+        "outputQuality": "visual"
+      }
+    }
+  },
+  {
+    "id": "notebooklm",
+    "name": "NotebookLM",
+    "logo": "📚",
+    "company": "Google",
+    "description": "AI-powered research assistant that helps you understand and synthesize information from your documents",
+    "primaryCategory": "productivity",
+    "subcategories": [
+      "research",
+      "note-taking",
+      "education"
+    ],
+    "pricing": {
+      "model": "free",
+      "monthlyCost": 0,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 90,
+      "speed": 85,
+      "consistency": 88,
+      "reliability": 92
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interfaceQuality": 92,
+      "documentation": "excellent"
+    },
+    "features": [
+      "Document analysis",
+      "Source-grounded answers",
+      "Audio overviews",
+      "Multi-document synthesis",
+      "Citation tracking"
+    ],
+    "useCases": [
+      "Research",
+      "Study notes",
+      "Document analysis",
+      "Content synthesis"
+    ],
+    "integrations": [
+      "Google Drive",
+      "PDF upload",
+      "Text documents"
+    ],
+    "limitations": [
+      "Limited to 50 sources",
+      "No real-time collaboration"
+    ],
+    "vibeAlignment": {
+      "creative": 6,
+      "productive": 9,
+      "explorative": 10,
+      "relaxed": 7
+    },
+    "analytics": {
+      "popularity": 85,
+      "growth": "rapid",
+      "userSatisfaction": 92
+    },
+    "community": {
+      "rating": 4.7,
+      "reviewCount": 8500,
+      "activeUsers": "2M+"
+    },
+    "roiScore": 2850,
+    "website": "https://notebooklm.google.com"
+  },
+  {
+    "id": "replit-agent",
+    "name": "Replit Agent",
+    "logo": "🤖",
+    "company": "Replit",
+    "description": "AI agent that builds full-stack applications from natural language descriptions",
+    "primaryCategory": "code-generation",
+    "subcategories": [
+      "development",
+      "automation",
+      "prototyping"
+    ],
+    "pricing": {
+      "model": "paid",
+      "monthlyCost": 25,
+      "freeTier": false
+    },
+    "performance": {
+      "quality": 85,
+      "speed": 88,
+      "consistency": 82,
+      "reliability": 86
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interfaceQuality": 90,
+      "documentation": "good"
+    },
+    "features": [
+      "Full-stack app generation",
+      "Natural language coding",
+      "Instant deployment",
+      "Real-time collaboration",
+      "Multi-language support"
+    ],
+    "useCases": [
+      "Rapid prototyping",
+      "App development",
+      "Learning to code",
+      "Automating tasks"
+    ],
+    "integrations": [
+      "GitHub",
+      "npm",
+      "pip",
+      "Database hosting"
+    ],
+    "limitations": [
+      "Computing resource limits",
+      "Complex apps may need refinement"
+    ],
+    "vibeAlignment": {
+      "creative": 8,
+      "productive": 9,
+      "explorative": 7,
+      "relaxed": 6
+    },
+    "analytics": {
+      "popularity": 82,
+      "growth": "rapid",
+      "userSatisfaction": 88
+    },
+    "community": {
+      "rating": 4.5,
+      "reviewCount": 12000,
+      "activeUsers": "5M+"
+    },
+    "roiScore": 3200,
+    "website": "https://replit.com/agent"
+  },
+  {
+    "id": "framer-ai",
+    "name": "Framer AI",
+    "logo": "🎨",
+    "company": "Framer",
+    "description": "AI-powered website builder that creates professional sites from text descriptions",
+    "primaryCategory": "design",
+    "subcategories": [
+      "web-design",
+      "prototyping",
+      "no-code"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 15,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 88,
+      "speed": 90,
+      "consistency": 86,
+      "reliability": 89
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interfaceQuality": 94,
+      "documentation": "excellent"
+    },
+    "features": [
+      "Text-to-website",
+      "Responsive design",
+      "Custom animations",
+      "CMS integration",
+      "SEO optimization"
+    ],
+    "useCases": [
+      "Landing pages",
+      "Portfolio sites",
+      "Marketing websites",
+      "Startup MVPs"
+    ],
+    "integrations": [
+      "Analytics",
+      "Forms",
+      "CMS",
+      "Custom code"
+    ],
+    "limitations": [
+      "Advanced customization requires plan upgrade",
+      "Learning curve for animations"
+    ],
+    "vibeAlignment": {
+      "creative": 9,
+      "productive": 8,
+      "explorative": 6,
+      "relaxed": 7
+    },
+    "analytics": {
+      "popularity": 86,
+      "growth": "rapid",
+      "userSatisfaction": 91
+    },
+    "community": {
+      "rating": 4.6,
+      "reviewCount": 15000,
+      "activeUsers": "3M+"
+    },
+    "roiScore": 3100,
+    "website": "https://framer.com/ai"
+  },
+  {
+    "id": "opus-clip",
+    "name": "Opus Clip",
+    "logo": "✂️",
+    "company": "Opus Pro",
+    "description": "AI-powered tool that automatically creates viral short clips from long videos",
+    "primaryCategory": "video-editing",
+    "subcategories": [
+      "content-creation",
+      "social-media",
+      "automation"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 29,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 87,
+      "speed": 92,
+      "consistency": 85,
+      "reliability": 88
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interfaceQuality": 88,
+      "documentation": "good"
+    },
+    "features": [
+      "Auto clip generation",
+      "Viral score prediction",
+      "Auto captions",
+      "Brand customization",
+      "Multi-platform export"
+    ],
+    "useCases": [
+      "YouTube shorts",
+      "TikTok content",
+      "Instagram reels",
+      "Podcast clips"
+    ],
+    "integrations": [
+      "YouTube",
+      "Direct upload",
+      "Social media platforms"
+    ],
+    "limitations": [
+      "Clip quality depends on source",
+      "Limited customization on free tier"
+    ],
+    "vibeAlignment": {
+      "creative": 8,
+      "productive": 9,
+      "explorative": 5,
+      "relaxed": 8
+    },
+    "analytics": {
+      "popularity": 84,
+      "growth": "rapid",
+      "userSatisfaction": 87
+    },
+    "community": {
+      "rating": 4.4,
+      "reviewCount": 9500,
+      "activeUsers": "500K+"
+    },
+    "roiScore": 2900,
+    "website": "https://opus.pro"
+  },
+  {
+    "id": "claude-artifacts",
+    "name": "Claude Artifacts",
+    "logo": "⚡",
+    "company": "Anthropic",
+    "description": "Interactive creation feature that generates live code, documents, and visualizations",
+    "primaryCategory": "ai-assistant",
+    "subcategories": [
+      "code-generation",
+      "content-creation",
+      "visualization"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 20,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 92,
+      "speed": 88,
+      "consistency": 90,
+      "reliability": 91
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interfaceQuality": 93,
+      "documentation": "excellent"
+    },
+    "features": [
+      "Live code execution",
+      "Interactive visualizations",
+      "Document creation",
+      "React components",
+      "SVG graphics"
+    ],
+    "useCases": [
+      "Prototyping",
+      "Data visualization",
+      "Learning code",
+      "Creating demos"
+    ],
+    "integrations": [
+      "Claude API",
+      "Web technologies"
+    ],
+    "limitations": [
+      "Requires Claude Pro for heavy usage",
+      "Limited to supported frameworks"
+    ],
+    "vibeAlignment": {
+      "creative": 10,
+      "productive": 8,
+      "explorative": 9,
+      "relaxed": 6
+    },
+    "analytics": {
+      "popularity": 88,
+      "growth": "explosive",
+      "userSatisfaction": 93
+    },
+    "community": {
+      "rating": 4.8,
+      "reviewCount": 18000,
+      "activeUsers": "4M+"
+    },
+    "roiScore": 3400,
+    "website": "https://claude.ai",
+    "alternatives": [
+      "cursor",
+      "github-copilot",
+      "replit-agent"
+    ]
+  },
+  {
+    "id": "capcut",
+    "name": "CapCut",
+    "logo": "✂️",
+    "company": "ByteDance",
+    "description": "Free all-in-one video editing app with AI-powered features for creating engaging social media content",
+    "primaryCategory": "video-editing",
+    "subcategories": [
+      "content-creation",
+      "social-media",
+      "mobile-editing"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 0,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 85,
+      "speed": 90,
+      "consistency": 87,
+      "reliability": 88
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interfaceQuality": 91,
+      "documentation": "good"
+    },
+    "features": [
+      "AI auto-captions",
+      "Background removal",
+      "Text-to-speech",
+      "Trending effects",
+      "Multi-track editing"
+    ],
+    "useCases": [
+      "TikTok videos",
+      "Instagram Reels",
+      "YouTube Shorts",
+      "Social media content"
+    ],
+    "integrations": [
+      "TikTok",
+      "Direct export",
+      "Cloud storage"
+    ],
+    "limitations": [
+      "Pro features require subscription",
+      "Mobile-focused interface"
+    ],
+    "vibeAlignment": {
+      "creative": 8,
+      "productive": 7,
+      "explorative": 5,
+      "relaxed": 9
+    },
+    "analytics": {
+      "popularity": 92,
+      "growth": "explosive",
+      "userSatisfaction": 89
+    },
+    "community": {
+      "rating": 4.6,
+      "reviewCount": 250000,
+      "activeUsers": "200M+"
+    },
+    "roiScore": 3300,
+    "website": "https://capcut.com",
+    "alternatives": [
+      "opus-clip",
+      "descript",
+      "pictory"
+    ]
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "logo": "💎",
+    "company": "Google",
+    "description": "Google's most capable multimodal AI model with advanced reasoning, coding, and creative capabilities",
+    "primaryCategory": "text-generation",
+    "subcategories": [
+      "writing",
+      "coding",
+      "research",
+      "multimodal"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 20,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 93,
+      "speed": 90,
+      "consistency": 91,
+      "reliability": 92
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interfaceQuality": 92,
+      "documentation": "excellent"
+    },
+    "features": [
+      "Multimodal understanding",
+      "Advanced reasoning",
+      "Code generation",
+      "1M token context",
+      "Image & video analysis"
+    ],
+    "useCases": [
+      "Research",
+      "Coding",
+      "Content creation",
+      "Data analysis",
+      "Document processing"
+    ],
+    "integrations": [
+      "Google Workspace",
+      "Google Cloud",
+      "API access"
+    ],
+    "limitations": [
+      "Some features require paid plan",
+      "Regional availability varies"
+    ],
+    "vibeAlignment": {
+      "creative": 8,
+      "productive": 9,
+      "explorative": 10,
+      "relaxed": 7
+    },
+    "analytics": {
+      "popularity": 89,
+      "growth": "explosive",
+      "userSatisfaction": 91
+    },
+    "community": {
+      "rating": 4.7,
+      "reviewCount": 45000,
+      "activeUsers": "100M+"
+    },
+    "roiScore": 3600,
+    "website": "https://gemini.google.com",
+    "alternatives": [
+      "chatgpt",
+      "claude",
+      "perplexity"
+    ]
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "logo": "🎭",
+    "company": "HeyGen",
+    "description": "AI video generation platform that creates professional videos with realistic AI avatars and voices",
+    "primaryCategory": "video-generation",
+    "subcategories": [
+      "avatar-generation",
+      "text-to-video",
+      "content-creation"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 29,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 90,
+      "speed": 85,
+      "consistency": 89,
+      "reliability": 90
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interfaceQuality": 93,
+      "documentation": "excellent"
+    },
+    "features": [
+      "AI avatars",
+      "Voice cloning",
+      "Multi-language support",
+      "Custom avatars",
+      "Video translation"
+    ],
+    "useCases": [
+      "Marketing videos",
+      "Training content",
+      "Product demos",
+      "Social media",
+      "Corporate communications"
+    ],
+    "integrations": [
+      "API access",
+      "Zapier",
+      "Video editing tools"
+    ],
+    "limitations": [
+      "Credit-based usage",
+      "Video length limits on free tier"
+    ],
+    "vibeAlignment": {
+      "creative": 8,
+      "productive": 9,
+      "explorative": 6,
+      "relaxed": 7
+    },
+    "analytics": {
+      "popularity": 87,
+      "growth": "rapid",
+      "userSatisfaction": 90
+    },
+    "community": {
+      "rating": 4.6,
+      "reviewCount": 28000,
+      "activeUsers": "2M+"
+    },
+    "roiScore": 3500,
+    "website": "https://heygen.com",
+    "alternatives": [
+      "runway-gen2",
+      "synthesia",
+      "d-id"
+    ]
+  },
+  {
+    "id": "v0-dev",
+    "name": "v0.dev",
+    "logo": "⚡",
+    "company": "Vercel",
+    "description": "AI-powered web development tool that generates production-ready React code from text descriptions",
+    "primaryCategory": "code-generation",
+    "subcategories": [
+      "web-development",
+      "ui-design",
+      "prototyping"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 20,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 89,
+      "speed": 92,
+      "consistency": 88,
+      "reliability": 90
+    },
+    "userExperience": {
+      "learningCurve": "intermediate",
+      "interfaceQuality": 94,
+      "documentation": "excellent"
+    },
+    "features": [
+      "Text-to-UI",
+      "React components",
+      "Tailwind CSS",
+      "shadcn/ui integration",
+      "Copy-paste code"
+    ],
+    "useCases": [
+      "UI prototyping",
+      "Component generation",
+      "Landing pages",
+      "Dashboard templates",
+      "App interfaces"
+    ],
+    "integrations": [
+      "Next.js",
+      "Vercel deployment",
+      "shadcn/ui",
+      "Tailwind CSS"
+    ],
+    "limitations": [
+      "Requires React knowledge for customization",
+      "Limited to supported frameworks"
+    ],
+    "vibeAlignment": {
+      "creative": 7,
+      "productive": 10,
+      "explorative": 8,
+      "relaxed": 6
+    },
+    "analytics": {
+      "popularity": 86,
+      "growth": "explosive",
+      "userSatisfaction": 92
+    },
+    "community": {
+      "rating": 4.8,
+      "reviewCount": 35000,
+      "activeUsers": "1M+"
+    },
+    "roiScore": 3700,
+    "website": "https://v0.dev",
+    "alternatives": [
+      "replit-agent",
+      "bolt-new",
+      "cursor"
+    ]
+  },
+  {
+    "id": "bolt-new",
+    "name": "Bolt.new",
+    "logo": "⚡",
+    "company": "StackBlitz",
+    "description": "AI-powered full-stack development environment that builds and deploys web apps in seconds",
+    "primaryCategory": "code-generation",
+    "subcategories": [
+      "web-development",
+      "full-stack",
+      "deployment"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "monthlyCost": 20,
+      "freeTier": true
+    },
+    "performance": {
+      "quality": 88,
+      "speed": 95,
+      "consistency": 87,
+      "reliability": 89
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interfaceQuality": 95,
+      "documentation": "good"
+    },
+    "features": [
+      "Instant dev environment",
+      "Full-stack apps",
+      "Live preview",
+      "NPM package support",
+      "One-click deploy"
+    ],
+    "useCases": [
+      "Rapid prototyping",
+      "MVPs",
+      "Code experiments",
+      "Learning projects",
+      "Portfolio sites"
+    ],
+    "integrations": [
+      "GitHub",
+      "NPM",
+      "Vite",
+      "Node.js",
+      "WebContainers"
+    ],
+    "limitations": [
+      "Browser-based limitations",
+      "Performance constraints on complex apps"
+    ],
+    "vibeAlignment": {
+      "creative": 8,
+      "productive": 9,
+      "explorative": 9,
+      "relaxed": 7
+    },
+    "analytics": {
+      "popularity": 85,
+      "growth": "explosive",
+      "userSatisfaction": 90
+    },
+    "community": {
+      "rating": 4.7,
+      "reviewCount": 22000,
+      "activeUsers": "800K+"
+    },
+    "roiScore": 3400,
+    "website": "https://bolt.new",
+    "alternatives": [
+      "v0-dev",
+      "replit-agent",
+      "github-copilot"
+    ]
+  },
+  {
+    "id": "jasper-ai",
+    "name": "Jasper AI",
+    "logo": "✍️",
+    "company": "Jasper",
+    "description": "Enterprise AI content platform for creating on-brand marketing copy, blog posts, and social content",
+    "primaryCategory": "text-generation",
+    "subcategories": [
+      "content-creation",
+      "marketing",
+      "copywriting"
+    ],
+    "pricing": {
+      "model": "paid",
+      "monthlyCost": 49,
+      "freeTier": false
+    },
+    "performance": {
+      "quality": 87,
+      "speed": 90,
+      "consistency": 88,
+      "reliability": 89
+    },
+    "userExperience": {
+      "learningCurve": "beginner",
+      "interfaceQuality": 90,
+      "documentation": "excellent"
+    },
+    "features": [
+      "Brand voice",
+      "SEO optimization",
+      "50+ templates",
+      "Multi-language",
+      "Team collaboration"
+    ],
+    "useCases": [
+      "Blog writing",
+      "Ad copy",
+      "Email campaigns",
+      "Social media posts",
+      "Product descriptions"
+    ],
+    "integrations": [
+      "Surfer SEO",
+      "Grammarly",
+      "Copyscape",
+      "Browser extension"
+    ],
+    "limitations": [
+      "Higher price point",
+      "Word count limits",
+      "No free tier"
+    ],
+    "vibeAlignment": {
+      "creative": 8,
+      "productive": 9,
+      "explorative": 5,
+      "relaxed": 7
+    },
+    "analytics": {
+      "popularity": 83,
+      "growth": "steady",
+      "userSatisfaction": 86
+    },
+    "community": {
+      "rating": 4.4,
+      "reviewCount": 18000,
+      "activeUsers": "100K+"
+    },
+    "roiScore": 2900,
+    "website": "https://jasper.ai",
+    "alternatives": [
+      "chatgpt",
+      "claude",
+      "copy-ai"
+    ]
+  }
 ]
