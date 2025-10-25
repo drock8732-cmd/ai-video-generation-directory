@@ -15,7 +15,7 @@ const REQUIRED_TOOL_FIELDS = ['id', 'name', 'company', 'description', 'primaryCa
  */
 async function loadToolsData() {
     try {
-        const response = await fetch('/data/tools.json');
+        const response = await fetch('./data/tools.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
