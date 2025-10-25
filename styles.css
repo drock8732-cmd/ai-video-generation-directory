@@ -422,6 +422,57 @@ p {
     font-weight: 600;
 }
 
+/* Tools Header with View All Button */
+.tools-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.btn-view-all {
+    position: absolute;
+    right: 0;
+    padding: 0.75rem 1.5rem;
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
+}
+
+.btn-view-all:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.btn-view-all i {
+    font-size: 0.9rem;
+}
+
+/* Responsive: Move button below heading on mobile */
+@media (max-width: 768px) {
+    .tools-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-view-all {
+        position: static;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 .models-section h2::after,
 .comparison-section h2::after,
 .about-section h2::after,

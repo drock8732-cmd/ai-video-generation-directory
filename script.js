@@ -491,6 +491,12 @@ async function initializeApplication() {
     setupEventListeners();
     animateStats();
 
+    // Update View All button with correct count
+    const viewAllText = document.getElementById('viewAllText');
+    if (viewAllText) {
+        viewAllText.textContent = `View All (${aiToolsDatabase.length})`;
+    }
+
     console.log('✅ AI Intelligence Hub initialized successfully');
 }
 
@@ -935,6 +941,61 @@ function goToNextPage() {
         applyFiltersAndSearch();
         scrollToModelsSection();
     }
+}
+
+// Toggle View All / Paginated view
+let viewingAll = false;
+
+function toggleViewAll() {
+    viewingAll = !viewingAll;
+
+    const viewAllText = document.getElementById('viewAllText');
+    const viewAllBtn = document.getElementById('viewAllBtn');
+    const paginationContainer = document.getElementById('paginationContainer');
+
+    if (viewingAll) {
+        // Show all tools
+        appState.pagination.itemsPerPage = appState.pagination.totalItems || aiToolsDatabase.length;
+        appState.pagination.currentPage = 1;
+
+        // Update button text and icon
+        if (viewAllText) {
+            viewAllText.textContent = 'Show Pages';
+        }
+        if (viewAllBtn) {
+            viewAllBtn.querySelector('i').className = 'fas fa-compress';
+        }
+
+        // Hide pagination controls
+        if (paginationContainer) {
+            paginationContainer.style.display = 'none';
+        }
+
+        showNotification(`📊 Viewing all ${appState.pagination.totalItems} tools`);
+    } else {
+        // Return to paginated view
+        appState.pagination.itemsPerPage = 12;
+        appState.pagination.currentPage = 1;
+
+        // Update button text and icon
+        if (viewAllText) {
+            viewAllText.textContent = `View All (${appState.pagination.totalItems})`;
+        }
+        if (viewAllBtn) {
+            viewAllBtn.querySelector('i').className = 'fas fa-expand';
+        }
+
+        // Show pagination controls
+        if (paginationContainer) {
+            paginationContainer.style.display = 'flex';
+        }
+
+        showNotification('📄 Switched to paginated view');
+    }
+
+    // Re-apply filters with new pagination settings
+    applyFiltersAndSearch();
+    scrollToModelsSection();
 }
 
 // Scroll to models section (smooth scroll to top of tools grid)

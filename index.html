@@ -191,8 +191,14 @@
     <main class="main-content">
         <!-- AI Tools Section -->
         <section id="models" class="models-section">
-            <h2>Featured AI Tools</h2>
-            
+            <div class="tools-header">
+                <h2>Featured AI Tools</h2>
+                <button class="btn-view-all" id="viewAllBtn" onclick="toggleViewAll()">
+                    <i class="fas fa-expand"></i>
+                    <span id="viewAllText">View All (33)</span>
+                </button>
+            </div>
+
             <div class="models-grid" id="modelsGrid">
                 <!-- AI tool cards will be populated by JavaScript -->
             </div>
